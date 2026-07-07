@@ -67,6 +67,35 @@ function playerComment(player) {
   return null;
 }
 
+function rankBadgeClass(rank, total) {
+  if (!rank || !total) return "";
+  if (rank === 1) return "mvp";
+  if (rank === total) return "worst";
+  return "";
+}
+
+function recentFlexGamesHTML(games) {
+  if (!games || !games.length) return "";
+  const items = games.map(g => {
+    const cls = rankBadgeClass(g.rank, g.total);
+    const rankText = g.rank ? `${g.rank}/${g.total}등` : "-";
+    const resultCls = g.win ? "win-text" : "loss-text";
+    return `
+      <div class="flex-game-row">
+        <span class="flex-champ">${g.champion}</span>
+        <span class="flex-kda">${g.kills}/${g.deaths}/${g.assists}</span>
+        <span class="flex-result ${resultCls}">${g.win ? "승" : "패"}</span>
+        <span class="flex-rank ${cls}">${rankText}</span>
+      </div>`;
+  }).join("");
+
+  return `
+    <div class="flex-games-section">
+      <div class="flex-games-title">최근 자유랭크 3게임</div>
+      ${items}
+    </div>`;
+}
+
 function renderCard(player, index) {
   const solo = { ...player.solo, ...player.recent_30d.solo };
   const flex = { ...player.flex, ...player.recent_30d.flex };
@@ -87,6 +116,7 @@ function renderCard(player, index) {
     </div>
     ${queueRowHTML("솔랭", solo)}
     ${queueRowHTML("자랭", flex)}
+    ${recentFlexGamesHTML(player.recent_flex_games)}
     <div class="aram-row">
       <span>칼바람 (최근 30일)</span>
       <b>${aram.games}판 · ${aram.wins}승 ${aram.losses}패 (${aram.winrate}%)</b>
