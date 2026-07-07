@@ -64,33 +64,12 @@ TIER_ORDER = [
 
 def _request(url, max_retries=5):
     """Riot API 호출 (rate limit 429 및 일시적 오류에 대한 재시도 포함)."""
-    req = urllib.request.Request(url, req = urllib.request.Request(url, headers={
+    req = urllib.request.Request(url, headers={
         "X-Riot-Token": RIOT_API_KEY,
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
         "Accept-Language": "en-US,en;q=0.9",
     })
     for attempt in range(max_retries):
-        try:
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                retry_after = int(e.headers.get("Retry-After", "2"))
-                print(f"  [429] rate limited, {retry_after}s 대기...")
-                time.sleep(retry_after + 1)
-                continue
-            if e.code == 404:
-                return None
-            if e.code in (500, 502, 503, 504):
-                print(f"  [{e.code}] 서버 오류, 재시도 {attempt+1}/{max_retries}")
-                time.sleep(2 * (attempt + 1))
-                continue
-            raise
-        except urllib.error.URLError as e:
-            print(f"  네트워크 오류: {e}, 재시도 {attempt+1}/{max_retries}")
-            time.sleep(2 * (attempt + 1))
-    raise RuntimeError(f"요청 실패(재시도 초과): {url}")
-
 
 def load_json(path, default):
     if os.path.exists(path):
