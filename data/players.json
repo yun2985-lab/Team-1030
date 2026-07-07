@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-07T07:09:31.295880Z",
+  "updated_at": "2026-07-07T07:34:24.428683Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -55,7 +55,39 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 4
+      "solo_last_game_days_ago": 4,
+      "recent_flex_games": [
+        {
+          "date": "2026-06-18",
+          "champion": "Nautilus",
+          "win": false,
+          "kills": 3,
+          "deaths": 12,
+          "assists": 20,
+          "rank": 5,
+          "total": 10
+        },
+        {
+          "date": "2026-06-18",
+          "champion": "Thresh",
+          "win": false,
+          "kills": 6,
+          "deaths": 13,
+          "assists": 17,
+          "rank": 4,
+          "total": 10
+        },
+        {
+          "date": "2026-06-16",
+          "champion": "Nautilus",
+          "win": false,
+          "kills": 1,
+          "deaths": 9,
+          "assists": 24,
+          "rank": 7,
+          "total": 10
+        }
+      ]
     },
     {
       "label": "심해최강벨코즈",
@@ -110,7 +142,39 @@
         "type": "loss",
         "count": 1
       },
-      "solo_last_game_days_ago": 3
+      "solo_last_game_days_ago": 3,
+      "recent_flex_games": [
+        {
+          "date": "2026-06-18",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 2,
+          "deaths": 13,
+          "assists": 11,
+          "rank": 9,
+          "total": 10
+        },
+        {
+          "date": "2026-06-18",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 15,
+          "deaths": 9,
+          "assists": 8,
+          "rank": 2,
+          "total": 10
+        },
+        {
+          "date": "2026-06-10",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 16,
+          "deaths": 4,
+          "assists": 10,
+          "rank": 2,
+          "total": 10
+        }
+      ]
     },
     {
       "label": "부릉부릉배부릉",
@@ -165,7 +229,39 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 21
+      "solo_last_game_days_ago": 21,
+      "recent_flex_games": [
+        {
+          "date": "2026-06-18",
+          "champion": "Lucian",
+          "win": false,
+          "kills": 13,
+          "deaths": 7,
+          "assists": 15,
+          "rank": 2,
+          "total": 10
+        },
+        {
+          "date": "2026-06-18",
+          "champion": "Lucian",
+          "win": false,
+          "kills": 5,
+          "deaths": 12,
+          "assists": 9,
+          "rank": 10,
+          "total": 10
+        },
+        {
+          "date": "2026-06-16",
+          "champion": "Senna",
+          "win": false,
+          "kills": 7,
+          "deaths": 4,
+          "assists": 23,
+          "rank": 4,
+          "total": 10
+        }
+      ]
     },
     {
       "label": "전지훈",
@@ -220,7 +316,29 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 0
+      "solo_last_game_days_ago": 0,
+      "recent_flex_games": [
+        {
+          "date": "2026-06-07",
+          "champion": "Malphite",
+          "win": true,
+          "kills": 5,
+          "deaths": 3,
+          "assists": 6,
+          "rank": 2,
+          "total": 10
+        },
+        {
+          "date": "2026-06-07",
+          "champion": "KSante",
+          "win": false,
+          "kills": 1,
+          "deaths": 2,
+          "assists": 3,
+          "rank": 10,
+          "total": 10
+        }
+      ]
     },
     {
       "label": "장의사",
@@ -275,7 +393,39 @@
         "type": "none",
         "count": 0
       },
-      "solo_last_game_days_ago": null
+      "solo_last_game_days_ago": null,
+      "recent_flex_games": [
+        {
+          "date": "2026-06-18",
+          "champion": "Sejuani",
+          "win": false,
+          "kills": 3,
+          "deaths": 7,
+          "assists": 24,
+          "rank": 6,
+          "total": 10
+        },
+        {
+          "date": "2026-06-18",
+          "champion": "Zac",
+          "win": false,
+          "kills": 8,
+          "deaths": 7,
+          "assists": 18,
+          "rank": 5,
+          "total": 10
+        },
+        {
+          "date": "2026-06-16",
+          "champion": "Zac",
+          "win": false,
+          "kills": 3,
+          "deaths": 6,
+          "assists": 22,
+          "rank": 9,
+          "total": 10
+        }
+      ]
     }
   ]
 }
