@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-07T06:44:30.234665Z",
+  "updated_at": "2026-07-07T07:09:31.295880Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -50,7 +50,12 @@
           "losses": 0,
           "winrate": 0.0
         }
-      }
+      },
+      "solo_streak": {
+        "type": "win",
+        "count": 1
+      },
+      "solo_last_game_days_ago": 4
     },
     {
       "label": "심해최강벨코즈",
@@ -100,7 +105,12 @@
           "losses": 0,
           "winrate": 0.0
         }
-      }
+      },
+      "solo_streak": {
+        "type": "loss",
+        "count": 1
+      },
+      "solo_last_game_days_ago": 3
     },
     {
       "label": "부릉부릉배부릉",
@@ -150,7 +160,12 @@
           "losses": 0,
           "winrate": 0.0
         }
-      }
+      },
+      "solo_streak": {
+        "type": "win",
+        "count": 1
+      },
+      "solo_last_game_days_ago": 21
     },
     {
       "label": "전지훈",
@@ -200,7 +215,12 @@
           "losses": 0,
           "winrate": 0.0
         }
-      }
+      },
+      "solo_streak": {
+        "type": "win",
+        "count": 1
+      },
+      "solo_last_game_days_ago": 0
     },
     {
       "label": "장의사",
@@ -250,7 +270,12 @@
           "losses": 0,
           "winrate": 0.0
         }
-      }
+      },
+      "solo_streak": {
+        "type": "none",
+        "count": 0
+      },
+      "solo_last_game_days_ago": null
     }
   ]
 }
