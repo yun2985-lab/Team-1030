@@ -2,6 +2,12 @@
 Team 1030 - League of Legends 티어 트래커
 매일 실행되어 5개 계정의 솔로랭크/자유랭크 티어·LP와
 최근 30일간 솔랭/자랭/칼바람 판수·승률을 수집해 data/players.json에 저장한다.
+
+필요 환경변수:
+  RIOT_API_KEY   Riot Developer / Personal API Key
+
+실행:
+  python fetch_data.py
 """
 
 import os
@@ -188,10 +194,14 @@ def main():
         flex = tier_rank_lp(entries, "RANKED_FLEX_SR")
 
         recent_counts = {}
+        solo_streak = {"type": "none", "count": 0}
+        solo_last_game_days_ago = None
+
         for key, qid in QUEUE_IDS.items():
             match_ids = get_match_ids(puuid, qid, recent_start_epoch)
             wins = 0
             losses = 0
+            results_with_time = []
             for mid in match_ids:
                 result = get_match_result(mid, puuid, match_cache)
                 if result is None or result["win"] is None:
@@ -200,6 +210,8 @@ def main():
                     wins += 1
                 else:
                     losses += 1
+                if result.get("game_end"):
+                    results_with_time.append(result)
                 time.sleep(0.05)
             games = wins + losses
             recent_counts[key] = {
@@ -209,6 +221,21 @@ def main():
                 "winrate": round(wins / games * 100, 1) if games else 0.0,
             }
             print(f"  {key}: {games}판 ({wins}승 {losses}패)")
+
+            if key == "solo" and results_with_time:
+                results_with_time.sort(key=lambda r: r["game_end"], reverse=True)
+                most_recent = results_with_time[0]
+                solo_last_game_days_ago = int(
+                    (now_epoch * 1000 - most_recent["game_end"]) / 86400000
+                )
+                streak_type = "win" if most_recent["win"] else "loss"
+                streak_count = 0
+                for r in results_with_time:
+                    if r["win"] == most_recent["win"]:
+                        streak_count += 1
+                    else:
+                        break
+                solo_streak = {"type": streak_type, "count": streak_count}
 
         history = [h for h in record.get("history", []) if h["date"] != today]
         history.append({
@@ -225,6 +252,8 @@ def main():
             "solo": solo,
             "flex": flex,
             "recent_30d": recent_counts,
+            "solo_streak": solo_streak,
+            "solo_last_game_days_ago": solo_last_game_days_ago,
             "history": history,
         })
         new_players.append(record)
