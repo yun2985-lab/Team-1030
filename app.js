@@ -51,11 +51,28 @@ function queueRowHTML(label, q) {
     </div>`;
 }
 
+function playerComment(player) {
+  const inactiveDays = player.solo_last_game_days_ago;
+  const streak = player.solo_streak || { type: "none", count: 0 };
+
+  if (inactiveDays === null || inactiveDays === undefined || inactiveDays >= 5) {
+    return { text: "연습이 필요합니다. 팀을 위해 연습량을 채워주세요", cls: "inactive" };
+  }
+  if (streak.type === "loss" && streak.count >= 3) {
+    return { text: "진정하세요. 휴식이 필요합니다", cls: "cold" };
+  }
+  if (streak.type === "win" && streak.count >= 3) {
+    return { text: "좋은 퍼포먼스를 보이고 있어요!", cls: "hot" };
+  }
+  return null;
+}
+
 function renderCard(player, index) {
   const solo = { ...player.solo, ...player.recent_30d.solo };
   const flex = { ...player.flex, ...player.recent_30d.flex };
   const aram = player.recent_30d.aram || { games: 0, wins: 0, losses: 0, winrate: 0 };
   const tierColorVar = `var(--tier-${(player.solo?.tier || 'unranked').toLowerCase()})`;
+  const comment = playerComment(player);
 
   const card = document.createElement("div");
   card.className = "card";
@@ -74,6 +91,7 @@ function renderCard(player, index) {
       <span>칼바람 (최근 30일)</span>
       <b>${aram.games}판 · ${aram.wins}승 ${aram.losses}패 (${aram.winrate}%)</b>
     </div>
+    ${comment ? `<div class="player-comment ${comment.cls}">${comment.text}</div>` : ""}
     <div class="chart-wrap"><canvas id="chart-${index}"></canvas></div>
   `;
   return card;
@@ -84,7 +102,7 @@ function renderChart(canvasId, history) {
   const ctx = document.getElementById(canvasId);
   if (!ctx || !history.length) return;
 
-  const labels = history.map(h => h.date.slice(5)); // MM-DD
+  const labels = history.map(h => h.date.slice(5));
   const soloLP = history.map(h => tierScore(h.solo_tier, h.solo_rank, h.solo_lp));
 
   new Chart(ctx, {
