@@ -64,7 +64,11 @@ TIER_ORDER = [
 
 def _request(url, max_retries=5):
     """Riot API 호출 (rate limit 429 및 일시적 오류에 대한 재시도 포함)."""
-    req = urllib.request.Request(url, headers={"X-Riot-Token": RIOT_API_KEY})
+    req = urllib.request.Request(url, req = urllib.request.Request(url, headers={
+        "X-Riot-Token": RIOT_API_KEY,
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        "Accept-Language": "en-US,en;q=0.9",
+    })
     for attempt in range(max_retries):
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
