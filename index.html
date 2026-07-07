@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Team 1030 — 티어 트래커</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-splash" aria-hidden="true">
+    <div class="bg-splash-img" style="background-image:url('assets/champions/Velkoz_0.jpg')"></div>
+    <div class="bg-splash-img" style="background-image:url('assets/champions/LeeSin_0.jpg')"></div>
+    <div class="bg-splash-img" style="background-image:url('assets/champions/Sett_0.jpg')"></div>
+    <div class="bg-splash-img" style="background-image:url('assets/champions/MissFortune_0.jpg')"></div>
+    <div class="bg-splash-img" style="background-image:url('assets/champions/Teemo_0.jpg')"></div>
+  </div>
+  <div class="bg-scrim" aria-hidden="true"></div>
+
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark">30</span>
+        <div class="brand-text">
+          <h1>TEAM <span>10:30</span></h1>
+          <p class="tagline">랭크 소환사 5인, 매일 오전 9시 갱신</p>
+        </div>
+      </div>
+      <div class="updated" id="updated-at">데이터 불러오는 중...</div>
+    </div>
+  </header>
+
+  <section class="team-chart-section">
+    <div class="team-chart-inner">
+      <div class="team-chart-head">
+        <h2>솔로랭크 티어 추이 <span>· 최근 30일</span></h2>
+        <ul class="legend" id="team-legend"></ul>
+      </div>
+      <div class="team-chart-wrap">
+        <canvas id="team-chart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <main class="board" id="board">
+    <!-- 로딩 스켈레톤 -->
+    <div class="loading" id="loading">불러오는 중...</div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Riot Games API 기반 · 공식 라이엇 제품이 아니며 라이엇 게임즈의 승인/보증을 받지 않았습니다.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
