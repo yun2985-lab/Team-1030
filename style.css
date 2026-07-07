@@ -315,6 +315,30 @@ body {
 }
 .aram-row b { color: var(--text); }
 
+.player-comment {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.player-comment.inactive {
+  background: rgba(217, 99, 108, 0.12);
+  color: #e28a91;
+  border: 1px solid rgba(217, 99, 108, 0.3);
+}
+.player-comment.cold {
+  background: rgba(126, 138, 168, 0.12);
+  color: var(--text-dim);
+  border: 1px solid rgba(126, 138, 168, 0.3);
+}
+.player-comment.hot {
+  background: rgba(76, 175, 130, 0.12);
+  color: #7fd9ab;
+  border: 1px solid rgba(76, 175, 130, 0.3);
+}
+
 .chart-wrap {
   margin-top: 14px;
   height: 90px;
@@ -329,4 +353,4 @@ body {
 
 @media (max-width: 480px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
-}
+             }
