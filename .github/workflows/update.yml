@@ -1,0 +1,34 @@
+name: Update Team 1030 Tier Data
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 데이터 수집 실행
+        env:
+          RIOT_API_KEY: ${{ secrets.RIOT_API_KEY }}
+        run: python fetch_data.py
+
+      - name: 변경사항 커밋 및 푸시
+        run: |
+          git config user.name "team1030-bot"
+          git config user.email "actions@github.com"
+          git add data/players.json data/match_cache.json
+          git diff --cached --quiet && echo "변경 없음" || git commit -m "chore: update tier data $(date -u +%F)"
+          git push
