@@ -2,12 +2,6 @@
 Team 1030 - League of Legends 티어 트래커
 매일 실행되어 5개 계정의 솔로랭크/자유랭크 티어·LP와
 최근 30일간 솔랭/자랭/칼바람 판수·승률을 수집해 data/players.json에 저장한다.
-
-필요 환경변수:
-  RIOT_API_KEY   Riot Developer / Personal API Key
-
-실행:
-  python fetch_data.py
 """
 
 import os
@@ -18,13 +12,8 @@ import urllib.request
 import urllib.error
 import urllib.parse
 
-# ---------------------------------------------------------------------------
-# 설정
-# ---------------------------------------------------------------------------
-
 TEAM_NAME = "Team 1030"
 
-# (표시 이름, gameName, tagLine)
 PLAYERS = [
     {"label": "최강롯디자잉", "game_name": "최강롯디자잉", "tag_line": "1030"},
     {"label": "심해최강벨코즈", "game_name": "심해최강벨코즈", "tag_line": "ybak"},
@@ -33,9 +22,8 @@ PLAYERS = [
     {"label": "장의사", "game_name": "장의사", "tag_line": "kr1"},
 ]
 
-# 라우팅 (한국 서버 기준)
-PLATFORM_ROUTE = "kr"      # summoner-v4, league-v4
-REGIONAL_ROUTE = "asia"    # account-v1, match-v5
+PLATFORM_ROUTE = "kr"
+REGIONAL_ROUTE = "asia"
 
 RIOT_API_KEY = os.environ.get("RIOT_API_KEY", "").strip()
 
@@ -43,8 +31,8 @@ DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 PLAYERS_JSON = os.path.join(DATA_DIR, "players.json")
 MATCH_CACHE_JSON = os.path.join(DATA_DIR, "match_cache.json")
 
-HISTORY_KEEP_DAYS = 35          # 티어 히스토리 보관 일수
-RECENT_WINDOW_DAYS = 30         # "최근 한달" 판수/승률 집계 기준 일수
+HISTORY_KEEP_DAYS = 35
+RECENT_WINDOW_DAYS = 30
 
 QUEUE_IDS = {
     "solo": 420,
@@ -52,24 +40,35 @@ QUEUE_IDS = {
     "aram": 450,
 }
 
-TIER_ORDER = [
-    "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM",
-    "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER",
-]
-
-
-# ---------------------------------------------------------------------------
-# 공용 유틸
-# ---------------------------------------------------------------------------
 
 def _request(url, max_retries=5):
-    """Riot API 호출 (rate limit 429 및 일시적 오류에 대한 재시도 포함)."""
     req = urllib.request.Request(url, headers={
         "X-Riot-Token": RIOT_API_KEY,
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
         "Accept-Language": "en-US,en;q=0.9",
     })
     for attempt in range(max_retries):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                retry_after = int(e.headers.get("Retry-After", "2"))
+                print(f"  [429] rate limited, {retry_after}s 대기...")
+                time.sleep(retry_after + 1)
+                continue
+            if e.code == 404:
+                return None
+            if e.code in (500, 502, 503, 504):
+                print(f"  [{e.code}] 서버 오류, 재시도 {attempt+1}/{max_retries}")
+                time.sleep(2 * (attempt + 1))
+                continue
+            raise
+        except urllib.error.URLError as e:
+            print(f"  네트워크 오류: {e}, 재시도 {attempt+1}/{max_retries}")
+            time.sleep(2 * (attempt + 1))
+    raise RuntimeError(f"요청 실패(재시도 초과): {url}")
+
 
 def load_json(path, default):
     if os.path.exists(path):
@@ -83,10 +82,6 @@ def save_json(path, obj):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
-
-# ---------------------------------------------------------------------------
-# Riot API 호출 함수
-# ---------------------------------------------------------------------------
 
 def get_puuid(game_name, tag_line):
     url = (f"https://{REGIONAL_ROUTE}.api.riotgames.com/riot/account/v1/"
@@ -102,7 +97,6 @@ def get_league_entries(puuid):
 
 
 def get_match_ids(puuid, queue_id, start_time_epoch):
-    """queue_id 큐의 start_time_epoch 이후 매치 ID 목록 (최대 100개씩 페이지네이션)."""
     ids = []
     start = 0
     count = 100
@@ -120,7 +114,6 @@ def get_match_ids(puuid, queue_id, start_time_epoch):
 
 
 def get_match_result(match_id, puuid, cache):
-    """match_cache에 없으면 API 조회 후 캐시에 저장. {"win": bool} 반환."""
     if match_id in cache:
         return cache[match_id]
 
@@ -153,10 +146,6 @@ def tier_rank_lp(entries, queue_type):
     return {"tier": "UNRANKED", "rank": "", "lp": 0, "wins": 0, "losses": 0}
 
 
-# ---------------------------------------------------------------------------
-# 메인 로직
-# ---------------------------------------------------------------------------
-
 def main():
     if not RIOT_API_KEY:
         raise SystemExit("환경변수 RIOT_API_KEY가 설정되어 있지 않습니다.")
@@ -170,7 +159,6 @@ def main():
         "updated_at": None,
         "players": [],
     })
-    # label -> 기존 player 레코드 매핑
     existing = {p["label"]: p for p in players_store.get("players", [])}
 
     match_cache = load_json(MATCH_CACHE_JSON, {})
@@ -199,7 +187,6 @@ def main():
         solo = tier_rank_lp(entries, "RANKED_SOLO_5x5")
         flex = tier_rank_lp(entries, "RANKED_FLEX_SR")
 
-        # 최근 30일 판수 집계 (솔랭/자랭/칼바람)
         recent_counts = {}
         for key, qid in QUEUE_IDS.items():
             match_ids = get_match_ids(puuid, qid, recent_start_epoch)
@@ -223,7 +210,6 @@ def main():
             }
             print(f"  {key}: {games}판 ({wins}승 {losses}패)")
 
-        # 오늘자 히스토리 스냅샷 추가 (같은 날짜면 갱신)
         history = [h for h in record.get("history", []) if h["date"] != today]
         history.append({
             "date": today,
@@ -243,14 +229,12 @@ def main():
         })
         new_players.append(record)
 
-        # 캐시를 매 플레이어마다 저장해 중간에 실패해도 진행 유지
         save_json(MATCH_CACHE_JSON, match_cache)
 
     players_store["players"] = new_players
     players_store["updated_at"] = datetime.datetime.utcnow().isoformat() + "Z"
     save_json(PLAYERS_JSON, players_store)
 
-    # 매치 캐시 정리: RECENT_WINDOW_DAYS보다 오래된 매치는 캐시에서 제거해 파일 크기 관리
     cutoff_epoch_ms = (now_epoch - (RECENT_WINDOW_DAYS + 5) * 86400) * 1000
     match_cache = {
         mid: v for mid, v in match_cache.items()
