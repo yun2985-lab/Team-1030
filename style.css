@@ -315,6 +315,53 @@ body {
 }
 .aram-row b { color: var(--text); }
 
+.flex-games-section {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--panel-border);
+}
+.flex-games-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+.flex-game-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  padding: 4px 0;
+}
+.flex-champ {
+  color: var(--text);
+  font-weight: 600;
+}
+.flex-kda {
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+}
+.win-text { color: var(--win); font-weight: 600; }
+.loss-text { color: var(--loss); font-weight: 600; }
+.flex-rank {
+  font-size: 11.5px;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: rgba(126, 138, 168, 0.15);
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+.flex-rank.mvp {
+  background: rgba(200, 164, 77, 0.2);
+  color: var(--gold-bright);
+}
+.flex-rank.worst {
+  background: rgba(217, 99, 108, 0.15);
+  color: #e28a91;
+}
+
 .player-comment {
   margin-top: 12px;
   padding: 8px 12px;
@@ -353,4 +400,4 @@ body {
 
 @media (max-width: 480px) {
   .header-inner { flex-direction: column; align-items: flex-start; }
-             }
+  }
