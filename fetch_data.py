@@ -2,12 +2,6 @@
 Team 1030 - League of Legends 티어 트래커
 매일 실행되어 5개 계정의 솔로랭크/자유랭크 티어·LP와
 최근 30일간 솔랭/자랭/칼바람 판수·승률을 수집해 data/players.json에 저장한다.
-
-필요 환경변수:
-  RIOT_API_KEY   Riot Developer / Personal API Key
-
-실행:
-  python fetch_data.py
 """
 
 import os
@@ -120,7 +114,9 @@ def get_match_ids(puuid, queue_id, start_time_epoch):
 
 
 def get_match_result(match_id, puuid, cache):
-    if match_id in cache:
+    """match_cache에 없으면 API 조회 후 캐시에 저장.
+    {"win": bool, "game_end": int, "participants": [...]} 반환."""
+    if match_id in cache and "participants" in cache[match_id]:
         return cache[match_id]
 
     url = f"https://{REGIONAL_ROUTE}.api.riotgames.com/lol/match/v5/matches/{match_id}"
@@ -129,14 +125,50 @@ def get_match_result(match_id, puuid, cache):
         return None
 
     win = None
+    participants = []
     for p in data["info"]["participants"]:
+        participants.append({
+            "puuid": p["puuid"],
+            "championName": p.get("championName", "?"),
+            "kills": p.get("kills", 0),
+            "deaths": p.get("deaths", 0),
+            "assists": p.get("assists", 0),
+            "damage": p.get("totalDamageDealtToChampions", 0),
+            "gold": p.get("goldEarned", 0),
+            "vision": p.get("visionScore", 0),
+            "win": p.get("win", False),
+        })
         if p["puuid"] == puuid:
             win = p["win"]
-            break
 
-    result = {"win": win, "game_end": data["info"].get("gameEndTimestamp")}
+    result = {
+        "win": win,
+        "game_end": data["info"].get("gameEndTimestamp"),
+        "participants": participants,
+    }
     cache[match_id] = result
     return result
+
+
+def performance_rank(participants, puuid):
+    """경기 내 참가자들을 활약도 점수로 정렬해 puuid의 순위를 계산.
+    op.gg 등 커뮤니티 스탯 사이트에서 흔히 쓰는 방식(킬관여/딜량/골드/시야)을
+    참고한 자체 근사치이며, 공식 순위 지표는 아니다."""
+    def score(p):
+        return (
+            (p["kills"] + p["assists"]) * 2
+            - p["deaths"]
+            + p["damage"] / 1000
+            + p["gold"] / 1000
+            + p["vision"] * 0.5
+            + (2 if p["win"] else 0)
+        )
+
+    ranked = sorted(participants, key=score, reverse=True)
+    for i, p in enumerate(ranked):
+        if p["puuid"] == puuid:
+            return {"rank": i + 1, "total": len(ranked)}
+    return None
 
 
 def tier_rank_lp(entries, queue_type):
@@ -196,6 +228,7 @@ def main():
         recent_counts = {}
         solo_streak = {"type": "none", "count": 0}
         solo_last_game_days_ago = None
+        recent_flex_games = []
 
         for key, qid in QUEUE_IDS.items():
             match_ids = get_match_ids(puuid, qid, recent_start_epoch)
@@ -237,6 +270,26 @@ def main():
                         break
                 solo_streak = {"type": streak_type, "count": streak_count}
 
+            if key == "flex" and results_with_time:
+                results_with_time.sort(key=lambda r: r["game_end"], reverse=True)
+                for r in results_with_time[:3]:
+                    me = next((p for p in r["participants"] if p["puuid"] == puuid), None)
+                    if not me:
+                        continue
+                    rank_info = performance_rank(r["participants"], puuid)
+                    recent_flex_games.append({
+                        "date": datetime.datetime.utcfromtimestamp(
+                            r["game_end"] / 1000
+                        ).date().isoformat(),
+                        "champion": me["championName"],
+                        "win": me["win"],
+                        "kills": me["kills"],
+                        "deaths": me["deaths"],
+                        "assists": me["assists"],
+                        "rank": rank_info["rank"] if rank_info else None,
+                        "total": rank_info["total"] if rank_info else None,
+                    })
+
         history = [h for h in record.get("history", []) if h["date"] != today]
         history.append({
             "date": today,
@@ -254,6 +307,7 @@ def main():
             "recent_30d": recent_counts,
             "solo_streak": solo_streak,
             "solo_last_game_days_ago": solo_last_game_days_ago,
+            "recent_flex_games": recent_flex_games,
             "history": history,
         })
         new_players.append(record)
