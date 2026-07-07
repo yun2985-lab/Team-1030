@@ -37,7 +37,7 @@ PLAYERS = [
 PLATFORM_ROUTE = "kr"      # summoner-v4, league-v4
 REGIONAL_ROUTE = "asia"    # account-v1, match-v5
 
-RIOT_API_KEY = os.environ.get("RIOT_API_KEY", "")
+RIOT_API_KEY = os.environ.get("RIOT_API_KEY", "").strip()
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 PLAYERS_JSON = os.path.join(DATA_DIR, "players.json")
