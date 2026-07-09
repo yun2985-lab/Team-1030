@@ -12874,5 +12874,237 @@
         "win": true
       }
     ]
+  },
+  "KR_8290393941": {
+    "win": true,
+    "game_end": 1783514386217,
+    "participants": [
+      {
+        "puuid": "4LjjsaPgj5njEfqdyrVgglUssnIzettiqQDr1rnYGdyR9OEc8Q13Cots0zbHaDEb4hrMuIDhvc2qFQ",
+        "championName": "Jhin",
+        "kills": 9,
+        "deaths": 0,
+        "assists": 6,
+        "damage": 33875,
+        "gold": 15533,
+        "vision": 44,
+        "win": true
+      },
+      {
+        "puuid": "0iAL3XQYfweXFp-uh-7cOXFEElgvqq32PkQbBS4VrWBwJZ0LM59ZKtYjhpGhic97ENnWBX7_3hgJvw",
+        "championName": "Jayce",
+        "kills": 13,
+        "deaths": 1,
+        "assists": 11,
+        "damage": 27277,
+        "gold": 16369,
+        "vision": 39,
+        "win": true
+      },
+      {
+        "puuid": "IYfrAzZ1IVM8Ju_AeBiiSeexs9ICamUfGBLoufqhfzhqvNY-nIguuNq2SjMY6i2uMO7e2p_unR8ZvA",
+        "championName": "Velkoz",
+        "kills": 7,
+        "deaths": 1,
+        "assists": 11,
+        "damage": 45000,
+        "gold": 12695,
+        "vision": 49,
+        "win": true
+      },
+      {
+        "puuid": "9hzlqsDGGPVhotxKQtdeyow68FTDZQdLf26E9jNtbkkUaG1tdEWbbIid084kMuiG_O3sXdRB6bUmaQ",
+        "championName": "Ashe",
+        "kills": 10,
+        "deaths": 7,
+        "assists": 14,
+        "damage": 22220,
+        "gold": 14043,
+        "vision": 32,
+        "win": true
+      },
+      {
+        "puuid": "0Mr2mkSvQzYJZ8uWViRqTh1EAVQvtvBolJdwxKq8naur333q_1uWJwTkzwoExRcjowI2K48Htk27Tw",
+        "championName": "Morgana",
+        "kills": 3,
+        "deaths": 5,
+        "assists": 26,
+        "damage": 16783,
+        "gold": 9974,
+        "vision": 76,
+        "win": true
+      },
+      {
+        "puuid": "PxNc_CAAkJjsuOaAEZALxNjd-RwpQqjgNzdcc470PjxeeWIIq4XIzRUMADOJUI19Iy3JsS_kzrG2OQ",
+        "championName": "Nasus",
+        "kills": 2,
+        "deaths": 4,
+        "assists": 1,
+        "damage": 10332,
+        "gold": 10928,
+        "vision": 24,
+        "win": false
+      },
+      {
+        "puuid": "ihriLvDJladm3NOFpl3Z6E4pd_z4KHJEiBKSiE9Z1N7S0hGPw21vrsaJdkT77NSwbKFREfyLLWyw0Q",
+        "championName": "Rammus",
+        "kills": 4,
+        "deaths": 9,
+        "assists": 2,
+        "damage": 7979,
+        "gold": 9916,
+        "vision": 21,
+        "win": false
+      },
+      {
+        "puuid": "lS1m0q_9OfCHQta2wNqhZfOhT7nWD3-y1o9eGuDMWDl-koNu0PIsXuGywfXfkApRTE4HzZUu2hdbuA",
+        "championName": "Kaisa",
+        "kills": 4,
+        "deaths": 5,
+        "assists": 2,
+        "damage": 15158,
+        "gold": 10545,
+        "vision": 19,
+        "win": false
+      },
+      {
+        "puuid": "wny6SXdoitsxQrmrPF1vvHTX26cKe1-px7ZrS-XIm1zuKXyfJq0u2kGH0vTa9oXOsu5VQO1ektk7PA",
+        "championName": "Varus",
+        "kills": 1,
+        "deaths": 12,
+        "assists": 11,
+        "damage": 18682,
+        "gold": 11641,
+        "vision": 32,
+        "win": false
+      },
+      {
+        "puuid": "Vhd1dkc7A_bULh2Mc4BRwAmuRJ7pU43zBsWNCfJD0rthiJXp_UusVwJCpkveTNL-NBQIL7EUhhliIA",
+        "championName": "Nautilus",
+        "kills": 3,
+        "deaths": 12,
+        "assists": 5,
+        "damage": 8146,
+        "gold": 7896,
+        "vision": 99,
+        "win": false
+      }
+    ]
+  },
+  "KR_8290361214": {
+    "win": false,
+    "game_end": 1783512280229,
+    "participants": [
+      {
+        "puuid": "UyOWCeeNIM1clL6KJogG4uLFOO7GOiw0DDagNEABy3OEwEd5Ycp8Wua1vYAzpaxyd0eW0pIn-v9Ugw",
+        "championName": "Tryndamere",
+        "kills": 2,
+        "deaths": 10,
+        "assists": 1,
+        "damage": 8391,
+        "gold": 7219,
+        "vision": 25,
+        "win": false
+      },
+      {
+        "puuid": "vkOlCtizxEf0Mw1RQUcjGbRZUV6_a-ysPO08pZyCLpFCRy-awWjm3IUT1GkdNnCXRQ8dKpN9O2cJLQ",
+        "championName": "Udyr",
+        "kills": 7,
+        "deaths": 7,
+        "assists": 2,
+        "damage": 17776,
+        "gold": 10140,
+        "vision": 38,
+        "win": false
+      },
+      {
+        "puuid": "IYfrAzZ1IVM8Ju_AeBiiSeexs9ICamUfGBLoufqhfzhqvNY-nIguuNq2SjMY6i2uMO7e2p_unR8ZvA",
+        "championName": "Velkoz",
+        "kills": 6,
+        "deaths": 6,
+        "assists": 1,
+        "damage": 16229,
+        "gold": 9867,
+        "vision": 30,
+        "win": false
+      },
+      {
+        "puuid": "Ui6eJ0E_DLKFb3iX1OmN6PL_qTzrh6WyAEAUzvFtpIsDaUIQhNcVvUgb4Vuu-uPP-BDgGQUrYEqo2A",
+        "championName": "Zeri",
+        "kills": 0,
+        "deaths": 4,
+        "assists": 4,
+        "damage": 8130,
+        "gold": 9144,
+        "vision": 16,
+        "win": false
+      },
+      {
+        "puuid": "Kly5fXeZWlqtMh1jzRwcZqAAKENnZYweYf39FmdkKUWda22Y9SJBUspzD3w18oGbQuoHEjXtkCKnqg",
+        "championName": "Lulu",
+        "kills": 0,
+        "deaths": 5,
+        "assists": 5,
+        "damage": 2727,
+        "gold": 5822,
+        "vision": 66,
+        "win": false
+      },
+      {
+        "puuid": "yAonrF44ZpFJU5pSur4yq4qeLZKSnFL2fJywNkkE7Tujqj4AFUax7ealPGANSQSwvAasnX1tM5If_w",
+        "championName": "Akali",
+        "kills": 11,
+        "deaths": 3,
+        "assists": 3,
+        "damage": 29032,
+        "gold": 11175,
+        "vision": 24,
+        "win": true
+      },
+      {
+        "puuid": "F59484K2R1YSSQ8sJsY-aCit_or0BK68o33s_YFDwJryvyu4tjkGT2zr3nQAg7wwvm-sBBWwmewcXg",
+        "championName": "Graves",
+        "kills": 4,
+        "deaths": 5,
+        "assists": 6,
+        "damage": 13892,
+        "gold": 9666,
+        "vision": 19,
+        "win": true
+      },
+      {
+        "puuid": "T_ZN8u9XkMR7ODA7-lF6I7ZV1XATB_iFlJpssElHEnP15RyMhem3bk7NYyZFItbhSvlrF5q2My1Rxw",
+        "championName": "Xerath",
+        "kills": 7,
+        "deaths": 5,
+        "assists": 4,
+        "damage": 19048,
+        "gold": 9768,
+        "vision": 30,
+        "win": true
+      },
+      {
+        "puuid": "bcFTjhpGDMNta6MuetlHMBYiitRuPLYP_aKBnKG3TV4r0IPsn3g62yuNY5meHlMiQv2MR3D_Gf0cIw",
+        "championName": "Ezreal",
+        "kills": 7,
+        "deaths": 2,
+        "assists": 6,
+        "damage": 19820,
+        "gold": 12793,
+        "vision": 27,
+        "win": true
+      },
+      {
+        "puuid": "G7EJWkwZsiNlSJrgEvGRApctnGnrTcSm1e0vO6pgoUM_v71HbkPCZZpnku3UxR77x3cX4G9mofLK1g",
+        "championName": "Leona",
+        "kills": 3,
+        "deaths": 1,
+        "assists": 13,
+        "damage": 7038,
+        "gold": 7881,
+        "vision": 53,
+        "win": true
+      }
+    ]
   }
 }

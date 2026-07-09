@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-08T09:17:01.456133Z",
+  "updated_at": "2026-07-09T11:31:35.292349Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -18,6 +18,15 @@
         },
         {
           "date": "2026-07-08",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 54,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 0
+        },
+        {
+          "date": "2026-07-09",
           "solo_tier": "SILVER",
           "solo_rank": "I",
           "solo_lp": 54,
@@ -42,10 +51,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 6,
+          "games": 4,
           "wins": 1,
-          "losses": 5,
-          "winrate": 16.7
+          "losses": 3,
+          "winrate": 25.0
         },
         "flex": {
           "games": 8,
@@ -64,7 +73,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 5,
+      "solo_last_game_days_ago": 6,
       "recent_flex_games": [
         {
           "date": "2026-06-18",
@@ -120,14 +129,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 0
+        },
+        {
+          "date": "2026-07-09",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 15,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 0
         }
       ],
       "solo": {
         "tier": "EMERALD",
         "rank": "II",
-        "lp": 17,
-        "wins": 123,
-        "losses": 84
+        "lp": 15,
+        "wins": 124,
+        "losses": 85
       },
       "flex": {
         "tier": "GOLD",
@@ -138,10 +156,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 34,
-          "wins": 21,
-          "losses": 13,
-          "winrate": 61.8
+          "games": 36,
+          "wins": 22,
+          "losses": 14,
+          "winrate": 61.1
         },
         "flex": {
           "games": 5,
@@ -157,10 +175,10 @@
         }
       },
       "solo_streak": {
-        "type": "loss",
+        "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 4,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-06-18",
@@ -216,6 +234,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 0
+        },
+        {
+          "date": "2026-07-09",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 0
         }
       ],
       "solo": {
@@ -256,7 +283,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 22,
+      "solo_last_game_days_ago": 23,
       "recent_flex_games": [
         {
           "date": "2026-06-18",
@@ -312,6 +339,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "III",
           "flex_lp": 77
+        },
+        {
+          "date": "2026-07-09",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 35,
+          "flex_tier": "GOLD",
+          "flex_rank": "III",
+          "flex_lp": 77
         }
       ],
       "solo": {
@@ -330,10 +366,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 52,
-          "wins": 27,
+          "games": 51,
+          "wins": 26,
           "losses": 25,
-          "winrate": 51.9
+          "winrate": 51.0
         },
         "flex": {
           "games": 0,
@@ -352,7 +388,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 2,
       "recent_flex_games": []
     },
     {
@@ -371,6 +407,15 @@
         },
         {
           "date": "2026-07-08",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 0
+        },
+        {
+          "date": "2026-07-09",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
