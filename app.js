@@ -1,6 +1,9 @@
 const PLAYER_COLORS = ["#c8a44d", "#5b8fd9", "#4caf82", "#d1495b", "#9a5fd0"];
 const PLAYER_POINT_STYLES = ["circle", "rectRot", "triangle", "rect", "star"];
 
+let teamChartInstance = null;
+let teamChartZoomed = false;
+
 const TIER_ORDER = [
   "UNRANKED", "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM",
   "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER",
@@ -8,10 +11,20 @@ const TIER_ORDER = [
 const RANK_ORDER = { "IV": 0, "III": 1, "II": 2, "I": 3, "": 4 };
 
 const TIER_LABEL_KR = {
-  UNRANKED: "언랭크", IRON: "아이언", BRONZE: "브론즈", SILVER: "실버",
+  UNRANKED: "심해", IRON: "아이언", BRONZE: "브론즈", SILVER: "실버",
   GOLD: "골드", PLATINUM: "플래티넘", EMERALD: "에메랄드", DIAMOND: "다이아",
   MASTER: "마스터", GRANDMASTER: "그랜드마스터", CHALLENGER: "챌린저",
 };
+
+// 실제 롤 티어 뱃지 색상에 가깝게 맞춘 색상표 (정확한 라이엇 헥스값은 아니고 근사치)
+const TIER_COLORS = {
+  UNRANKED: "#8a8f9c", IRON: "#5b5a56", BRONZE: "#8c5a34", SILVER: "#9fa8b5",
+  GOLD: "#e8b339", PLATINUM: "#3fa992", EMERALD: "#0fae67", DIAMOND: "#5d7ce0",
+  MASTER: "#b153e0", GRANDMASTER: "#e0483f", CHALLENGER: "#61e2f0",
+};
+
+// 랭크 로마숫자를 화면 표기용 아라비아 숫자로 변환 (예: "III" -> 3)
+const RANK_TO_NUM = { "IV": 4, "III": 3, "II": 2, "I": 1 };
 
 function tierScore(tier, rank, lp) {
   const t = TIER_ORDER.indexOf(tier) * 1000;
@@ -21,8 +34,34 @@ function tierScore(tier, rank, lp) {
   return t + r + (lp || 0) / 2;
 }
 
+// tierScore로 만든 숫자값을 y축에 표시할 "골드 4" 같은 라벨로 되돌리는 함수
+function scoreToTierLabel(value) {
+  const idx = Math.floor(value / 1000);
+  const tier = TIER_ORDER[idx];
+  if (!tier) return "";
+  const remainder = Math.round(value - idx * 1000);
+  const rankKeys = ["IV", "III", "II", "I", ""];
+  const rankIdx = Math.min(Math.max(Math.round(remainder / 100), 0), rankKeys.length - 1);
+  const rankStr = rankKeys[rankIdx];
+  const label = TIER_LABEL_KR[tier] || tier;
+  const noRankTiers = ["UNRANKED", "MASTER", "GRANDMASTER", "CHALLENGER"];
+  if (noRankTiers.includes(tier)) {
+    // 랭크 구분이 없는 티어는 경계값(0, 100, 200...)에서만 라벨을 보여줌
+    return remainder === 0 ? label : "";
+  }
+  const num = RANK_TO_NUM[rankStr];
+  return num ? `${label} ${num}` : label;
+}
+
+// 같은 값을 실제 롤 티어 색상으로 변환
+function scoreToTierColor(value) {
+  const idx = Math.floor(value / 1000);
+  const tier = TIER_ORDER[idx];
+  return TIER_COLORS[tier] || "#7d8aa8";
+}
+
 function tierBadgeText(tier, rank, lp) {
-  if (!tier || tier === "UNRANKED") return "언랭크";
+  if (!tier || tier === "UNRANKED") return "심해";
   const kr = TIER_LABEL_KR[tier] || tier;
   const rankPart = rank && !["MASTER", "GRANDMASTER", "CHALLENGER"].includes(tier) ? ` ${rank}` : "";
   return `${kr}${rankPart} ${lp}LP`;
@@ -176,14 +215,11 @@ function renderChart(canvasId, history) {
         y: {
           display: true,
           ticks: {
-            color: "#7d8aa8",
-            stepSize: 1000,
+            stepSize: 100,
             font: { size: 9 },
-            callback: (value) => {
-              const idx = Math.round(value / 1000);
-              const tier = TIER_ORDER[idx];
-              return tier ? TIER_LABEL_KR[tier] : "";
-            },
+            maxTicksLimit: 5,
+            color: (context) => scoreToTierColor(context.tick.value),
+            callback: (value) => scoreToTierLabel(value),
           },
           grid: { color: "rgba(126,138,168,0.06)" },
         },
@@ -245,7 +281,7 @@ function renderTeamChart(players) {
     };
   });
 
-  new Chart(ctx, {
+  teamChartInstance = new Chart(ctx, {
     type: "line",
     data: { labels: allDates.map(d => d.slice(5)), datasets },
     options: {
@@ -274,18 +310,46 @@ function renderTeamChart(players) {
           display: true,
           title: { display: true, text: "티어", color: "#9aa5c0", font: { size: 11 } },
           ticks: {
-            color: "#7d8aa8",
-            stepSize: 1000,
-            callback: (value) => {
-              const idx = Math.round(value / 1000);
-              const tier = TIER_ORDER[idx];
-              return tier ? TIER_LABEL_KR[tier] : "";
-            },
+            stepSize: 100,
+            color: (context) => scoreToTierColor(context.tick.value),
+            callback: (value) => scoreToTierLabel(value),
           },
           grid: { color: "rgba(126,138,168,0.06)" },
         },
       },
     },
+  });
+}
+
+// 돋보기 버튼: 심해(0점) 같은 극단값을 빼고 실제 랭크 구간만 확대해서 보여줌
+function setupZoomToggle() {
+  const btn = document.getElementById("zoom-toggle-btn");
+  if (!btn || !teamChartInstance) return;
+
+  btn.addEventListener("click", () => {
+    teamChartZoomed = !teamChartZoomed;
+    const yScale = teamChartInstance.options.scales.y;
+
+    if (teamChartZoomed) {
+      const scores = teamChartInstance.data.datasets
+        .flatMap(ds => ds.data)
+        .filter(v => v !== null && v > 0);
+      if (scores.length) {
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        const pad = Math.max((max - min) * 0.15, 80);
+        yScale.min = Math.max(0, min - pad);
+        yScale.max = max + pad;
+      }
+      btn.style.background = "rgba(200,164,77,0.18)";
+      btn.title = "전체 보기";
+    } else {
+      delete yScale.min;
+      delete yScale.max;
+      btn.style.background = "none";
+      btn.title = "확대해서 격차 보기";
+    }
+    teamChartInstance.update();
   });
 }
 
@@ -315,6 +379,7 @@ async function main() {
   try {
     renderTeamLegend(players);
     renderTeamChart(players);
+    setupZoomToggle();
   } catch (e) {
     console.error("팀 차트 렌더링 실패:", e);
   }
