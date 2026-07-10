@@ -125,20 +125,18 @@ function recentSoloGamesHTML(games) {
     const hasOpponent = g.opponent_champion != null;
     const verdictCls = g.laner_verdict === "win" ? "mvp" : g.laner_verdict === "loss" ? "worst" : "";
     const verdictLabel = LANE_VERDICT_LABEL[g.laner_verdict] || "";
-    const laneHTML = hasOpponent
-      ? `
-        <div class="lane-compare">
-          <span class="lane-me">${g.champion} ${g.kills}/${g.deaths}/${g.assists}</span>
-          <span class="lane-vs">vs</span>
-          <span class="lane-opp">${g.opponent_champion} ${g.opponent_kills}/${g.opponent_deaths}/${g.opponent_assists}</span>
-          ${verdictLabel ? `<span class="flex-rank ${verdictCls}">${verdictLabel}</span>` : ""}
-        </div>`
-      : `<div class="lane-compare"><span class="lane-me">${g.champion} ${g.kills}/${g.deaths}/${g.assists}</span></div>`;
 
     return `
-      <div class="flex-game-row">
-        <span class="flex-result ${resultCls}">${g.win ? "승" : "패"}</span>
-        ${laneHTML}
+      <div class="flex-game-row" style="display:flex; flex-direction:column; gap:2px; align-items:stretch;">
+        <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+          <span class="flex-result ${resultCls}">${g.win ? "승" : "패"}</span>
+          <span class="lane-me">${g.champion} ${g.kills}/${g.deaths}/${g.assists}</span>
+          ${verdictLabel ? `<span class="flex-rank ${verdictCls}">${verdictLabel}</span>` : ""}
+        </div>
+        ${hasOpponent ? `
+        <div style="color:#7d8aa8; font-size:0.85em; padding-left:2px;">
+          vs ${g.opponent_champion} ${g.opponent_kills}/${g.opponent_deaths}/${g.opponent_assists}
+        </div>` : ""}
       </div>`;
   }).join("");
 
