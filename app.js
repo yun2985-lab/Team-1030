@@ -1,4 +1,5 @@
 const PLAYER_COLORS = ["#c8a44d", "#5b8fd9", "#4caf82", "#d1495b", "#9a5fd0"];
+const PLAYER_POINT_STYLES = ["circle", "rectRot", "triangle", "rect", "star"];
 
 const TIER_ORDER = [
   "UNRANKED", "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM",
@@ -194,6 +195,7 @@ function renderTeamChart(players) {
     });
 
     const color = PLAYER_COLORS[i % PLAYER_COLORS.length];
+    const pointStyle = PLAYER_POINT_STYLES[i % PLAYER_POINT_STYLES.length];
     return {
       label: p.label,
       data,
@@ -203,9 +205,13 @@ function renderTeamChart(players) {
       spanGaps: true,
       borderWidth: 2,
       tension: 0.3,
-      pointRadius: 2,
-      pointHoverRadius: 5,
+      // 같은 티어/구간에 있는 선수끼리 선이 겹칠 때도 점 모양으로 구분되도록
+      pointStyle,
+      pointRadius: 4,
+      pointHoverRadius: 6,
       pointBackgroundColor: color,
+      pointBorderColor: "#0b1220",
+      pointBorderWidth: 1,
     };
   });
 
