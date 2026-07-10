@@ -13106,5 +13106,121 @@
         "win": true
       }
     ]
+  },
+  "KR_8291668628": {
+    "win": true,
+    "game_end": 1783604405297,
+    "participants": [
+      {
+        "puuid": "3cQbOjQiGnPkaq6jXvOmjCwAvv3HBjc7fMH-5PLgOUsLwYNdCXPIbJKVp4n5W9Iu0n1ymHqFs8xY_w",
+        "championName": "Illaoi",
+        "kills": 9,
+        "deaths": 6,
+        "assists": 1,
+        "damage": 24655,
+        "gold": 11200,
+        "vision": 23,
+        "win": false
+      },
+      {
+        "puuid": "tkTICOHVcklaCW3rjZGd-TfgD82wRmLy90mdhsLiw0yHFP6gS7J-8YzLQwWSZ2B1WDCDmP76FwPQeQ",
+        "championName": "Nocturne",
+        "kills": 5,
+        "deaths": 4,
+        "assists": 5,
+        "damage": 12160,
+        "gold": 10597,
+        "vision": 30,
+        "win": false
+      },
+      {
+        "puuid": "ZCi28_x3HFBUGU5R3rWQrdnnebV1HEtFp_-STzABQHAJc8cCSEWzDhwpl7YaW2u9vRIR2aEIG7v0Yg",
+        "championName": "Hwei",
+        "kills": 3,
+        "deaths": 6,
+        "assists": 5,
+        "damage": 21993,
+        "gold": 8316,
+        "vision": 26,
+        "win": false
+      },
+      {
+        "puuid": "Vmmo0ZnBjdIC5_6yLAfXvV0bayhU_Uqr8nizQ5n4OD8Sly-q6l0lRvESz42jm_Pb-OuKDKbymF-tCg",
+        "championName": "MissFortune",
+        "kills": 3,
+        "deaths": 4,
+        "assists": 4,
+        "damage": 11802,
+        "gold": 9769,
+        "vision": 18,
+        "win": false
+      },
+      {
+        "puuid": "z2rAXsUjLGwNKGd5Eyc0aWDJJvbvyqEv6vIqjSXcSQlIZK9nIRJ-lL1ybWO6Nin7pmtuCS6AJdHpcA",
+        "championName": "Nami",
+        "kills": 1,
+        "deaths": 7,
+        "assists": 9,
+        "damage": 6357,
+        "gold": 6545,
+        "vision": 42,
+        "win": false
+      },
+      {
+        "puuid": "KY7BD8EkpxqcPBrvVrhLLLZZ0BpGNrj8vEcbV6ccwtWtEqqRWtNUN5nbubivPssEl2eJN5VSIG24ZQ",
+        "championName": "Fiora",
+        "kills": 9,
+        "deaths": 6,
+        "assists": 5,
+        "damage": 26405,
+        "gold": 13049,
+        "vision": 29,
+        "win": true
+      },
+      {
+        "puuid": "Rb8u8lbPLHOA3ZbBISN0f24PLd4qa3RAcBKTyZdy8PboV5ZWGcLI2YNalZXttuGECJ47bqW8QZjwgA",
+        "championName": "Trundle",
+        "kills": 5,
+        "deaths": 5,
+        "assists": 6,
+        "damage": 12772,
+        "gold": 12139,
+        "vision": 27,
+        "win": true
+      },
+      {
+        "puuid": "DvMVahtSZgKHlYkwXzTg9E-i5Q6Fjxn-x-4_vANxdfdGtjb3sR9j8O31VfP4G3Rjo2dJP8IU-XvVMw",
+        "championName": "Taliyah",
+        "kills": 4,
+        "deaths": 4,
+        "assists": 4,
+        "damage": 10791,
+        "gold": 8611,
+        "vision": 24,
+        "win": true
+      },
+      {
+        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
+        "championName": "Ziggs",
+        "kills": 7,
+        "deaths": 3,
+        "assists": 10,
+        "damage": 29103,
+        "gold": 13093,
+        "vision": 20,
+        "win": true
+      },
+      {
+        "puuid": "15hmnPCY2LV-G6IbwHrPHJtMOD0Pl9wSKspywAYzl-Zxg5n_foQY-lxvBryo6aqN-CROU7wX5Mbm1A",
+        "championName": "Seraphine",
+        "kills": 2,
+        "deaths": 4,
+        "assists": 10,
+        "damage": 10711,
+        "gold": 8055,
+        "vision": 51,
+        "win": true
+      }
+    ]
   }
 }
