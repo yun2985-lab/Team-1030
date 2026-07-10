@@ -16,7 +16,9 @@ const TIER_LABEL_KR = {
 function tierScore(tier, rank, lp) {
   const t = TIER_ORDER.indexOf(tier) * 1000;
   const r = (RANK_ORDER[rank] ?? 0) * 100;
-  return t + r + (lp || 0) / 1000;
+  // lp를 2로만 나눠서, 같은 티어/랭크 내에서도 LP 차이가 그래프에 좀 더 드러나게 함
+  // (랭크 간격이 100이라 lp 기여분은 항상 50 미만으로 유지해야 순서가 안 꼬임)
+  return t + r + (lp || 0) / 2;
 }
 
 function tierBadgeText(tier, rank, lp) {
