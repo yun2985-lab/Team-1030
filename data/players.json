@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-10T03:05:56.592369Z",
+  "updated_at": "2026-07-10T03:20:42.300082Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -113,6 +113,50 @@
           "assists": 24,
           "rank": 7,
           "total": 10
+        }
+      ],
+      "recent_solo_games": [
+        {
+          "date": "2026-07-02",
+          "champion": "Thresh",
+          "win": true,
+          "kills": 1,
+          "deaths": 7,
+          "assists": 18,
+          "position": "UTILITY",
+          "opponent_champion": "Seraphine",
+          "opponent_kills": 3,
+          "opponent_deaths": 9,
+          "opponent_assists": 21,
+          "laner_verdict": "even"
+        },
+        {
+          "date": "2026-07-02",
+          "champion": "Nautilus",
+          "win": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0,
+          "position": "UTILITY",
+          "opponent_champion": "Blitzcrank",
+          "opponent_kills": 0,
+          "opponent_deaths": 0,
+          "opponent_assists": 0,
+          "laner_verdict": "even"
+        },
+        {
+          "date": "2026-06-14",
+          "champion": "Teemo",
+          "win": false,
+          "kills": 1,
+          "deaths": 6,
+          "assists": 5,
+          "position": "TOP",
+          "opponent_champion": "Nasus",
+          "opponent_kills": 0,
+          "opponent_deaths": 4,
+          "opponent_assists": 7,
+          "laner_verdict": "loss"
         }
       ]
     },
@@ -228,6 +272,50 @@
           "rank": 2,
           "total": 10
         }
+      ],
+      "recent_solo_games": [
+        {
+          "date": "2026-07-08",
+          "champion": "Velkoz",
+          "win": true,
+          "kills": 7,
+          "deaths": 1,
+          "assists": 11,
+          "position": "MIDDLE",
+          "opponent_champion": "Kaisa",
+          "opponent_kills": 4,
+          "opponent_deaths": 5,
+          "opponent_assists": 2,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-07-08",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 6,
+          "deaths": 6,
+          "assists": 1,
+          "position": "MIDDLE",
+          "opponent_champion": "Xerath",
+          "opponent_kills": 7,
+          "opponent_deaths": 5,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-07-03",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 7,
+          "deaths": 8,
+          "assists": 7,
+          "position": "MIDDLE",
+          "opponent_champion": "Akali",
+          "opponent_kills": 12,
+          "opponent_deaths": 7,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        }
       ]
     },
     {
@@ -342,6 +430,50 @@
           "rank": 4,
           "total": 10
         }
+      ],
+      "recent_solo_games": [
+        {
+          "date": "2026-06-15",
+          "champion": "Lucian",
+          "win": true,
+          "kills": 5,
+          "deaths": 3,
+          "assists": 6,
+          "position": "BOTTOM",
+          "opponent_champion": "Ziggs",
+          "opponent_kills": 3,
+          "opponent_deaths": 7,
+          "opponent_assists": 7,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-06-15",
+          "champion": "Lucian",
+          "win": false,
+          "kills": 14,
+          "deaths": 9,
+          "assists": 7,
+          "position": "BOTTOM",
+          "opponent_champion": "Ezreal",
+          "opponent_kills": 8,
+          "opponent_deaths": 10,
+          "opponent_assists": 6,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-06-15",
+          "champion": "Nautilus",
+          "win": true,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0,
+          "position": "UTILITY",
+          "opponent_champion": "Braum",
+          "opponent_kills": 0,
+          "opponent_deaths": 0,
+          "opponent_assists": 0,
+          "laner_verdict": "even"
+        }
       ]
     },
     {
@@ -425,7 +557,51 @@
         "count": 2
       },
       "solo_last_game_days_ago": 0,
-      "recent_flex_games": []
+      "recent_flex_games": [],
+      "recent_solo_games": [
+        {
+          "date": "2026-07-09",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 7,
+          "deaths": 3,
+          "assists": 10,
+          "position": "BOTTOM",
+          "opponent_champion": "MissFortune",
+          "opponent_kills": 3,
+          "opponent_deaths": 4,
+          "opponent_assists": 4,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-07-06",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 6,
+          "deaths": 2,
+          "assists": 11,
+          "position": "BOTTOM",
+          "opponent_champion": "Caitlyn",
+          "opponent_kills": 3,
+          "opponent_deaths": 8,
+          "opponent_assists": 4,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-07-06",
+          "champion": "Ziggs",
+          "win": false,
+          "kills": 1,
+          "deaths": 9,
+          "assists": 4,
+          "position": "BOTTOM",
+          "opponent_champion": "Zeri",
+          "opponent_kills": 18,
+          "opponent_deaths": 5,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        }
+      ]
     },
     {
       "label": "장의사",
@@ -539,7 +715,8 @@
           "rank": 9,
           "total": 10
         }
-      ]
+      ],
+      "recent_solo_games": []
     }
   ]
 }
