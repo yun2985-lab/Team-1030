@@ -158,7 +158,7 @@ def get_match_result(match_id, puuid, cache):
 
 
 def performance_rank(participants, puuid):
-    """경기 내 참가자들을 활약도 점수로 정렬해 puuid의 순위를 계산.
+    """같은 팀(5명) 안에서 활약도 점수로 정렬해 puuid의 순위를 계산.
     op.gg 등 커뮤니티 스탯 사이트에서 흔히 쓰는 방식(킬관여/딜량/골드/시야)을
     참고한 자체 근사치이며, 공식 순위 지표는 아니다."""
     def score(p):
@@ -171,7 +171,12 @@ def performance_rank(participants, puuid):
             + (2 if p["win"] else 0)
         )
 
-    ranked = sorted(participants, key=score, reverse=True)
+    me = next((p for p in participants if p["puuid"] == puuid), None)
+    if not me:
+        return None
+    teammates = [p for p in participants if p.get("teamId") == me.get("teamId")]
+
+    ranked = sorted(teammates, key=score, reverse=True)
     for i, p in enumerate(ranked):
         if p["puuid"] == puuid:
             return {"rank": i + 1, "total": len(ranked)}
