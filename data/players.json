@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-10T04:44:29.313204Z",
+  "updated_at": "2026-07-10T11:23:58.602372Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -41,7 +41,7 @@
           "solo_lp": 54,
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
-          "flex_lp": 0
+          "flex_lp": 18
         }
       ],
       "solo": {
@@ -54,9 +54,9 @@
       "flex": {
         "tier": "PLATINUM",
         "rank": "IV",
-        "lp": 0,
-        "wins": 31,
-        "losses": 35
+        "lp": 18,
+        "wins": 33,
+        "losses": 36
       },
       "recent_30d": {
         "solo": {
@@ -66,10 +66,10 @@
           "winrate": 25.0
         },
         "flex": {
-          "games": 8,
-          "wins": 1,
-          "losses": 7,
-          "winrate": 12.5
+          "games": 11,
+          "wins": 3,
+          "losses": 8,
+          "winrate": 27.3
         },
         "aram": {
           "games": 0,
@@ -85,33 +85,33 @@
       "solo_last_game_days_ago": 7,
       "recent_flex_games": [
         {
-          "date": "2026-06-18",
+          "date": "2026-07-10",
+          "champion": "Malphite",
+          "win": true,
+          "kills": 8,
+          "deaths": 11,
+          "assists": 8,
+          "rank": 3,
+          "total": 5
+        },
+        {
+          "date": "2026-07-10",
           "champion": "Nautilus",
           "win": false,
           "kills": 3,
-          "deaths": 12,
-          "assists": 20,
-          "rank": 2,
+          "deaths": 11,
+          "assists": 18,
+          "rank": 3,
           "total": 5
         },
         {
-          "date": "2026-06-18",
-          "champion": "Thresh",
-          "win": false,
-          "kills": 6,
-          "deaths": 13,
-          "assists": 17,
-          "rank": 2,
-          "total": 5
-        },
-        {
-          "date": "2026-06-16",
+          "date": "2026-07-10",
           "champion": "Nautilus",
-          "win": false,
-          "kills": 1,
-          "deaths": 9,
-          "assists": 24,
-          "rank": 4,
+          "win": true,
+          "kills": 3,
+          "deaths": 13,
+          "assists": 27,
+          "rank": 1,
           "total": 5
         }
       ],
@@ -199,7 +199,7 @@
           "solo_lp": 15,
           "flex_tier": "GOLD",
           "flex_rank": "IV",
-          "flex_lp": 0
+          "flex_lp": 17
         }
       ],
       "solo": {
@@ -212,9 +212,9 @@
       "flex": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 0,
-        "wins": 34,
-        "losses": 46
+        "lp": 17,
+        "wins": 36,
+        "losses": 47
       },
       "recent_30d": {
         "solo": {
@@ -224,10 +224,10 @@
           "winrate": 62.9
         },
         "flex": {
-          "games": 5,
-          "wins": 0,
-          "losses": 5,
-          "winrate": 0.0
+          "games": 8,
+          "wins": 2,
+          "losses": 6,
+          "winrate": 25.0
         },
         "aram": {
           "games": 0,
@@ -243,33 +243,33 @@
       "solo_last_game_days_ago": 1,
       "recent_flex_games": [
         {
-          "date": "2026-06-18",
+          "date": "2026-07-10",
           "champion": "Velkoz",
-          "win": false,
-          "kills": 2,
-          "deaths": 13,
-          "assists": 11,
-          "rank": 5,
-          "total": 5
-        },
-        {
-          "date": "2026-06-18",
-          "champion": "Velkoz",
-          "win": false,
-          "kills": 15,
-          "deaths": 9,
-          "assists": 8,
+          "win": true,
+          "kills": 7,
+          "deaths": 2,
+          "assists": 10,
           "rank": 1,
           "total": 5
         },
         {
-          "date": "2026-06-10",
-          "champion": "Velkoz",
+          "date": "2026-07-10",
+          "champion": "Lissandra",
           "win": false,
-          "kills": 16,
-          "deaths": 4,
-          "assists": 10,
-          "rank": 2,
+          "kills": 3,
+          "deaths": 17,
+          "assists": 15,
+          "rank": 5,
+          "total": 5
+        },
+        {
+          "date": "2026-07-10",
+          "champion": "Velkoz",
+          "win": true,
+          "kills": 12,
+          "deaths": 10,
+          "assists": 9,
+          "rank": 4,
           "total": 5
         }
       ],
@@ -514,8 +514,8 @@
           "solo_rank": "IV",
           "solo_lp": 55,
           "flex_tier": "GOLD",
-          "flex_rank": "III",
-          "flex_lp": 77
+          "flex_rank": "II",
+          "flex_lp": 1
         }
       ],
       "solo": {
@@ -527,10 +527,10 @@
       },
       "flex": {
         "tier": "GOLD",
-        "rank": "III",
-        "lp": 77,
-        "wins": 38,
-        "losses": 39
+        "rank": "II",
+        "lp": 1,
+        "wins": 40,
+        "losses": 40
       },
       "recent_30d": {
         "solo": {
@@ -540,10 +540,10 @@
           "winrate": 51.9
         },
         "flex": {
-          "games": 0,
-          "wins": 0,
-          "losses": 0,
-          "winrate": 0.0
+          "games": 3,
+          "wins": 2,
+          "losses": 1,
+          "winrate": 66.7
         },
         "aram": {
           "games": 0,
@@ -557,7 +557,38 @@
         "count": 2
       },
       "solo_last_game_days_ago": 0,
-      "recent_flex_games": [],
+      "recent_flex_games": [
+        {
+          "date": "2026-07-10",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 7,
+          "deaths": 4,
+          "assists": 9,
+          "rank": 2,
+          "total": 5
+        },
+        {
+          "date": "2026-07-10",
+          "champion": "Ziggs",
+          "win": false,
+          "kills": 13,
+          "deaths": 7,
+          "assists": 11,
+          "rank": 1,
+          "total": 5
+        },
+        {
+          "date": "2026-07-10",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 6,
+          "deaths": 6,
+          "assists": 20,
+          "rank": 3,
+          "total": 5
+        }
+      ],
       "recent_solo_games": [
         {
           "date": "2026-07-09",
