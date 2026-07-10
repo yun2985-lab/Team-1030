@@ -272,6 +272,13 @@ function renderTeamChart(players) {
   const ctx = document.getElementById("team-chart");
   if (!ctx) return;
 
+  // "바로 적용" 등으로 재호출될 때 기존 차트가 남아있으면 캔버스 재사용 에러가 나므로 먼저 정리
+  if (teamChartInstance) {
+    teamChartInstance.destroy();
+    teamChartInstance = null;
+  }
+  teamChartZoomed = false;
+
   const allDates = [...new Set(players.flatMap(p => (p.history || []).map(h => h.date)))].sort();
   if (!allDates.length) return;
 
@@ -358,7 +365,11 @@ function setupZoomToggle() {
   const btn = document.getElementById("zoom-toggle-btn");
   if (!btn || !teamChartInstance) return;
 
-  btn.addEventListener("click", () => {
+  btn.style.background = "none";
+  btn.title = "확대해서 격차 보기";
+
+  // addEventListener 대신 onclick 할당 — "바로 적용"으로 재호출돼도 리스너가 중복 안 쌓임
+  btn.onclick = () => {
     teamChartZoomed = !teamChartZoomed;
     const yScale = teamChartInstance.options.scales.y;
 
@@ -382,7 +393,51 @@ function setupZoomToggle() {
       btn.title = "확대해서 격차 보기";
     }
     teamChartInstance.update();
+  };
+}
+
+// 모든 선수의 recent_flex_games 중 가장 최근 날짜의 게임을 찾아 2등/4등을 뽑는다.
+// (5인 팀 게임 기준 total===5인 기록만 대상으로 함)
+function computeFlexCoffeeInfo(players) {
+  const all = [];
+  players.forEach(p => {
+    (p.recent_flex_games || []).forEach(g => {
+      all.push({ label: p.label, ...g });
+    });
   });
+  if (!all.length) return null;
+
+  const latestDate = all.reduce((max, g) => (g.date > max ? g.date : max), all[0].date);
+  const sameGame = all.filter(g => g.date === latestDate && g.total === 5);
+  if (!sameGame.length) return null;
+
+  const second = sameGame.find(g => g.rank === 2);
+  const fourth = sameGame.find(g => g.rank === 4);
+  if (!second || !fourth) return null;
+
+  return { date: latestDate, second, fourth };
+}
+
+function renderCoffeeCallout(players) {
+  const el = document.getElementById("coffee-callout");
+  if (!el) return;
+
+  const info = computeFlexCoffeeInfo(players);
+  if (!info) {
+    el.style.display = "none";
+    el.innerHTML = "";
+    return;
+  }
+
+  el.style.display = "block";
+  el.innerHTML = `
+    <div class="coffee-callout-box">
+      <div class="coffee-callout-date">최근 자유랭크 · ${info.date.slice(5)}</div>
+      <div class="coffee-callout-msg">
+        축하합니다. <b>${info.second.label}</b>, <b>${info.fourth.label}</b> 님<br/>
+        2, 4등 당첨으로 커피를 사주셔야 합니다 ♡
+      </div>
+    </div>`;
 }
 
 const LADDER_ROWS = 8;
@@ -610,9 +665,9 @@ function initLadderGame(players) {
   }
 
   regenerate();
-  shuffleBtn.addEventListener("click", regenerate);
+  shuffleBtn.onclick = regenerate;
 
-  revealBtn.addEventListener("click", () => {
+  revealBtn.onclick = () => {
     if (!ladderRungs) return;
     const inputs = outcomesEl.querySelectorAll(".ladder-outcome-input");
     const outcomes = Array.from(inputs).map((inp, i) => inp.value.trim() || `결과 ${i + 1}`);
@@ -635,7 +690,7 @@ function initLadderGame(players) {
       });
       resultEl.innerHTML = rows.join("");
     });
-  });
+  };
 }
 
 async function main() {
@@ -679,10 +734,33 @@ async function main() {
   players.forEach((p, i) => renderChart(`chart-${i}`, p.history || []));
 
   try {
+    renderCoffeeCallout(players);
+  } catch (e) {
+    console.error("커피 배너 렌더링 실패:", e);
+  }
+
+  try {
     initLadderGame(players);
   } catch (e) {
     console.error("사다리 게임 초기화 실패:", e);
   }
 }
 
+function setupRefreshButton() {
+  const btn = document.getElementById("refresh-btn");
+  if (!btn) return;
+  btn.onclick = async () => {
+    btn.disabled = true;
+    const original = btn.textContent;
+    btn.textContent = "적용 중...";
+    try {
+      await main();
+    } finally {
+      btn.disabled = false;
+      btn.textContent = original;
+    }
+  };
+}
+
+setupRefreshButton();
 main();
