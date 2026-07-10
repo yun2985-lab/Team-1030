@@ -116,6 +116,39 @@ function rankBadgeClass(rank, total) {
   return "";
 }
 
+const LANE_VERDICT_LABEL = { win: "우위", loss: "열세", even: "비슷" };
+
+function recentSoloGamesHTML(games) {
+  if (!games || !games.length) return "";
+  const items = games.map(g => {
+    const resultCls = g.win ? "win-text" : "loss-text";
+    const hasOpponent = g.opponent_champion != null;
+    const verdictCls = g.laner_verdict === "win" ? "mvp" : g.laner_verdict === "loss" ? "worst" : "";
+    const verdictLabel = LANE_VERDICT_LABEL[g.laner_verdict] || "";
+    const laneHTML = hasOpponent
+      ? `
+        <div class="lane-compare">
+          <span class="lane-me">${g.champion} ${g.kills}/${g.deaths}/${g.assists}</span>
+          <span class="lane-vs">vs</span>
+          <span class="lane-opp">${g.opponent_champion} ${g.opponent_kills}/${g.opponent_deaths}/${g.opponent_assists}</span>
+          ${verdictLabel ? `<span class="flex-rank ${verdictCls}">${verdictLabel}</span>` : ""}
+        </div>`
+      : `<div class="lane-compare"><span class="lane-me">${g.champion} ${g.kills}/${g.deaths}/${g.assists}</span></div>`;
+
+    return `
+      <div class="flex-game-row">
+        <span class="flex-result ${resultCls}">${g.win ? "승" : "패"}</span>
+        ${laneHTML}
+      </div>`;
+  }).join("");
+
+  return `
+    <div class="flex-games-section">
+      <div class="flex-games-title">최근 솔로랭크 3게임 · 라인전 비교</div>
+      ${items}
+    </div>`;
+}
+
 function recentFlexGamesHTML(games) {
   if (!games || !games.length) return "";
   const items = games.map(g => {
@@ -158,6 +191,7 @@ function renderCard(player, index) {
     </div>
     ${queueRowHTML("솔랭", solo)}
     ${queueRowHTML("자랭", flex)}
+    ${recentSoloGamesHTML(player.recent_solo_games)}
     ${recentFlexGamesHTML(player.recent_flex_games)}
     <div class="aram-row">
       <span>칼바람 (최근 30일)</span>
