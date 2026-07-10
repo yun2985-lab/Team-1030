@@ -421,19 +421,26 @@ function traceLadderPath(rungs, numLines, startCol) {
   return col;
 }
 
-function drawLadder(canvas, numLines, rungs, showPaths) {
-  const ctx = canvas.getContext("2d");
-  const w = canvas.width, h = canvas.height;
-  ctx.clearRect(0, 0, w, h);
-  const marginX = 24, marginY = 16;
-  const colGap = (w - marginX * 2) / (numLines - 1);
-  const numRows = rungs.length;
-  const rowGap = (h - marginY * 2) / (numRows + 1);
-  const colX = i => marginX + colGap * i;
-  const rowY = r => marginY + rowGap * (r + 1);
+function sizeLadderCanvas(canvas) {
+  const parentWidth = (canvas.parentElement && canvas.parentElement.clientWidth) || 320;
+  const displayWidth = Math.max(240, Math.min(parentWidth, 480));
+  const aspect = 260 / 320;
+  const displayHeight = Math.round(displayWidth * aspect);
+  // 인라인 style로 명시적 px 지정 — style.css의 다른 전역 canvas 규칙과 충돌해도 덮어씀
+  canvas.width = displayWidth;
+  canvas.height = displayHeight;
+  canvas.style.width = displayWidth + "px";
+  canvas.style.height = displayHeight + "px";
+  canvas.style.maxWidth = "100%";
+}
 
-  ctx.strokeStyle = "#3c4664";
-  ctx.lineWidth = 2;
+function drawLadderBase(ctx, w, h, numLines, rungs, colX, rowY, marginY) {
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = "rgba(126,138,168,0.06)";
+  ctx.fillRect(0, 0, w, h);
+
+  ctx.strokeStyle = "#7d8aa8";
+  ctx.lineWidth = 3;
   for (let i = 0; i < numLines; i++) {
     ctx.beginPath();
     ctx.moveTo(colX(i), marginY);
@@ -441,9 +448,9 @@ function drawLadder(canvas, numLines, rungs, showPaths) {
     ctx.stroke();
   }
 
-  ctx.strokeStyle = "#5b8fd9";
-  ctx.lineWidth = 2;
-  for (let r = 0; r < numRows; r++) {
+  ctx.strokeStyle = "#7db8ff";
+  ctx.lineWidth = 3;
+  for (let r = 0; r < rungs.length; r++) {
     for (let c = 0; c < numLines - 1; c++) {
       if (rungs[r][c]) {
         ctx.beginPath();
@@ -453,29 +460,125 @@ function drawLadder(canvas, numLines, rungs, showPaths) {
       }
     }
   }
+}
+
+function drawLadder(canvas, numLines, rungs, showPaths) {
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width, h = canvas.height;
+  const marginX = 24, marginY = 16;
+  const colGap = (w - marginX * 2) / (numLines - 1);
+  const rowGap = (h - marginY * 2) / (rungs.length + 1);
+  const colX = i => marginX + colGap * i;
+  const rowY = r => marginY + rowGap * (r + 1);
+
+  drawLadderBase(ctx, w, h, numLines, rungs, colX, rowY, marginY);
 
   if (showPaths) {
     for (let i = 0; i < numLines; i++) {
       ctx.strokeStyle = PLAYER_COLORS[i % PLAYER_COLORS.length];
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 4;
+      ctx.lineCap = "round";
+      const { points } = computeLadderPathPoints(rungs, numLines, i, colX, rowY, marginY, h);
       ctx.beginPath();
-      let col = i;
-      ctx.moveTo(colX(col), marginY);
-      for (let r = 0; r < numRows; r++) {
-        const row = rungs[r];
-        ctx.lineTo(colX(col), rowY(r));
-        let nextCol = col;
-        if (row[col]) nextCol = col + 1;
-        else if (col > 0 && row[col - 1]) nextCol = col - 1;
-        if (nextCol !== col) {
-          ctx.lineTo(colX(nextCol), rowY(r));
-          col = nextCol;
-        }
-      }
-      ctx.lineTo(colX(col), h - marginY);
+      ctx.moveTo(points[0].x, points[0].y);
+      for (let p = 1; p < points.length; p++) ctx.lineTo(points[p].x, points[p].y);
       ctx.stroke();
     }
   }
+}
+
+// startCol에서 출발해 사다리를 타고 내려가는 전체 경로의 꺾이는 지점들을 좌표로 계산
+function computeLadderPathPoints(rungs, numLines, startCol, colX, rowY, marginY, h) {
+  const points = [];
+  let col = startCol;
+  points.push({ x: colX(col), y: marginY });
+  for (let r = 0; r < rungs.length; r++) {
+    const row = rungs[r];
+    points.push({ x: colX(col), y: rowY(r) });
+    let nextCol = col;
+    if (row[col]) nextCol = col + 1;
+    else if (col > 0 && row[col - 1]) nextCol = col - 1;
+    if (nextCol !== col) {
+      points.push({ x: colX(nextCol), y: rowY(r) });
+      col = nextCol;
+    }
+  }
+  points.push({ x: colX(col), y: h - marginY });
+  return { points, endCol: col };
+}
+
+function pointDist(a, b) {
+  return Math.hypot(b.x - a.x, b.y - a.y);
+}
+
+// points 배열로 이루어진 경로를 전체 길이의 t(0~1) 비율만큼만 그려서 "내려가는 중" 느낌을 냄
+function drawPartialPath(ctx, points, t) {
+  let totalLen = 0;
+  for (let i = 1; i < points.length; i++) totalLen += pointDist(points[i - 1], points[i]);
+  const target = totalLen * t;
+
+  ctx.beginPath();
+  ctx.moveTo(points[0].x, points[0].y);
+  let acc = 0;
+  for (let i = 1; i < points.length; i++) {
+    const segLen = pointDist(points[i - 1], points[i]);
+    if (acc + segLen <= target) {
+      ctx.lineTo(points[i].x, points[i].y);
+      acc += segLen;
+    } else {
+      const ratio = segLen === 0 ? 0 : (target - acc) / segLen;
+      ctx.lineTo(
+        points[i - 1].x + (points[i].x - points[i - 1].x) * ratio,
+        points[i - 1].y + (points[i].y - points[i - 1].y) * ratio
+      );
+      break;
+    }
+  }
+  ctx.stroke();
+}
+
+function easeInOutQuad(t) {
+  return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+}
+
+// 모든 참가자의 경로를 동시에 위→아래로 부드럽게 애니메이션하며 그리고,
+// 끝나면 onDone(각자의 도착 위치 배열)을 호출
+function animateLadderReveal(canvas, numLines, rungs, onDone) {
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width, h = canvas.height;
+  const marginX = 24, marginY = 16;
+  const colGap = (w - marginX * 2) / (numLines - 1);
+  const rowGap = (h - marginY * 2) / (rungs.length + 1);
+  const colX = i => marginX + colGap * i;
+  const rowY = r => marginY + rowGap * (r + 1);
+
+  const paths = [];
+  for (let i = 0; i < numLines; i++) {
+    paths.push(computeLadderPathPoints(rungs, numLines, i, colX, rowY, marginY, h));
+  }
+
+  const duration = 900;
+  const startTime = performance.now();
+
+  function frame(now) {
+    const t = Math.min((now - startTime) / duration, 1);
+    const eased = easeInOutQuad(t);
+
+    drawLadderBase(ctx, w, h, numLines, rungs, colX, rowY, marginY);
+    for (let i = 0; i < numLines; i++) {
+      ctx.strokeStyle = PLAYER_COLORS[i % PLAYER_COLORS.length];
+      ctx.lineWidth = 4;
+      ctx.lineCap = "round";
+      drawPartialPath(ctx, paths[i].points, eased);
+    }
+
+    if (t < 1) {
+      requestAnimationFrame(frame);
+    } else {
+      onDone(paths.map(p => p.endCol));
+    }
+  }
+  requestAnimationFrame(frame);
 }
 
 function initLadderGame(players) {
@@ -500,6 +603,7 @@ function initLadderGame(players) {
     .join("");
 
   function regenerate() {
+    sizeLadderCanvas(canvas);
     ladderRungs = generateLadderRungs(ladderNumLines, LADDER_ROWS);
     resultEl.innerHTML = "";
     drawLadder(canvas, ladderNumLines, ladderRungs, false);
@@ -512,12 +616,25 @@ function initLadderGame(players) {
     if (!ladderRungs) return;
     const inputs = outcomesEl.querySelectorAll(".ladder-outcome-input");
     const outcomes = Array.from(inputs).map((inp, i) => inp.value.trim() || `결과 ${i + 1}`);
-    const lines = ladderNames.map((name, i) => {
-      const bottomIdx = traceLadderPath(ladderRungs, ladderNumLines, i);
-      return `<div><span style="color:${PLAYER_COLORS[i % PLAYER_COLORS.length]}">${name}</span> → ${outcomes[bottomIdx]}</div>`;
+    resultEl.innerHTML = "";
+    revealBtn.disabled = true;
+
+    animateLadderReveal(canvas, ladderNumLines, ladderRungs, (endCols) => {
+      revealBtn.disabled = false;
+      const rows = ladderNames.map((name, i) => {
+        const outcome = outcomes[endCols[i]];
+        const isCoffee = outcome.includes("커피");
+        const coffeeHTML = isCoffee
+          ? `<span class="coffee-pop"><img src="assets/coffee.png" alt="커피" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';"><span class="coffee-emoji-fallback" style="display:none;">☕</span></span>`
+          : "";
+        return `
+          <div class="ladder-result-row" style="animation-delay:${i * 90}ms;">
+            <span style="color:${PLAYER_COLORS[i % PLAYER_COLORS.length]}">${name}</span>
+            → <span class="${isCoffee ? "coffee-outcome" : ""}">${outcome}</span>${coffeeHTML}
+          </div>`;
+      });
+      resultEl.innerHTML = rows.join("");
     });
-    resultEl.innerHTML = lines.join("");
-    drawLadder(canvas, ladderNumLines, ladderRungs, true);
   });
 }
 
