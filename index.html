@@ -17,6 +17,23 @@
   .ladder-section button,
   .ladder-section input { position: relative; z-index: 3; }
 
+  .coffee-callout { max-width: 640px; margin: 24px auto 0; position: relative; z-index: 2; }
+  .coffee-callout-box {
+    background: linear-gradient(135deg, rgba(232,179,57,0.16), rgba(200,164,77,0.08));
+    border: 1px solid rgba(232,179,57,0.4);
+    border-radius: 14px;
+    padding: 16px 18px;
+    text-align: center;
+    animation: coffeeCalloutIn 0.5s cubic-bezier(.34,1.56,.64,1) both;
+  }
+  .coffee-callout-date { font-size: 0.78rem; color: #b8a06a; margin-bottom: 6px; }
+  .coffee-callout-msg { font-size: 1rem; color: #f3ead2; line-height: 1.6; }
+  .coffee-callout-msg b { color: #e8b339; }
+  @keyframes coffeeCalloutIn {
+    from { opacity: 0; transform: translateY(-8px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
   .ladder-section {
     max-width: 640px;
     margin: 24px auto 40px;
@@ -100,6 +117,7 @@
         </div>
       </div>
       <div class="updated" id="updated-at">데이터 불러오는 중...</div>
+      <button id="refresh-btn" type="button" style="background:none; border:1px solid #c8a44d; color:#c8a44d; padding:6px 12px; border-radius:8px; font-size:0.85rem; cursor:pointer; margin-left:10px; white-space:nowrap;">🔄 바로 적용</button>
     </div>
   </header>
 
@@ -125,6 +143,8 @@
     <!-- 로딩 스켈레톤 -->
     <div class="loading" id="loading">불러오는 중...</div>
   </main>
+
+  <section class="coffee-callout" id="coffee-callout" style="display:none;"></section>
 
   <section class="ladder-section">
     <h2>🪜 사다리 게임</h2>
