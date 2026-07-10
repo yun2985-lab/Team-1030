@@ -9,6 +9,14 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="style.css" />
 <style>
+  /* 배경 장식용 스플래시/스크림 오버레이는 클릭을 통과시켜야 하는데
+     원래 style.css에 pointer-events 처리가 빠져있는 것으로 보여 여기서 보강 */
+  .bg-splash, .bg-scrim { pointer-events: none; }
+
+  .ladder-section { position: relative; z-index: 2; }
+  .ladder-section button,
+  .ladder-section input { position: relative; z-index: 3; }
+
   .ladder-section {
     max-width: 640px;
     margin: 24px auto 40px;
