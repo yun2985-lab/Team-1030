@@ -28,7 +28,7 @@
     font-size: 0.85rem;
   }
   .ladder-names span { flex: 1 1 0; min-width: 0; }
-  #ladder-canvas { width: 100%; max-width: 100%; height: auto; display: block; margin: 8px 0; }
+  #ladder-canvas { display: block; margin: 8px auto; border-radius: 8px; }
   .ladder-controls { display: flex; gap: 8px; margin-top: 12px; }
   .ladder-controls button {
     flex: 1;
@@ -42,6 +42,32 @@
   }
   .ladder-controls button:active { background: rgba(200,164,77,0.15); }
   .ladder-result { margin-top: 14px; font-size: 0.9rem; color: #e6ebf5; line-height: 1.6; }
+  .ladder-outcome-input:focus { outline: none; border-color: #c8a44d; }
+
+  .ladder-result-row {
+    opacity: 0;
+    animation: ladderRowFadeIn 0.4s ease forwards;
+  }
+  @keyframes ladderRowFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .coffee-outcome { color: #e8b339; font-weight: 700; }
+  .coffee-pop {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 1.2em;
+    vertical-align: middle;
+    animation: coffeePop 0.5s cubic-bezier(.34,1.56,.64,1) both;
+    animation-delay: 0.25s;
+  }
+  .coffee-pop img { width: 1.2em; height: 1.2em; vertical-align: middle; object-fit: contain; }
+  @keyframes coffeePop {
+    0% { transform: scale(0) rotate(-15deg); opacity: 0; }
+    60% { transform: scale(1.3) rotate(8deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
 </style>
 </head>
 <body>
