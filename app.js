@@ -385,6 +385,142 @@ function setupZoomToggle() {
   });
 }
 
+const LADDER_ROWS = 8;
+let ladderRungs = null;
+let ladderNumLines = 5;
+let ladderNames = [];
+
+// 사다리 가로줄(rung)을 랜덤 생성. 같은 줄에서 인접한 두 칸에 동시에 가로줄이
+// 생기지 않도록(교차 방지) col을 2씩 건너뛰는 표준 아미다쿠지 생성 방식.
+function generateLadderRungs(numLines, numRows) {
+  const rungs = [];
+  for (let r = 0; r < numRows; r++) {
+    const row = new Array(numLines - 1).fill(false);
+    let c = 0;
+    while (c < numLines - 1) {
+      if (Math.random() < 0.5) {
+        row[c] = true;
+        c += 2;
+      } else {
+        c += 1;
+      }
+    }
+    rungs.push(row);
+  }
+  return rungs;
+}
+
+// startCol(맨 위 출발 위치)에서 사다리를 타고 내려갔을 때 도착하는 맨 아래 위치를 계산
+function traceLadderPath(rungs, numLines, startCol) {
+  let col = startCol;
+  for (let r = 0; r < rungs.length; r++) {
+    const row = rungs[r];
+    if (row[col]) col += 1;
+    else if (col > 0 && row[col - 1]) col -= 1;
+  }
+  return col;
+}
+
+function drawLadder(canvas, numLines, rungs, showPaths) {
+  const ctx = canvas.getContext("2d");
+  const w = canvas.width, h = canvas.height;
+  ctx.clearRect(0, 0, w, h);
+  const marginX = 24, marginY = 16;
+  const colGap = (w - marginX * 2) / (numLines - 1);
+  const numRows = rungs.length;
+  const rowGap = (h - marginY * 2) / (numRows + 1);
+  const colX = i => marginX + colGap * i;
+  const rowY = r => marginY + rowGap * (r + 1);
+
+  ctx.strokeStyle = "#3c4664";
+  ctx.lineWidth = 2;
+  for (let i = 0; i < numLines; i++) {
+    ctx.beginPath();
+    ctx.moveTo(colX(i), marginY);
+    ctx.lineTo(colX(i), h - marginY);
+    ctx.stroke();
+  }
+
+  ctx.strokeStyle = "#5b8fd9";
+  ctx.lineWidth = 2;
+  for (let r = 0; r < numRows; r++) {
+    for (let c = 0; c < numLines - 1; c++) {
+      if (rungs[r][c]) {
+        ctx.beginPath();
+        ctx.moveTo(colX(c), rowY(r));
+        ctx.lineTo(colX(c + 1), rowY(r));
+        ctx.stroke();
+      }
+    }
+  }
+
+  if (showPaths) {
+    for (let i = 0; i < numLines; i++) {
+      ctx.strokeStyle = PLAYER_COLORS[i % PLAYER_COLORS.length];
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      let col = i;
+      ctx.moveTo(colX(col), marginY);
+      for (let r = 0; r < numRows; r++) {
+        const row = rungs[r];
+        ctx.lineTo(colX(col), rowY(r));
+        let nextCol = col;
+        if (row[col]) nextCol = col + 1;
+        else if (col > 0 && row[col - 1]) nextCol = col - 1;
+        if (nextCol !== col) {
+          ctx.lineTo(colX(nextCol), rowY(r));
+          col = nextCol;
+        }
+      }
+      ctx.lineTo(colX(col), h - marginY);
+      ctx.stroke();
+    }
+  }
+}
+
+function initLadderGame(players) {
+  const namesEl = document.getElementById("ladder-names");
+  const canvas = document.getElementById("ladder-canvas");
+  const outcomesEl = document.getElementById("ladder-outcomes");
+  const resultEl = document.getElementById("ladder-result");
+  const shuffleBtn = document.getElementById("ladder-shuffle-btn");
+  const revealBtn = document.getElementById("ladder-reveal-btn");
+  if (!canvas || !namesEl || !outcomesEl || !resultEl || !shuffleBtn || !revealBtn) return;
+
+  ladderNames = (players && players.length ? players.map(p => p.label) : []).slice(0, 5);
+  while (ladderNames.length < 5) ladderNames.push(`P${ladderNames.length + 1}`);
+  ladderNumLines = ladderNames.length;
+
+  namesEl.innerHTML = ladderNames
+    .map((n, i) => `<span style="color:${PLAYER_COLORS[i % PLAYER_COLORS.length]}; font-weight:600;">${n}</span>`)
+    .join("");
+
+  outcomesEl.innerHTML = ladderNames
+    .map((_, i) => `<input type="text" class="ladder-outcome-input" data-idx="${i}" placeholder="결과 ${i + 1}" style="width:0; flex:1 1 0; min-width:0; background:#0e1626; border:1px solid #2a3350; color:#e6ebf5; border-radius:6px; padding:6px 4px; text-align:center; font-size:0.85em;" />`)
+    .join("");
+
+  function regenerate() {
+    ladderRungs = generateLadderRungs(ladderNumLines, LADDER_ROWS);
+    resultEl.innerHTML = "";
+    drawLadder(canvas, ladderNumLines, ladderRungs, false);
+  }
+
+  regenerate();
+  shuffleBtn.addEventListener("click", regenerate);
+
+  revealBtn.addEventListener("click", () => {
+    if (!ladderRungs) return;
+    const inputs = outcomesEl.querySelectorAll(".ladder-outcome-input");
+    const outcomes = Array.from(inputs).map((inp, i) => inp.value.trim() || `결과 ${i + 1}`);
+    const lines = ladderNames.map((name, i) => {
+      const bottomIdx = traceLadderPath(ladderRungs, ladderNumLines, i);
+      return `<div><span style="color:${PLAYER_COLORS[i % PLAYER_COLORS.length]}">${name}</span> → ${outcomes[bottomIdx]}</div>`;
+    });
+    resultEl.innerHTML = lines.join("");
+    drawLadder(canvas, ladderNumLines, ladderRungs, true);
+  });
+}
+
 async function main() {
   const board = document.getElementById("board");
   const updatedEl = document.getElementById("updated-at");
@@ -424,6 +560,12 @@ async function main() {
 
   players.forEach((p, i) => board.appendChild(renderCard(p, i)));
   players.forEach((p, i) => renderChart(`chart-${i}`, p.history || []));
+
+  try {
+    initLadderGame(players);
+  } catch (e) {
+    console.error("사다리 게임 초기화 실패:", e);
+  }
 }
 
 main();
