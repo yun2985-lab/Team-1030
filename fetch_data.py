@@ -115,9 +115,13 @@ def get_match_ids(puuid, queue_id, start_time_epoch):
 
 def get_match_result(match_id, puuid, cache):
     """match_cache에 없으면 API 조회 후 캐시에 저장.
-    {"win": bool, "game_end": int, "participants": [...]} 반환."""
-    if match_id in cache and "participants" in cache[match_id]:
-        return cache[match_id]
+    {"win": bool, "game_end": int, "participants": [...]} 반환.
+    캐시에 teamId/teamPosition이 없는 예전 형식이면(라인전 상대 기능 추가 이전 캐시)
+    다시 조회한다."""
+    cached = cache.get(match_id)
+    if cached and "participants" in cached and cached["participants"]:
+        if "teamId" in cached["participants"][0]:
+            return cached
 
     url = f"https://{REGIONAL_ROUTE}.api.riotgames.com/lol/match/v5/matches/{match_id}"
     data = _request(url)
@@ -137,6 +141,9 @@ def get_match_result(match_id, puuid, cache):
             "gold": p.get("goldEarned", 0),
             "vision": p.get("visionScore", 0),
             "win": p.get("win", False),
+            "teamId": p.get("teamId"),
+            "teamPosition": p.get("teamPosition", ""),
+            "individualPosition": p.get("individualPosition", ""),
         })
         if p["puuid"] == puuid:
             win = p["win"]
@@ -168,6 +175,23 @@ def performance_rank(participants, puuid):
     for i, p in enumerate(ranked):
         if p["puuid"] == puuid:
             return {"rank": i + 1, "total": len(ranked)}
+    return None
+
+
+def find_lane_opponent(participants, me):
+    """me와 같은 포지션(teamPosition)인데 다른 팀인 참가자를 찾는다.
+    포지션 정보가 없는 경기(아주 오래된 경기 등)는 None을 반환한다."""
+    my_pos = me.get("teamPosition") or me.get("individualPosition")
+    if not my_pos:
+        return None
+    for p in participants:
+        if p["puuid"] == me["puuid"]:
+            continue
+        if p.get("teamId") == me.get("teamId"):
+            continue
+        opp_pos = p.get("teamPosition") or p.get("individualPosition")
+        if opp_pos == my_pos:
+            return p
     return None
 
 
@@ -229,6 +253,7 @@ def main():
         solo_streak = {"type": "none", "count": 0}
         solo_last_game_days_ago = None
         recent_flex_games = []
+        recent_solo_games = []
 
         for key, qid in QUEUE_IDS.items():
             match_ids = get_match_ids(puuid, qid, recent_start_epoch)
@@ -270,6 +295,39 @@ def main():
                         break
                 solo_streak = {"type": streak_type, "count": streak_count}
 
+                # 최근 솔랭 3게임: 라인전 상대(같은 포지션, 상대 팀)와 KDA 비교
+                for r in results_with_time[:3]:
+                    me = next((p for p in r["participants"] if p["puuid"] == puuid), None)
+                    if not me:
+                        continue
+                    opp = find_lane_opponent(r["participants"], me)
+                    laner_verdict = None
+                    if opp:
+                        my_score = me["kills"] - me["deaths"]
+                        opp_score = opp["kills"] - opp["deaths"]
+                        if my_score > opp_score:
+                            laner_verdict = "win"
+                        elif my_score < opp_score:
+                            laner_verdict = "loss"
+                        else:
+                            laner_verdict = "even"
+                    recent_solo_games.append({
+                        "date": datetime.datetime.utcfromtimestamp(
+                            r["game_end"] / 1000
+                        ).date().isoformat(),
+                        "champion": me["championName"],
+                        "win": me["win"],
+                        "kills": me["kills"],
+                        "deaths": me["deaths"],
+                        "assists": me["assists"],
+                        "position": me.get("teamPosition") or me.get("individualPosition") or "",
+                        "opponent_champion": opp["championName"] if opp else None,
+                        "opponent_kills": opp["kills"] if opp else None,
+                        "opponent_deaths": opp["deaths"] if opp else None,
+                        "opponent_assists": opp["assists"] if opp else None,
+                        "laner_verdict": laner_verdict,
+                    })
+
             if key == "flex" and results_with_time:
                 results_with_time.sort(key=lambda r: r["game_end"], reverse=True)
                 for r in results_with_time[:3]:
@@ -308,6 +366,7 @@ def main():
             "solo_streak": solo_streak,
             "solo_last_game_days_ago": solo_last_game_days_ago,
             "recent_flex_games": recent_flex_games,
+            "recent_solo_games": recent_solo_games,
             "history": history,
         })
         new_players.append(record)
