@@ -8,6 +8,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <link rel="stylesheet" href="style.css" />
+<style>
+  .ladder-section {
+    max-width: 640px;
+    margin: 24px auto 40px;
+    padding: 20px;
+    background: rgba(15, 22, 40, 0.6);
+    border: 1px solid rgba(126,138,168,0.15);
+    border-radius: 16px;
+  }
+  .ladder-section h2 { margin: 0 0 4px; font-size: 1.15rem; color: #e6ebf5; }
+  .ladder-desc { margin: 0 0 16px; color: #7d8aa8; font-size: 0.85rem; }
+  .ladder-names, .ladder-outcomes {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  .ladder-names span { flex: 1 1 0; min-width: 0; }
+  #ladder-canvas { width: 100%; max-width: 100%; height: auto; display: block; margin: 8px 0; }
+  .ladder-controls { display: flex; gap: 8px; margin-top: 12px; }
+  .ladder-controls button {
+    flex: 1;
+    background: none;
+    border: 1px solid #c8a44d;
+    color: #c8a44d;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  .ladder-controls button:active { background: rgba(200,164,77,0.15); }
+  .ladder-result { margin-top: 14px; font-size: 0.9rem; color: #e6ebf5; line-height: 1.6; }
+</style>
 </head>
 <body>
 
@@ -56,6 +91,19 @@
     <!-- 로딩 스켈레톤 -->
     <div class="loading" id="loading">불러오는 중...</div>
   </main>
+
+  <section class="ladder-section">
+    <h2>🪜 사다리 게임</h2>
+    <p class="ladder-desc">애매할 때 가위바위보 대신 여기서 정하세요</p>
+    <div class="ladder-names" id="ladder-names"></div>
+    <canvas id="ladder-canvas" width="320" height="260"></canvas>
+    <div class="ladder-outcomes" id="ladder-outcomes"></div>
+    <div class="ladder-controls">
+      <button id="ladder-shuffle-btn" type="button">사다리 새로 만들기</button>
+      <button id="ladder-reveal-btn" type="button">결과 보기</button>
+    </div>
+    <div class="ladder-result" id="ladder-result"></div>
+  </section>
 
   <footer class="site-footer">
     <p>Riot Games API 기반 · 공식 라이엇 제품이 아니며 라이엇 게임즈의 승인/보증을 받지 않았습니다.</p>
