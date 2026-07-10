@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-10T03:31:27.555181Z",
+  "updated_at": "2026-07-10T03:48:51.352503Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -91,8 +91,8 @@
           "kills": 3,
           "deaths": 12,
           "assists": 20,
-          "rank": 5,
-          "total": 10
+          "rank": 2,
+          "total": 5
         },
         {
           "date": "2026-06-18",
@@ -101,8 +101,8 @@
           "kills": 6,
           "deaths": 13,
           "assists": 17,
-          "rank": 4,
-          "total": 10
+          "rank": 2,
+          "total": 5
         },
         {
           "date": "2026-06-16",
@@ -111,8 +111,8 @@
           "kills": 1,
           "deaths": 9,
           "assists": 24,
-          "rank": 7,
-          "total": 10
+          "rank": 4,
+          "total": 5
         }
       ],
       "recent_solo_games": [
@@ -249,8 +249,8 @@
           "kills": 2,
           "deaths": 13,
           "assists": 11,
-          "rank": 9,
-          "total": 10
+          "rank": 5,
+          "total": 5
         },
         {
           "date": "2026-06-18",
@@ -259,8 +259,8 @@
           "kills": 15,
           "deaths": 9,
           "assists": 8,
-          "rank": 2,
-          "total": 10
+          "rank": 1,
+          "total": 5
         },
         {
           "date": "2026-06-10",
@@ -270,7 +270,7 @@
           "deaths": 4,
           "assists": 10,
           "rank": 2,
-          "total": 10
+          "total": 5
         }
       ],
       "recent_solo_games": [
@@ -407,8 +407,8 @@
           "kills": 13,
           "deaths": 7,
           "assists": 15,
-          "rank": 2,
-          "total": 10
+          "rank": 1,
+          "total": 5
         },
         {
           "date": "2026-06-18",
@@ -417,8 +417,8 @@
           "kills": 5,
           "deaths": 12,
           "assists": 9,
-          "rank": 10,
-          "total": 10
+          "rank": 5,
+          "total": 5
         },
         {
           "date": "2026-06-16",
@@ -427,8 +427,8 @@
           "kills": 7,
           "deaths": 4,
           "assists": 23,
-          "rank": 4,
-          "total": 10
+          "rank": 2,
+          "total": 5
         }
       ],
       "recent_solo_games": [
@@ -692,8 +692,8 @@
           "kills": 3,
           "deaths": 7,
           "assists": 24,
-          "rank": 6,
-          "total": 10
+          "rank": 3,
+          "total": 5
         },
         {
           "date": "2026-06-18",
@@ -702,8 +702,8 @@
           "kills": 8,
           "deaths": 7,
           "assists": 18,
-          "rank": 5,
-          "total": 10
+          "rank": 3,
+          "total": 5
         },
         {
           "date": "2026-06-16",
@@ -712,8 +712,8 @@
           "kills": 3,
           "deaths": 6,
           "assists": 22,
-          "rank": 9,
-          "total": 10
+          "rank": 5,
+          "total": 5
         }
       ],
       "recent_solo_games": []
