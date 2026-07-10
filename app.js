@@ -155,10 +155,38 @@ function renderChart(canvasId, history) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (item) => {
+              const h = history[item.dataIndex];
+              if (!h) return "기록 없음";
+              return tierBadgeText(h.solo_tier, h.solo_rank, h.solo_lp);
+            },
+          },
+        },
+      },
       scales: {
-        x: { display: false },
-        y: { display: false },
+        x: {
+          display: true,
+          ticks: { color: "#7d8aa8", maxRotation: 0, autoSkip: true, maxTicksLimit: 4, font: { size: 9 } },
+          grid: { display: false },
+        },
+        y: {
+          display: true,
+          ticks: {
+            color: "#7d8aa8",
+            stepSize: 1000,
+            font: { size: 9 },
+            callback: (value) => {
+              const idx = Math.round(value / 1000);
+              const tier = TIER_ORDER[idx];
+              return tier ? TIER_LABEL_KR[tier] : "";
+            },
+          },
+          grid: { color: "rgba(126,138,168,0.06)" },
+        },
       },
     },
   });
@@ -238,11 +266,23 @@ function renderTeamChart(players) {
       },
       scales: {
         x: {
+          title: { display: true, text: "날짜", color: "#9aa5c0", font: { size: 11 } },
           ticks: { color: "#7d8aa8", maxRotation: 0, autoSkip: true, maxTicksLimit: 10 },
           grid: { color: "rgba(126,138,168,0.08)" },
         },
         y: {
-          display: false,
+          display: true,
+          title: { display: true, text: "티어", color: "#9aa5c0", font: { size: 11 } },
+          ticks: {
+            color: "#7d8aa8",
+            stepSize: 1000,
+            callback: (value) => {
+              const idx = Math.round(value / 1000);
+              const tier = TIER_ORDER[idx];
+              return tier ? TIER_LABEL_KR[tier] : "";
+            },
+          },
+          grid: { color: "rgba(126,138,168,0.06)" },
         },
       },
     },
