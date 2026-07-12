@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-12T07:51:03.989127Z",
+  "updated_at": "2026-07-12T14:18:20.175639Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -232,7 +232,7 @@
           "date": "2026-07-12",
           "solo_tier": "EMERALD",
           "solo_rank": "II",
-          "solo_lp": 73,
+          "solo_lp": 93,
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 31
@@ -241,8 +241,8 @@
       "solo": {
         "tier": "EMERALD",
         "rank": "II",
-        "lp": 73,
-        "wins": 128,
+        "lp": 93,
+        "wins": 129,
         "losses": 86
       },
       "flex": {
@@ -254,10 +254,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 40,
-          "wins": 26,
+          "games": 41,
+          "wins": 27,
           "losses": 14,
-          "winrate": 65.0
+          "winrate": 65.9
         },
         "flex": {
           "games": 8,
@@ -273,7 +273,7 @@
         }
       },
       "solo_streak": {
-        "type": "loss",
+        "type": "win",
         "count": 1
       },
       "solo_last_game_days_ago": 0,
@@ -311,6 +311,20 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-12",
+          "champion": "Taliyah",
+          "win": true,
+          "kills": 0,
+          "deaths": 5,
+          "assists": 4,
+          "position": "MIDDLE",
+          "opponent_champion": "Syndra",
+          "opponent_kills": 6,
+          "opponent_deaths": 7,
+          "opponent_assists": 2,
+          "laner_verdict": "loss"
+        },
+        {
           "date": "2026-07-11",
           "champion": "Velkoz",
           "win": false,
@@ -336,20 +350,6 @@
           "opponent_kills": 2,
           "opponent_deaths": 5,
           "opponent_assists": 1,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-07-11",
-          "champion": "Velkoz",
-          "win": true,
-          "kills": 5,
-          "deaths": 1,
-          "assists": 3,
-          "position": "MIDDLE",
-          "opponent_champion": "Leblanc",
-          "opponent_kills": 3,
-          "opponent_deaths": 4,
-          "opponent_assists": 2,
           "laner_verdict": "win"
         }
       ]
@@ -584,7 +584,7 @@
           "date": "2026-07-12",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
-          "solo_lp": 38,
+          "solo_lp": 57,
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
@@ -593,8 +593,8 @@
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 38,
-        "wins": 157,
+        "lp": 57,
+        "wins": 158,
         "losses": 156
       },
       "flex": {
@@ -606,10 +606,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 52,
-          "wins": 28,
+          "games": 50,
+          "wins": 26,
           "losses": 24,
-          "winrate": 53.8
+          "winrate": 52.0
         },
         "flex": {
           "games": 6,
@@ -626,7 +626,7 @@
       },
       "solo_streak": {
         "type": "win",
-        "count": 2
+        "count": 3
       },
       "solo_last_game_days_ago": 0,
       "recent_flex_games": [
@@ -663,6 +663,20 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-12",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 10,
+          "deaths": 9,
+          "assists": 12,
+          "position": "BOTTOM",
+          "opponent_champion": "Lucian",
+          "opponent_kills": 8,
+          "opponent_deaths": 6,
+          "opponent_assists": 10,
+          "laner_verdict": "loss"
+        },
+        {
           "date": "2026-07-11",
           "champion": "Ziggs",
           "win": true,
@@ -688,20 +702,6 @@
           "opponent_kills": 13,
           "opponent_deaths": 4,
           "opponent_assists": 11,
-          "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-11",
-          "champion": "Ziggs",
-          "win": false,
-          "kills": 1,
-          "deaths": 2,
-          "assists": 1,
-          "position": "BOTTOM",
-          "opponent_champion": "Tristana",
-          "opponent_kills": 5,
-          "opponent_deaths": 1,
-          "opponent_assists": 0,
           "laner_verdict": "loss"
         }
       ]

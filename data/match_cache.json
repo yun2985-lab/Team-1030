@@ -2099,122 +2099,6 @@
       }
     ]
   },
-  "KR_8250150048": {
-    "win": false,
-    "game_end": 1780841505418,
-    "participants": [
-      {
-        "puuid": "dfbpSTd3ZYjbMqPwIazvBvAIni5vMIolaVPiWn7-XFBeyGWlJOKayG4M6hHYLwFdbQ1VUMrCCOF2yQ",
-        "championName": "Malphite",
-        "kills": 1,
-        "deaths": 3,
-        "assists": 5,
-        "damage": 16873,
-        "gold": 7707,
-        "vision": 23,
-        "win": true
-      },
-      {
-        "puuid": "AwuN8HQYqvrlayg8O3I2e8JtgW-toVp2BX4Yyh2QgIMhE2LjqVDfmFeDJBRbVWfYyVl4BLxNVq05OQ",
-        "championName": "XinZhao",
-        "kills": 6,
-        "deaths": 9,
-        "assists": 10,
-        "damage": 15031,
-        "gold": 11967,
-        "vision": 28,
-        "win": true
-      },
-      {
-        "puuid": "y-Bxdym9nyX0QDKd9Yh0Hid4K73JtmO7vQ0ev7GuOVQkByJIA4zueORvSUKmxj2BztYp5Goj3yiviw",
-        "championName": "Vladimir",
-        "kills": 10,
-        "deaths": 5,
-        "assists": 3,
-        "damage": 31187,
-        "gold": 13552,
-        "vision": 19,
-        "win": true
-      },
-      {
-        "puuid": "8G1UOmCNBqEnp2g47pT3yMnrmC6vGrglSwUqZWZq0auAXZFNbUfhdLf5FLRY3ydDuZhCwI7TLYF5rA",
-        "championName": "Ezreal",
-        "kills": 11,
-        "deaths": 2,
-        "assists": 7,
-        "damage": 40441,
-        "gold": 15162,
-        "vision": 25,
-        "win": true
-      },
-      {
-        "puuid": "pcNwB4VS2IRomSUmwFqK_BxsQTwemXy6uVX-O78BbZr36YDHrn7qrYncxieUrAYa5XRpDwtnWwkzuQ",
-        "championName": "Lulu",
-        "kills": 0,
-        "deaths": 8,
-        "assists": 16,
-        "damage": 4071,
-        "gold": 7542,
-        "vision": 54,
-        "win": true
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "KSante",
-        "kills": 1,
-        "deaths": 2,
-        "assists": 3,
-        "damage": 16583,
-        "gold": 9086,
-        "vision": 25,
-        "win": false
-      },
-      {
-        "puuid": "fK4_TblWW4E7RTm9Jxlkr9siRv-F8Z-bLGT8YYCY5MzlEbqRfsSVZcU7hP2IcWSO9LNYZds6oZKZDg",
-        "championName": "Sejuani",
-        "kills": 9,
-        "deaths": 4,
-        "assists": 9,
-        "damage": 21999,
-        "gold": 12068,
-        "vision": 26,
-        "win": false
-      },
-      {
-        "puuid": "IYfrAzZ1IVM8Ju_AeBiiSeexs9ICamUfGBLoufqhfzhqvNY-nIguuNq2SjMY6i2uMO7e2p_unR8ZvA",
-        "championName": "Velkoz",
-        "kills": 4,
-        "deaths": 9,
-        "assists": 9,
-        "damage": 21532,
-        "gold": 9455,
-        "vision": 30,
-        "win": false
-      },
-      {
-        "puuid": "i3LAllNwJdfemNoETQQP9LQr4T97D7SdI5Ldrhwatx8QCwGR7IH_0296OueLXRKqnQRiBOM2Ghhp5A",
-        "championName": "MissFortune",
-        "kills": 12,
-        "deaths": 6,
-        "assists": 7,
-        "damage": 33143,
-        "gold": 13966,
-        "vision": 18,
-        "win": false
-      },
-      {
-        "puuid": "0kozO9sLydj2rcSZemBrq8z1dNdJS3DEQbIoe4H8d8HOQjSo893fSm9kWJF7PMBe8q-5X4-njwnewg",
-        "championName": "Braum",
-        "kills": 1,
-        "deaths": 7,
-        "assists": 16,
-        "damage": 10142,
-        "gold": 7478,
-        "vision": 48,
-        "win": false
-      }
-    ]
-  },
   "KR_8283997313": {
     "win": false,
     "game_end": 1783096947785,
@@ -15149,586 +15033,6 @@
       }
     ]
   },
-  "KR_8249929590": {
-    "win": true,
-    "game_end": 1780835904703,
-    "participants": [
-      {
-        "puuid": "wf-20E0pv8SIa8cB1fgsZzLlcPca57cLWhnc4qJsUPKPjDCVPCsHXgfFdubpR8oDhYTNf6QJ4vz2JA",
-        "championName": "Akali",
-        "kills": 11,
-        "deaths": 1,
-        "assists": 9,
-        "damage": 31054,
-        "gold": 14628,
-        "vision": 26,
-        "win": true
-      },
-      {
-        "puuid": "2NWoAHGIeWjqpXA7hJVKP1bRQeFCegF4D6ihirII2cVUu5LPWURB100IwNTLzCY1uecJsCj-pERd_Q",
-        "championName": "MonkeyKing",
-        "kills": 9,
-        "deaths": 7,
-        "assists": 18,
-        "damage": 21622,
-        "gold": 14612,
-        "vision": 47,
-        "win": true
-      },
-      {
-        "puuid": "nuL-vEZ0kbJ_XjIvFP6kEBtNOm3UAdFefHfSqnoHgDDWgKjSiknijud2zKvZc1Ku-qKxH3e9WzeZDQ",
-        "championName": "Naafiri",
-        "kills": 9,
-        "deaths": 5,
-        "assists": 12,
-        "damage": 39941,
-        "gold": 14793,
-        "vision": 12,
-        "win": true
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "Ziggs",
-        "kills": 8,
-        "deaths": 3,
-        "assists": 13,
-        "damage": 47202,
-        "gold": 15565,
-        "vision": 34,
-        "win": true
-      },
-      {
-        "puuid": "wZFAJdiKucqq4jYZ7Q2OnILYsckouBme6rQ7iYQTw1pJy-ny4gkK3kwWyKYQ96hdAKs9lOOHnrEgGw",
-        "championName": "Senna",
-        "kills": 4,
-        "deaths": 15,
-        "assists": 20,
-        "damage": 16705,
-        "gold": 11797,
-        "vision": 85,
-        "win": true
-      },
-      {
-        "puuid": "UjICGZxw0PyFWKcxFXgWF-gWSANnO9m1rbHIVXGGEhSuhL_Y6SGCrc8Ud7hLph6Gj2dWKnoqF3HSKA",
-        "championName": "Darius",
-        "kills": 6,
-        "deaths": 6,
-        "assists": 0,
-        "damage": 18475,
-        "gold": 12996,
-        "vision": 31,
-        "win": false
-      },
-      {
-        "puuid": "O7e1T76efEYhj1wCF2Uhi1MY1GYcLXh1NjbW1t27rCMhEn9-ZBCe_m96JFy_F8TBUx0P-LLbSt7btw",
-        "championName": "XinZhao",
-        "kills": 5,
-        "deaths": 5,
-        "assists": 10,
-        "damage": 23499,
-        "gold": 14421,
-        "vision": 69,
-        "win": false
-      },
-      {
-        "puuid": "RKvvC6uYhenlJvg6pC6XUY-Wr5mA8tK6HZ3t_Vh3dSPybiaG_IC4po-OKH8_B9I88g8DLbP2LWiB0Q",
-        "championName": "Sylas",
-        "kills": 4,
-        "deaths": 11,
-        "assists": 7,
-        "damage": 24159,
-        "gold": 11105,
-        "vision": 23,
-        "win": false
-      },
-      {
-        "puuid": "XYSTlHn0VVusBY5p22mtG2SJaH8ExO4pD4LpydSLsfhkuKaR3Ul-5IfrrlzvMdxGB3qWkUH0oGPM1A",
-        "championName": "Teemo",
-        "kills": 8,
-        "deaths": 9,
-        "assists": 4,
-        "damage": 47071,
-        "gold": 16010,
-        "vision": 40,
-        "win": false
-      },
-      {
-        "puuid": "MGITx5u8J6nf3K206FGZayti56WmOPIna8b_RFb1YupvojH2BABu3k4bwC8A-xPOOw1n5cm3Yz8fQA",
-        "championName": "Pyke",
-        "kills": 6,
-        "deaths": 10,
-        "assists": 12,
-        "damage": 13733,
-        "gold": 10374,
-        "vision": 78,
-        "win": false
-      }
-    ]
-  },
-  "KR_8249830785": {
-    "win": true,
-    "game_end": 1780832981777,
-    "participants": [
-      {
-        "puuid": "bbkvRuEUYDHZTxrC-mlf7jkPed_Nwr83HedBGZbtzHX1lNFTNlE_3vC0z2S9M6NtinaGQq9zPWspPA",
-        "championName": "Teemo",
-        "kills": 13,
-        "deaths": 8,
-        "assists": 7,
-        "damage": 59367,
-        "gold": 20904,
-        "vision": 37,
-        "win": true
-      },
-      {
-        "puuid": "ztC5C4sXCY7ioiWgisSdbI9JSVEztAHpaLrX7EXpVQ9opb_dXSrBFC6GLmcLnOeFjQiVOmbjQsWRrA",
-        "championName": "Nunu",
-        "kills": 5,
-        "deaths": 11,
-        "assists": 19,
-        "damage": 16200,
-        "gold": 16769,
-        "vision": 49,
-        "win": true
-      },
-      {
-        "puuid": "HsUckKWGznJqxMd1WldaJmlwri5todvU04LQ9pC--mEkHFBn8wx99UaqAGk49A2DZv8ulEWHI_PykQ",
-        "championName": "Akali",
-        "kills": 10,
-        "deaths": 11,
-        "assists": 10,
-        "damage": 34213,
-        "gold": 15327,
-        "vision": 72,
-        "win": true
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "Ashe",
-        "kills": 13,
-        "deaths": 8,
-        "assists": 12,
-        "damage": 43006,
-        "gold": 20426,
-        "vision": 42,
-        "win": true
-      },
-      {
-        "puuid": "bT79wZ9VHDfobe8hBygxJDtWbPdfFpOsYVDDxekaCnkkMtnG-1aoLFVTMi4L7GnWz7IyGIlwAqZfDA",
-        "championName": "Braum",
-        "kills": 1,
-        "deaths": 8,
-        "assists": 28,
-        "damage": 13432,
-        "gold": 12576,
-        "vision": 161,
-        "win": true
-      },
-      {
-        "puuid": "2guG96evt9JfFQWJFZStthRu8wXZfwhS1wU6Mjs8zo6rdqq-vtGm4YDQ4HwwMHqtlj19ZW5TDnDonw",
-        "championName": "Camille",
-        "kills": 8,
-        "deaths": 9,
-        "assists": 12,
-        "damage": 28045,
-        "gold": 15763,
-        "vision": 65,
-        "win": false
-      },
-      {
-        "puuid": "HISkrD6CZQhvNyeUdK9JhcpQPydYwbOXCBqVZPUT_x0jJTgemlL7eHOteFqzw5CrtWCkk8St_sIcFA",
-        "championName": "Graves",
-        "kills": 7,
-        "deaths": 15,
-        "assists": 15,
-        "damage": 36464,
-        "gold": 17450,
-        "vision": 26,
-        "win": false
-      },
-      {
-        "puuid": "6s5ogvNysARS8YSvFoOwS4z8Xs2Xwl4UdTijHDeG6PWcpoCjS0MWZbg2pr8REIbfo73vYwDUhnGStw",
-        "championName": "Xerath",
-        "kills": 13,
-        "deaths": 4,
-        "assists": 14,
-        "damage": 55544,
-        "gold": 17374,
-        "vision": 25,
-        "win": false
-      },
-      {
-        "puuid": "2a6epzOMMoqhWTgTSCBX8HZVLKYL9yYEbdSqm0tX5I1K75itFp19Xgs5hKWUexDKhsPYIzt1pK14zQ",
-        "championName": "Caitlyn",
-        "kills": 11,
-        "deaths": 9,
-        "assists": 14,
-        "damage": 42359,
-        "gold": 19666,
-        "vision": 31,
-        "win": false
-      },
-      {
-        "puuid": "noMli_l1_EGE8MMQPD_PaA9lUXl4VrEESigubrPrNS-fAkBz50PHNO8_e0m2Q19_83Ce8tWzLB9c1g",
-        "championName": "Bard",
-        "kills": 6,
-        "deaths": 6,
-        "assists": 26,
-        "damage": 21611,
-        "gold": 14795,
-        "vision": 177,
-        "win": false
-      }
-    ]
-  },
-  "KR_8249773234": {
-    "win": false,
-    "game_end": 1780830002415,
-    "participants": [
-      {
-        "puuid": "bab9Lqqsc37LQrXmRCBeIdVyztdJUWs0uqPDn_6p3_mXPdM4F514vy3XeCxZxBIjW_DvNWN2-i5thQ",
-        "championName": "Jax",
-        "kills": 6,
-        "deaths": 14,
-        "assists": 0,
-        "damage": 33879,
-        "gold": 12151,
-        "vision": 14,
-        "win": false
-      },
-      {
-        "puuid": "ouV5lPK1gfGwoqf0AD3kowJuBbttY_Vk0SSnowwqXQ3m_nDA-pBRdps-1HEjEfiazHQG-V-kHz8fuw",
-        "championName": "LeeSin",
-        "kills": 2,
-        "deaths": 8,
-        "assists": 8,
-        "damage": 13190,
-        "gold": 11347,
-        "vision": 31,
-        "win": false
-      },
-      {
-        "puuid": "AblYINqz4feYPFem9UTdyn6eBvnWJlgFAfpcwI1N8pGHLHh9HUWhhm4Y29DjTDER_HGWIwJctVQIkA",
-        "championName": "Malzahar",
-        "kills": 5,
-        "deaths": 7,
-        "assists": 6,
-        "damage": 31493,
-        "gold": 12207,
-        "vision": 18,
-        "win": false
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "Caitlyn",
-        "kills": 6,
-        "deaths": 4,
-        "assists": 6,
-        "damage": 21610,
-        "gold": 15141,
-        "vision": 24,
-        "win": false
-      },
-      {
-        "puuid": "7yQQ1TQZ9hqipLL8ztrhuC-kW-s9SA76roiRIXXVg3_Sbs6bMn7bIkBnqsueBdPDG9LSkDVNtPFiAg",
-        "championName": "Pantheon",
-        "kills": 3,
-        "deaths": 9,
-        "assists": 4,
-        "damage": 18021,
-        "gold": 10367,
-        "vision": 73,
-        "win": false
-      },
-      {
-        "puuid": "-CzKeoZfCdqLiK1VUegLX-if-G5yF2ZxkUJne51qAVkUdX3WrLDAJuJ13jxcF2OR7ZTflA5OhwBQ7g",
-        "championName": "Malphite",
-        "kills": 10,
-        "deaths": 3,
-        "assists": 13,
-        "damage": 32901,
-        "gold": 15599,
-        "vision": 18,
-        "win": true
-      },
-      {
-        "puuid": "nM4-K4vFrmLoPfRhoDJb_cOhnUreYtFGRPlCRpRo7mL8BDv_7rdx-ofhsLdpCOgwInoCE5BSuI5aWg",
-        "championName": "Lillia",
-        "kills": 12,
-        "deaths": 2,
-        "assists": 4,
-        "damage": 17875,
-        "gold": 16137,
-        "vision": 36,
-        "win": true
-      },
-      {
-        "puuid": "1jkoZmegpGsfUz_zIRh8M2oBawQsIY4jrsOqudvjMbTQNyTDXeogK0qr11TZidXQOMEheHDfnobhLw",
-        "championName": "Yone",
-        "kills": 9,
-        "deaths": 7,
-        "assists": 7,
-        "damage": 30478,
-        "gold": 14266,
-        "vision": 28,
-        "win": true
-      },
-      {
-        "puuid": "_y-t0bFc1XRorn6VJfyNrQ0h5thWRBssn76x4tLxKVJgfdkk7wmBTHIM_BjJ8H4KHiPW70Du0_wlXg",
-        "championName": "MissFortune",
-        "kills": 7,
-        "deaths": 4,
-        "assists": 8,
-        "damage": 25381,
-        "gold": 16149,
-        "vision": 23,
-        "win": true
-      },
-      {
-        "puuid": "tWIhaKth5bNXi23xWI5gYxrgQRiX2sucS9EQs6bFun0QVTDzWfRH4hlqOCnevTIghkeQ1gXRkSvioA",
-        "championName": "Zyra",
-        "kills": 4,
-        "deaths": 6,
-        "assists": 8,
-        "damage": 15065,
-        "gold": 9953,
-        "vision": 57,
-        "win": true
-      }
-    ]
-  },
-  "KR_8249646221": {
-    "win": false,
-    "game_end": 1780824867312,
-    "participants": [
-      {
-        "puuid": "2ZUw3P_bOGXC9IUc8-oaJrUiPXbwSxZ4LrgALOjitSIuznqgBamr2yzimmtiBwr5dH2dUKbzKKWoBA",
-        "championName": "DrMundo",
-        "kills": 7,
-        "deaths": 2,
-        "assists": 11,
-        "damage": 30957,
-        "gold": 12433,
-        "vision": 4,
-        "win": true
-      },
-      {
-        "puuid": "16bBAXRtTJC3d_Mi-0hTRtwrPx3pN0yuuX32QYyTYJGdtI_xOm5MWL03jdxy8vu2fWcT3VW6P8pNzQ",
-        "championName": "LeeSin",
-        "kills": 12,
-        "deaths": 1,
-        "assists": 7,
-        "damage": 16598,
-        "gold": 16170,
-        "vision": 18,
-        "win": true
-      },
-      {
-        "puuid": "A6ptPXzoufUk6NV3x3AnC9WlscUtD0FVbK-m-tUeGnnQmT8HNt8iNV7iyaeyCGXG-9EVTZ7doNmFxg",
-        "championName": "Lissandra",
-        "kills": 6,
-        "deaths": 5,
-        "assists": 7,
-        "damage": 22637,
-        "gold": 12514,
-        "vision": 16,
-        "win": true
-      },
-      {
-        "puuid": "14upnGt5acK4Y70bO51TCHANwwDUfjzV-hFRKi__qb_lzIRjBhnQjvo0dMTr_zPCu1JW6igEzH7otw",
-        "championName": "Caitlyn",
-        "kills": 4,
-        "deaths": 4,
-        "assists": 6,
-        "damage": 12478,
-        "gold": 11543,
-        "vision": 19,
-        "win": true
-      },
-      {
-        "puuid": "vEU_UZHNZWTa1AANEzMHc0XkQE-Oi43TNwYYsSZyTSdkzikWDzD8YD-WYTs4AeYai-8RRXE9vrqTNQ",
-        "championName": "Lux",
-        "kills": 3,
-        "deaths": 7,
-        "assists": 11,
-        "damage": 17820,
-        "gold": 8814,
-        "vision": 75,
-        "win": true
-      },
-      {
-        "puuid": "KspcYQgzFcKgrHVjYN6mquAWZY2iXcbEArxzdfZ0uHNu_W1VeOGezAyFhgCJjy1VM1kL9HCBSSsC8Q",
-        "championName": "Illaoi",
-        "kills": 3,
-        "deaths": 10,
-        "assists": 0,
-        "damage": 36422,
-        "gold": 10023,
-        "vision": 22,
-        "win": false
-      },
-      {
-        "puuid": "Uqr1RLr5xgcTIq8FkTHOhb7FdKJKoJDqESCJTQzs-1OzFePyn-c6NwoNwTRNQjtEWRBosa87cTZBrQ",
-        "championName": "Graves",
-        "kills": 2,
-        "deaths": 6,
-        "assists": 3,
-        "damage": 9929,
-        "gold": 8892,
-        "vision": 16,
-        "win": false
-      },
-      {
-        "puuid": "X-eNsfiSau_xpCkrQHwQmzsrsdEAcybO49LOMZDC1VclAvIaz3YG5BoOe8P-EaWNls9SfpIqP1HU1A",
-        "championName": "Karma",
-        "kills": 3,
-        "deaths": 5,
-        "assists": 7,
-        "damage": 17337,
-        "gold": 8308,
-        "vision": 16,
-        "win": false
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "Ashe",
-        "kills": 4,
-        "deaths": 8,
-        "assists": 6,
-        "damage": 17430,
-        "gold": 10744,
-        "vision": 29,
-        "win": false
-      },
-      {
-        "puuid": "AX7NUNI7f_qoy4pt4uigKFTM0Xnw4Zl2mBxUP9n3x7jMDq0npx0qkTlVGVFhTDGcVf8LAhs2uNZdYw",
-        "championName": "Xerath",
-        "kills": 7,
-        "deaths": 3,
-        "assists": 9,
-        "damage": 26621,
-        "gold": 10545,
-        "vision": 62,
-        "win": false
-      }
-    ]
-  },
-  "KR_8249534134": {
-    "win": true,
-    "game_end": 1780820102723,
-    "participants": [
-      {
-        "puuid": "S5kxUci21Ly8wQbd1ROSGgwf_WMmwRZ_5jTCVR6dTlUHF40QjR-P63ZXaWO94Nlm3UBLYd0__FfOsw",
-        "championName": "Sett",
-        "kills": 3,
-        "deaths": 4,
-        "assists": 0,
-        "damage": 8486,
-        "gold": 5321,
-        "vision": 13,
-        "win": false
-      },
-      {
-        "puuid": "m8Y1Ap-bs94uu3apLLk9gwLJcrzxoQq-zgJqlD1PemE_hQnuysVfBHhY0XPTI8lmNcrO1tgRiV9d0w",
-        "championName": "MonkeyKing",
-        "kills": 1,
-        "deaths": 3,
-        "assists": 3,
-        "damage": 5638,
-        "gold": 7240,
-        "vision": 22,
-        "win": false
-      },
-      {
-        "puuid": "RfnOaRlyDzUSwrVlYPYpbhAeufHylK85tyPinZ4YcSJY6q_N6XmYt9AKuegu6KCkTIIqDTZSryedYw",
-        "championName": "Pantheon",
-        "kills": 1,
-        "deaths": 7,
-        "assists": 1,
-        "damage": 8289,
-        "gold": 5771,
-        "vision": 10,
-        "win": false
-      },
-      {
-        "puuid": "Dwt0ea6uZuHRWAEVChDFHnygUfvgjW3pVACMGNlEAo9HQ4PZNcAfzHlWJR7jIDUYncB9jwuIZl7Cag",
-        "championName": "Teemo",
-        "kills": 3,
-        "deaths": 6,
-        "assists": 1,
-        "damage": 8697,
-        "gold": 8001,
-        "vision": 13,
-        "win": false
-      },
-      {
-        "puuid": "ZiD7hJxLfpDeiqNhsdqiXO2CYyQxV-4Qd_bEM051oOV5dO22DPMiglEoFdPuHUJJJWOv5fA6r8xkKw",
-        "championName": "Seraphine",
-        "kills": 1,
-        "deaths": 3,
-        "assists": 4,
-        "damage": 7915,
-        "gold": 5325,
-        "vision": 32,
-        "win": false
-      },
-      {
-        "puuid": "kimoRRQqYw-RCc4b6s7a7er-vFK9AXTW2lCOAPqxQlWxIj8VT4nhWwXqYBkOb7pWzGFdKBQrb5pg9A",
-        "championName": "Rumble",
-        "kills": 3,
-        "deaths": 2,
-        "assists": 4,
-        "damage": 16281,
-        "gold": 7761,
-        "vision": 17,
-        "win": true
-      },
-      {
-        "puuid": "3sD3NFp0gAqXcfQQXRIcf_Y0E1ocCzm3Gc67TSI0XSUEC9A_vzq-95MBLoIviSq2eG9T5Ba21jgHLA",
-        "championName": "XinZhao",
-        "kills": 5,
-        "deaths": 3,
-        "assists": 4,
-        "damage": 5763,
-        "gold": 7763,
-        "vision": 18,
-        "win": true
-      },
-      {
-        "puuid": "sMJQLBySLpz1Fyv_GBuZ06eNzQ5hwMKp_eq_yW8JVsqOBWEoV_tqpNZ-Zqv7VhNlD0EA3yHksKTl2A",
-        "championName": "Akali",
-        "kills": 7,
-        "deaths": 1,
-        "assists": 0,
-        "damage": 10979,
-        "gold": 8227,
-        "vision": 15,
-        "win": true
-      },
-      {
-        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
-        "championName": "Ashe",
-        "kills": 5,
-        "deaths": 2,
-        "assists": 3,
-        "damage": 11983,
-        "gold": 8526,
-        "vision": 21,
-        "win": true
-      },
-      {
-        "puuid": "gGsRzvI_hCzzalhagVWWPLFJC_8pjzNyNcRt5QQjZEIZ6ELBkLCReVZvC178sH6MlUpZUAdx54Ngpw",
-        "championName": "Lux",
-        "kills": 3,
-        "deaths": 1,
-        "assists": 8,
-        "damage": 11196,
-        "gold": 6428,
-        "vision": 38,
-        "win": true
-      }
-    ]
-  },
   "KR_8290393941": {
     "win": true,
     "game_end": 1783514386217,
@@ -18497,6 +17801,298 @@
         "gold": 5287,
         "vision": 48,
         "win": false,
+        "teamId": 200,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      }
+    ]
+  },
+  "KR_8295933932": {
+    "win": true,
+    "game_end": 1783860997355,
+    "participants": [
+      {
+        "puuid": "euzzb2wJRchvYd2BZXmGcpQ_Z3Wzs584LZEg82V1lyoZoHys_eINmZqam-hFK1pIr3Cxvs29hZE9qw",
+        "championName": "Vayne",
+        "kills": 2,
+        "deaths": 2,
+        "assists": 2,
+        "damage": 17866,
+        "gold": 11570,
+        "vision": 30,
+        "win": true,
+        "teamId": 100,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "bhT_NIsTYGeLFulrxhJGg32UlI9gzkI_1wgZFTEcZYROl8aSL3qHDJ4Il6tjRSF1TSRoA2aoVtzhDw",
+        "championName": "LeeSin",
+        "kills": 8,
+        "deaths": 1,
+        "assists": 5,
+        "damage": 17423,
+        "gold": 14649,
+        "vision": 44,
+        "win": true,
+        "teamId": 100,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "IYfrAzZ1IVM8Ju_AeBiiSeexs9ICamUfGBLoufqhfzhqvNY-nIguuNq2SjMY6i2uMO7e2p_unR8ZvA",
+        "championName": "Taliyah",
+        "kills": 0,
+        "deaths": 5,
+        "assists": 4,
+        "damage": 7644,
+        "gold": 8884,
+        "vision": 45,
+        "win": true,
+        "teamId": 100,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "7mJa1D9BcxpnjCbEdMBucJy6_1TSGIT3vdkrVueuT50XQCmccR4VaDSk6K2sC8haDgp9ewhTH1sYwQ",
+        "championName": "Jinx",
+        "kills": 19,
+        "deaths": 4,
+        "assists": 2,
+        "damage": 44750,
+        "gold": 21960,
+        "vision": 26,
+        "win": true,
+        "teamId": 100,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "NzH2f4vFrBT0rgzZXMA_3aUE5-kqkT4duCpD99p6VMSCnDhjwWGrrswIa3vPFTRD_NBiVtIWoMHcOg",
+        "championName": "Karma",
+        "kills": 0,
+        "deaths": 9,
+        "assists": 16,
+        "damage": 12657,
+        "gold": 9982,
+        "vision": 76,
+        "win": true,
+        "teamId": 100,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      },
+      {
+        "puuid": "oTnk-cqA6IPW_tdmeBDiQWCWtRo7FsozNeebSolyRgWYdRiU7y45Z2Ra-HBsUSmI88A7SPJNBbfxig",
+        "championName": "Kennen",
+        "kills": 0,
+        "deaths": 4,
+        "assists": 1,
+        "damage": 15394,
+        "gold": 9686,
+        "vision": 23,
+        "win": false,
+        "teamId": 200,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "ohi01mJabX1WtVBmPuobjcmfwwKFi_XYgGmKWQydVZZl0jlWqAVlRYzNucSm4nhV8nVeOm4CHgdx8Q",
+        "championName": "Vi",
+        "kills": 0,
+        "deaths": 3,
+        "assists": 5,
+        "damage": 10332,
+        "gold": 10791,
+        "vision": 43,
+        "win": false,
+        "teamId": 200,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "oNn21SvnhrtzQGoCT2mksE5hvXEJGrKxWIoPQ3RGWH4msxLjz317NgIaIuDTYfExMiwiqA4itd9kSQ",
+        "championName": "Syndra",
+        "kills": 6,
+        "deaths": 7,
+        "assists": 2,
+        "damage": 41347,
+        "gold": 12661,
+        "vision": 27,
+        "win": false,
+        "teamId": 200,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "imYNzPxHRqY2799IMnd29GnkOQSZoW39naal1JgTVyePInijpAp6sc8G3oJ9mIVlQMKSnA1DRch3jg",
+        "championName": "Kaisa",
+        "kills": 3,
+        "deaths": 9,
+        "assists": 5,
+        "damage": 13757,
+        "gold": 11926,
+        "vision": 38,
+        "win": false,
+        "teamId": 200,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "YJOF-QhIQkMkvGEfI89CBmKDeVOxOGOjqrRj7A6ZMwhYPMTRxoHhX0sOn1BIt_RPOjFRHuFkNr7JTA",
+        "championName": "Velkoz",
+        "kills": 12,
+        "deaths": 6,
+        "assists": 2,
+        "damage": 30874,
+        "gold": 14460,
+        "vision": 79,
+        "win": false,
+        "teamId": 200,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      }
+    ]
+  },
+  "KR_8295815040": {
+    "win": true,
+    "game_end": 1783856482587,
+    "participants": [
+      {
+        "puuid": "4LsKja2Fjtm1Bf9bQ1Igt590Ld66E0RErbNvogwCEE9bG_tODmJg1bttCpeLbvFqoNL3lMwvssgT3Q",
+        "championName": "Malphite",
+        "kills": 4,
+        "deaths": 11,
+        "assists": 5,
+        "damage": 26618,
+        "gold": 10186,
+        "vision": 32,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "gi3Lwm4ElbBB_jyBvVPun79OAoXn192oTJd8Y9WH2nBw4CY133paTi38fkcY_TJ_BtOgeSTyT4qPkg",
+        "championName": "Nocturne",
+        "kills": 18,
+        "deaths": 8,
+        "assists": 8,
+        "damage": 42551,
+        "gold": 18605,
+        "vision": 28,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "mm8K9RnzdHtsQXPQoym5YcbYeFTWp5VOE3ZnnujbwiE6_Z2p99FBBrfRYDebgOuP6TfnPUTzKOJEDg",
+        "championName": "Neeko",
+        "kills": 6,
+        "deaths": 13,
+        "assists": 11,
+        "damage": 24152,
+        "gold": 11787,
+        "vision": 40,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "zkjjD5ZWDM7y4NHIfyCV0UE5vOd6XrKZJ2SJ4IwvEMWFnpWBzOUwIr5J8rzK-wBkvnHDjDhqC-Mluw",
+        "championName": "Lucian",
+        "kills": 8,
+        "deaths": 6,
+        "assists": 10,
+        "damage": 24399,
+        "gold": 13649,
+        "vision": 18,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "OtJeS7ttk377dVRoWHaMVfts3yniskl_IDqrVkn3Qqimer7IsaXWkd3GimWHTUi9LyJ5m0D5etM9Pw",
+        "championName": "Pantheon",
+        "kills": 12,
+        "deaths": 12,
+        "assists": 11,
+        "damage": 41260,
+        "gold": 13103,
+        "vision": 88,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      },
+      {
+        "puuid": "ns-q2d5v4ofso9VLuvZAq9-lwhQaPwFSEcUu23RfErfu7j5TZ9AcEslgpvjuFAzj7-D0-IEbi4bH3Q",
+        "championName": "Akali",
+        "kills": 7,
+        "deaths": 8,
+        "assists": 12,
+        "damage": 37147,
+        "gold": 12645,
+        "vision": 28,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "Lqml3WwQ8bRK7boi4ekdY4DcGfLlYFSKrcxFcMwJxV7V20sA7N0Hdt9_g6kzG9h9fsH_gN6T-6hXtA",
+        "championName": "LeeSin",
+        "kills": 9,
+        "deaths": 11,
+        "assists": 16,
+        "damage": 21441,
+        "gold": 13533,
+        "vision": 36,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "IFx908wm3_Xr8gk1gDHoRJHlj3lwXIKSgKPbcwECV25Fb_zb8rC5PN6izE40CNI0hbzRM7R658e7LA",
+        "championName": "Yone",
+        "kills": 14,
+        "deaths": 10,
+        "assists": 7,
+        "damage": 32221,
+        "gold": 15821,
+        "vision": 38,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
+        "championName": "Ziggs",
+        "kills": 10,
+        "deaths": 9,
+        "assists": 12,
+        "damage": 39320,
+        "gold": 15682,
+        "vision": 28,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "DY18uFyPW0R6K0txZZLIi1A6sKL1TdZ8kF90P49Sxk4K8L41iDBs4KkyAgQ0vd8DPkyGMG2hZ632EA",
+        "championName": "Sylas",
+        "kills": 9,
+        "deaths": 10,
+        "assists": 13,
+        "damage": 25516,
+        "gold": 12374,
+        "vision": 67,
+        "win": true,
         "teamId": 200,
         "teamPosition": "UTILITY",
         "individualPosition": "UTILITY"
