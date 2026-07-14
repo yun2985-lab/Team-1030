@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-13T11:44:02.337508Z",
+  "updated_at": "2026-07-14T07:24:51.101283Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -69,6 +69,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 36
+        },
+        {
+          "date": "2026-07-14",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 54,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 36
         }
       ],
       "solo": {
@@ -109,7 +118,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 10,
+      "solo_last_game_days_ago": 11,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -254,14 +263,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 31
+        },
+        {
+          "date": "2026-07-14",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 53,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 31
         }
       ],
       "solo": {
         "tier": "EMERALD",
         "rank": "II",
-        "lp": 93,
+        "lp": 53,
         "wins": 129,
-        "losses": 86
+        "losses": 88
       },
       "flex": {
         "tier": "GOLD",
@@ -291,8 +309,8 @@
         }
       },
       "solo_streak": {
-        "type": "win",
-        "count": 1
+        "type": "loss",
+        "count": 2
       },
       "solo_last_game_days_ago": 0,
       "recent_flex_games": [
@@ -329,6 +347,34 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-13",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 1,
+          "deaths": 11,
+          "assists": 5,
+          "position": "MIDDLE",
+          "opponent_champion": "Locke",
+          "opponent_kills": 15,
+          "opponent_deaths": 8,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-07-13",
+          "champion": "Taliyah",
+          "win": false,
+          "kills": 1,
+          "deaths": 6,
+          "assists": 5,
+          "position": "MIDDLE",
+          "opponent_champion": "Syndra",
+          "opponent_kills": 9,
+          "opponent_deaths": 3,
+          "opponent_assists": 10,
+          "laner_verdict": "loss"
+        },
+        {
           "date": "2026-07-12",
           "champion": "Taliyah",
           "win": true,
@@ -341,34 +387,6 @@
           "opponent_deaths": 7,
           "opponent_assists": 2,
           "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-11",
-          "champion": "Velkoz",
-          "win": false,
-          "kills": 6,
-          "deaths": 10,
-          "assists": 23,
-          "position": "MIDDLE",
-          "opponent_champion": "Viktor",
-          "opponent_kills": 0,
-          "opponent_deaths": 9,
-          "opponent_assists": 24,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-07-11",
-          "champion": "Velkoz",
-          "win": true,
-          "kills": 5,
-          "deaths": 1,
-          "assists": 3,
-          "position": "MIDDLE",
-          "opponent_champion": "Ahri",
-          "opponent_kills": 2,
-          "opponent_deaths": 5,
-          "opponent_assists": 1,
-          "laner_verdict": "win"
         }
       ]
     },
@@ -439,6 +457,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 15
+        },
+        {
+          "date": "2026-07-14",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 15
         }
       ],
       "solo": {
@@ -479,7 +506,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 27,
+      "solo_last_game_days_ago": 28,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -624,14 +651,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-07-14",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 14,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 57,
-        "wins": 158,
-        "losses": 156
+        "lp": 14,
+        "wins": 159,
+        "losses": 159
       },
       "flex": {
         "tier": "GOLD",
@@ -642,10 +678,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 47,
-          "wins": 24,
-          "losses": 23,
-          "winrate": 51.1
+          "games": 51,
+          "wins": 25,
+          "losses": 26,
+          "winrate": 49.0
         },
         "flex": {
           "games": 6,
@@ -661,10 +697,10 @@
         }
       },
       "solo_streak": {
-        "type": "win",
-        "count": 3
+        "type": "loss",
+        "count": 2
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -699,45 +735,45 @@
       ],
       "recent_solo_games": [
         {
-          "date": "2026-07-12",
+          "date": "2026-07-13",
           "champion": "Ziggs",
-          "win": true,
-          "kills": 10,
-          "deaths": 9,
-          "assists": 12,
+          "win": false,
+          "kills": 2,
+          "deaths": 6,
+          "assists": 10,
           "position": "BOTTOM",
-          "opponent_champion": "Lucian",
-          "opponent_kills": 8,
+          "opponent_champion": "Kalista",
+          "opponent_kills": 3,
           "opponent_deaths": 6,
-          "opponent_assists": 10,
+          "opponent_assists": 5,
           "laner_verdict": "loss"
         },
         {
-          "date": "2026-07-11",
-          "champion": "Ziggs",
-          "win": true,
-          "kills": 12,
-          "deaths": 5,
-          "assists": 24,
-          "position": "BOTTOM",
-          "opponent_champion": "Zeri",
-          "opponent_kills": 15,
-          "opponent_deaths": 13,
-          "opponent_assists": 12,
-          "laner_verdict": "win"
+          "date": "2026-07-13",
+          "champion": "Nautilus",
+          "win": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0,
+          "position": "UTILITY",
+          "opponent_champion": "Maokai",
+          "opponent_kills": 0,
+          "opponent_deaths": 0,
+          "opponent_assists": 0,
+          "laner_verdict": "even"
         },
         {
-          "date": "2026-07-11",
+          "date": "2026-07-13",
           "champion": "Ziggs",
           "win": true,
-          "kills": 6,
+          "kills": 4,
           "deaths": 6,
-          "assists": 16,
+          "assists": 10,
           "position": "BOTTOM",
-          "opponent_champion": "Jhin",
-          "opponent_kills": 13,
-          "opponent_deaths": 4,
-          "opponent_assists": 11,
+          "opponent_champion": "Kaisa",
+          "opponent_kills": 19,
+          "opponent_deaths": 5,
+          "opponent_assists": 2,
           "laner_verdict": "loss"
         }
       ]
@@ -803,6 +839,15 @@
         },
         {
           "date": "2026-07-13",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 19
+        },
+        {
+          "date": "2026-07-14",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
