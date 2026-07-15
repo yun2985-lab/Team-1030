@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-15T07:30:41.080999Z",
+  "updated_at": "2026-07-15T12:36:32.687054Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -689,7 +689,7 @@
         "rank": "IV",
         "lp": 14,
         "wins": 159,
-        "losses": 159
+        "losses": 160
       },
       "flex": {
         "tier": "GOLD",
@@ -700,10 +700,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 49,
+          "games": 50,
           "wins": 24,
-          "losses": 25,
-          "winrate": 49.0
+          "losses": 26,
+          "winrate": 48.0
         },
         "flex": {
           "games": 6,
@@ -720,9 +720,9 @@
       },
       "solo_streak": {
         "type": "loss",
-        "count": 2
+        "count": 3
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -757,6 +757,20 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-15",
+          "champion": "Ziggs",
+          "win": false,
+          "kills": 0,
+          "deaths": 0,
+          "assists": 0,
+          "position": "BOTTOM",
+          "opponent_champion": "Senna",
+          "opponent_kills": 0,
+          "opponent_deaths": 0,
+          "opponent_assists": 2,
+          "laner_verdict": "even"
+        },
+        {
           "date": "2026-07-13",
           "champion": "Ziggs",
           "win": false,
@@ -783,20 +797,6 @@
           "opponent_deaths": 0,
           "opponent_assists": 0,
           "laner_verdict": "even"
-        },
-        {
-          "date": "2026-07-13",
-          "champion": "Ziggs",
-          "win": true,
-          "kills": 4,
-          "deaths": 6,
-          "assists": 10,
-          "position": "BOTTOM",
-          "opponent_champion": "Kaisa",
-          "opponent_kills": 19,
-          "opponent_deaths": 5,
-          "opponent_assists": 2,
-          "laner_verdict": "loss"
         }
       ]
     },
