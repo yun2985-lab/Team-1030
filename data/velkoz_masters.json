@@ -1,0 +1,255 @@
+{
+  "updated_at": "2026-07-15T12:39:38+09:00",
+  "masters": [
+    {
+      "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
+      "riot_id": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4#KR1",
+      "name": "김미쯔바보"
+    },
+    {
+      "slug": "%EC%9E%90%EC%93%B0%EB%8D%94%EB%9D%BC%EC%8A%A4%ED%8A%B8%EB%8C%84%EC%8A%A4-%EC%98%AC%EB%AE%A4%ED%8A%B8",
+      "riot_id": "%EC%9E%90%EC%93%B0%EB%8D%94%EB%9D%BC%EC%8A%A4%ED%8A%B8%EB%8C%84%EC%8A%A4#%EC%98%AC%EB%AE%A4%ED%8A%B8",
+      "name": "자쓰더라스트댄스"
+    },
+    {
+      "slug": "brainbreakers-KR1",
+      "riot_id": "brainbreakers#KR1",
+      "name": "brainbreakers"
+    },
+    {
+      "slug": "Phieu%20Be%20Nguu-KR1",
+      "riot_id": "Phieu%20Be%20Nguu#KR1",
+      "name": "Phieu Be Nguu"
+    },
+    {
+      "slug": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
+      "riot_id": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
+      "name": "미드 벨코즈"
+    },
+    {
+      "slug": "%EB%82%9C%EC%9B%90%EB%94%9C%EA%B0%99%EC%9D%80%EA%B1%B0%EA%B7%B8%EB%83%A5%EB%B2%84%EB%A0%A4%EB%B2%84%EB%A0%A4-%EC%9B%90%EC%A7%95%EC%A7%95",
+      "riot_id": "%EB%82%9C%EC%9B%90%EB%94%9C%EA%B0%99%EC%9D%80%EA%B1%B0%EA%B7%B8%EB%83%A5%EB%B2%84%EB%A0%A4%EB%B2%84%EB%A0%A4#%EC%9B%90%EC%A7%95%EC%A7%95",
+      "name": "난원딜같은거그냥버려버려"
+    },
+    {
+      "slug": "%ED%94%BC%EC%BD%94a-KR1",
+      "riot_id": "%ED%94%BC%EC%BD%94a#KR1",
+      "name": "피코a"
+    },
+    {
+      "slug": "%EC%A1%B1%EB%B0%9C%EB%A7%89%EA%B5%AD%EC%88%98-%EB%B9%84%EB%B9%94%EC%82%BC%EA%B2%B9",
+      "riot_id": "%EC%A1%B1%EB%B0%9C%EB%A7%89%EA%B5%AD%EC%88%98#%EB%B9%84%EB%B9%94%EC%82%BC%EA%B2%B9",
+      "name": "족발막국수"
+    },
+    {
+      "slug": "%EC%95%A1%EC%85%98%EB%B9%94%20%EC%A7%80%EC%A7%80%EC%A7%81-KR1",
+      "riot_id": "%EC%95%A1%EC%85%98%EB%B9%94%20%EC%A7%80%EC%A7%80%EC%A7%81#KR1",
+      "name": "액션빔 지지직"
+    },
+    {
+      "slug": "GGYUU-KR1",
+      "riot_id": "GGYUU#KR1",
+      "name": "GGYUU"
+    },
+    {
+      "slug": "%EC%9A%B0%EC%9C%A0%EC%A7%B1-0420",
+      "riot_id": "%EC%9A%B0%EC%9C%A0%EC%A7%B1#0420",
+      "name": "우유짱"
+    },
+    {
+      "slug": "%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%20%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0%20%EB%A7%9B%EC%A7%91%20%EB%B2%A8%EC%BD%94%EC%A6%88-%EC%9E%A5%EC%9D%B8%EC%9D%98%EC%86%9C%EC%94%A8",
+      "riot_id": "%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%20%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0%20%EB%A7%9B%EC%A7%91%20%EB%B2%A8%EC%BD%94%EC%A6%88#%EC%9E%A5%EC%9D%B8%EC%9D%98%EC%86%9C%EC%94%A8",
+      "name": "이탈리아 스파게티 맛집 벨코즈"
+    },
+    {
+      "slug": "%EB%8B%B9%EC%8B%A0%EC%9D%80%20%EC%A2%8B%EC%9D%80%20%EC%9B%90%EB%94%9C-KR1",
+      "riot_id": "%EB%8B%B9%EC%8B%A0%EC%9D%80%20%EC%A2%8B%EC%9D%80%20%EC%9B%90%EB%94%9C#KR1",
+      "name": "당신은 좋은 원딜"
+    },
+    {
+      "slug": "DouyuTV%20050899-KR1",
+      "riot_id": "DouyuTV%20050899#KR1",
+      "name": "DouyuTV 050899"
+    },
+    {
+      "slug": "%EA%B0%80%EB%9E%8C%EA%B3%B5%EC%A3%BC%EB%8B%98-KR1",
+      "riot_id": "%EA%B0%80%EB%9E%8C%EA%B3%B5%EC%A3%BC%EB%8B%98#KR1",
+      "name": "가람공주님"
+    },
+    {
+      "slug": "%EC%A7%95%ED%81%AC%EC%93%B0-KR1",
+      "riot_id": "%EC%A7%95%ED%81%AC%EC%93%B0#KR1",
+      "name": "징크쓰"
+    },
+    {
+      "slug": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84-KR1",
+      "riot_id": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84#KR1",
+      "name": "난 원딜 믿지않아"
+    },
+    {
+      "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
+      "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
+      "name": "상 수 리 나 무"
+    },
+    {
+      "slug": "%EB%B9%84%EB%9E%98%EB%8F%99%EC%A0%84%EC%82%AC-KR1",
+      "riot_id": "%EB%B9%84%EB%9E%98%EB%8F%99%EC%A0%84%EC%82%AC#KR1",
+      "name": "비래동전사"
+    },
+    {
+      "slug": "%EC%9E%84%EC%A7%84%EB%A1%9D-KR1",
+      "riot_id": "%EC%9E%84%EC%A7%84%EB%A1%9D#KR1",
+      "name": "임진록"
+    },
+    {
+      "slug": "KuOn-KR1",
+      "riot_id": "KuOn#KR1",
+      "name": "KuOn"
+    },
+    {
+      "slug": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8-KR3",
+      "riot_id": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8#KR3",
+      "name": "딜서폿장인"
+    },
+    {
+      "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
+      "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
+      "name": "S 벨코즈"
+    },
+    {
+      "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
+      "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
+      "name": "타락함"
+    },
+    {
+      "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
+      "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
+      "name": "임뿌뿌"
+    },
+    {
+      "slug": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC-KR1",
+      "riot_id": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC#KR1",
+      "name": "퀀틱드림"
+    },
+    {
+      "slug": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98-KR1",
+      "riot_id": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98#KR1",
+      "name": "세발낙지아님"
+    },
+    {
+      "slug": "%EC%B4%89%20%EC%B4%89-%ED%8D%BD%20%ED%8D%BD",
+      "riot_id": "%EC%B4%89%20%EC%B4%89#%ED%8D%BD%20%ED%8D%BD",
+      "name": "촉 촉"
+    },
+    {
+      "slug": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4-KR1",
+      "riot_id": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4#KR1",
+      "name": "갓 두 나 무"
+    },
+    {
+      "slug": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80-KR1",
+      "riot_id": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80#KR1",
+      "name": "잔잔한 호숫가"
+    },
+    {
+      "slug": "O%EB%B2%A8%EC%BD%94%EC%A6%88O-KR2",
+      "riot_id": "O%EB%B2%A8%EC%BD%94%EC%A6%88O#KR2",
+      "name": "O벨코즈O"
+    },
+    {
+      "slug": "Logos-KR1",
+      "riot_id": "Logos#KR1",
+      "name": "Logos"
+    },
+    {
+      "slug": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4-kr0",
+      "riot_id": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4#kr0",
+      "name": "툼바신라면"
+    },
+    {
+      "slug": "%EB%82%A0%EC%9C%BC%EB%8A%94%20%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0%20%EA%B4%B4%EB%AC%BC-%EB%B2%A8%EC%BD%94%EC%A6%88",
+      "riot_id": "%EB%82%A0%EC%9C%BC%EB%8A%94%20%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0%20%EA%B4%B4%EB%AC%BC#%EB%B2%A8%EC%BD%94%EC%A6%88",
+      "name": "날으는 스파게티 괴물"
+    },
+    {
+      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%EC%9E%90%EC%99%B8%EC%84%A0X%EC%84%A0%EA%B4%91%EC%84%A0%EB%82%A0%EB%A6%AC%EB%8A%94%EB%B2%A8%EC%BD%94%EC%A6%88-2005",
+      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%EC%9E%90%EC%99%B8%EC%84%A0X%EC%84%A0%EA%B4%91%EC%84%A0%EB%82%A0%EB%A6%AC%EB%8A%94%EB%B2%A8%EC%BD%94%EC%A6%88#2005",
+      "name": "감마선자외선X선광선날리는벨코즈"
+    },
+    {
+      "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
+      "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
+      "name": "뚜끼뚜빠뿌"
+    },
+    {
+      "slug": "MUTE%20ALL-2307",
+      "riot_id": "MUTE%20ALL#2307",
+      "name": "MUTE ALL"
+    },
+    {
+      "slug": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5-%EB%82%99%EC%A7%80%ED%82%B9",
+      "riot_id": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5#%EB%82%99%EC%A7%80%ED%82%B9",
+      "name": "낙지덮밥"
+    },
+    {
+      "slug": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC-charm",
+      "riot_id": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC#charm",
+      "name": "낭만파 아리"
+    },
+    {
+      "slug": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84-%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
+      "riot_id": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84#%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
+      "name": "페비츄비"
+    },
+    {
+      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
+      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4#2005",
+      "name": "감마선 그 아이"
+    },
+    {
+      "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
+      "riot_id": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0#CROWN",
+      "name": "왕관 쓴 꼴뚜기"
+    },
+    {
+      "slug": "Pasta%20La%20Vista-31415",
+      "riot_id": "Pasta%20La%20Vista#31415",
+      "name": "Pasta La Vista"
+    },
+    {
+      "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
+      "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
+      "name": "벨코즈 좋아"
+    },
+    {
+      "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
+      "riot_id": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94#KR1",
+      "name": "달리면숨차요"
+    },
+    {
+      "slug": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4-KR1",
+      "riot_id": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4#KR1",
+      "name": "라이후이"
+    },
+    {
+      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
+      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
+      "name": "까르보불"
+    },
+    {
+      "slug": "%EC%95%88%ED%98%95%EC%B0%AC-KR1",
+      "riot_id": "%EC%95%88%ED%98%95%EC%B0%AC#KR1",
+      "name": "안형찬"
+    },
+    {
+      "slug": "%ED%95%B5%20%EA%B7%80-KR1",
+      "riot_id": "%ED%95%B5%20%EA%B7%80#KR1",
+      "name": "핵 귀"
+    },
+    {
+      "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
+      "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
+      "name": "너무좋아고양이"
+    }
+  ]
+}
