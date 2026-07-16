@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus - 팀 매칭</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-0:#05070c;
+    --bg-1:#0a1428;
+    --bg-2:#0f1c33;
+    --gold:#c89b3c;
+    --gold-light:#f0e6d2;
+    --gold-dark:#5a4620;
+    --blue:#0ac8b9;
+    --blue-dim:#0a3d40;
+    --red:#e8495c;
+    --red-dim:#4a1520;
+    --line:rgba(200,155,60,0.25);
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0;padding:0;height:100%;
+    background:
+      radial-gradient(ellipse at 50% 0%, #0d1b33 0%, var(--bg-1) 45%, var(--bg-0) 100%);
+    font-family:'Noto Sans KR',sans-serif;
+    color:var(--gold-light);
+    overflow-x:hidden;
+  }
+  body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px 14px;
+    position:relative;
+  }
+  body::before{
+    content:"";
+    position:fixed;inset:0;
+    background-image:
+      repeating-linear-gradient(60deg, rgba(200,155,60,0.035) 0px, rgba(200,155,60,0.035) 1px, transparent 1px, transparent 46px),
+      repeating-linear-gradient(-60deg, rgba(200,155,60,0.035) 0px, rgba(200,155,60,0.035) 1px, transparent 1px, transparent 46px);
+    pointer-events:none;
+    z-index:0;
+  }
+  .app{
+    position:relative;z-index:1;
+    width:100%;max-width:480px;
+  }
+  .screen{display:none;}
+  .screen.active{display:block; animation:fadein .5s ease both;}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+  .eyebrow{
+    font-size:12px;letter-spacing:4px;color:var(--gold);
+    text-align:center;opacity:.75;margin-bottom:6px;
+    text-transform:uppercase;
+  }
+  h1{
+    font-family:'Black Han Sans',sans-serif;
+    font-size:34px;letter-spacing:1px;
+    text-align:center;margin:0 0 4px;
+    color:var(--gold-light);
+    text-shadow:0 0 18px rgba(200,155,60,0.35);
+  }
+  .sub{
+    text-align:center;color:#8b96a8;font-size:13px;margin-bottom:26px;
+  }
+
+  /* ---------- Panel ---------- */
+  .panel{
+    background:linear-gradient(180deg, rgba(15,28,51,0.9), rgba(8,15,28,0.9));
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:22px 20px;
+    position:relative;
+  }
+  .panel::before,.panel::after{
+    content:"";position:absolute;width:14px;height:14px;
+    border:2px solid var(--gold);opacity:.8;
+  }
+  .panel::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .panel::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+  label{
+    display:block;font-size:12px;color:var(--gold);
+    letter-spacing:1px;margin-bottom:8px;
+  }
+  .count-row{
+    display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  }
+  .count-btn{
+    width:38px;height:38px;border-radius:3px;
+    background:var(--bg-2);border:1px solid var(--line);
+    color:var(--gold-light);font-size:18px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:.15s;
+  }
+  .count-btn:hover{border-color:var(--gold);background:var(--gold-dark);}
+  #playerCount{
+    flex:1;text-align:center;font-family:'Black Han Sans',sans-serif;
+    font-size:26px;background:transparent;border:none;color:var(--gold-light);
+    outline:none;
+  }
+
+  .config-box{
+    background:var(--bg-2);border:1px solid var(--line);border-radius:3px;
+    padding:11px 10px;margin-bottom:18px;
+  }
+  .config-box .cfg-label{
+    font-size:11px;color:var(--gold);letter-spacing:.5px;margin-bottom:6px;
+  }
+  .config-box input[type="text"]{
+    width:100%;min-width:0;background:#0b1626;border:1px solid var(--line);
+    border-radius:2px;padding:9px;color:var(--gold-light);font-size:12.5px;
+    font-family:'Noto Sans KR',sans-serif;outline:none;
+  }
+  .config-box input[type="text"]:focus{border-color:var(--gold);}
+  .config-hint{font-size:10.5px;color:#6b7688;margin-top:6px;line-height:1.5;}
+  .cfg-check-row{
+    display:flex;align-items:center;gap:7px;margin-top:10px;font-size:12px;color:#9fb0c5;
+  }
+  .cfg-check-row input{accent-color:var(--gold);width:15px;height:15px;}
+
+  .name-grid{
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-bottom:16px;
+  }
+  .player-row-input{
+    display:flex;align-items:center;gap:6px;
+    min-width:0;
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    border-left:2px solid var(--gold-dark);
+    border-radius:2px;
+    padding:7px;
+  }
+  .player-row-input .pidx{
+    flex:0 0 auto;width:16px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:10.5px;color:#6b7688;font-family:'Black Han Sans',sans-serif;
+  }
+  .riot-id-input{
+    min-width:0;flex:1;
+    background:#0b1626;
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:8px 6px;
+    color:var(--gold-light);font-size:12px;
+    font-family:'Noto Sans KR',sans-serif;
+    outline:none;
+    transition:.15s;
+  }
+  .riot-id-input:focus{border-color:var(--gold);background:#12233e;}
+  .riot-id-input::placeholder{color:#5c6879;}
+
+  .primary-btn{
+    width:100%;padding:15px;
+    background:linear-gradient(180deg,#d9b25f,#a97d2f);
+    border:1px solid #f0e6d2;
+    border-radius:3px;
+    color:#1a1305;
+    font-family:'Black Han Sans',sans-serif;
+    font-size:18px;letter-spacing:2px;
+    cursor:pointer;
+    box-shadow:0 0 0 rgba(200,155,60,0);
+    transition:.2s;
+  }
+  .primary-btn:hover{
+    box-shadow:0 0 24px rgba(200,155,60,0.55);
+    transform:translateY(-1px);
+  }
+  .primary-btn:active{transform:translateY(0px);}
+  .ghost-btn{
+    width:100%;padding:12px;margin-top:10px;
+    background:transparent;border:1px solid var(--line);
+    border-radius:3px;color:#9fb0c5;font-size:13px;
+    letter-spacing:1px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;
+    transition:.15s;
+  }
+  .ghost-btn:hover{border-color:var(--gold);color:var(--gold-light);}
+
+  /* ---------- Loading screen ---------- */
+  .loading-wrap{
+    display:flex;flex-direction:column;align-items:center;
+    padding:30px 10px 10px;
+  }
+  .ring-stage{
+    position:relative;width:220px;height:220px;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:22px;
+  }
+  .ring{
+    position:absolute;border-radius:50%;
+    border:1px solid var(--line);
+  }
+  .ring.r1{width:220px;height:220px;border-color:rgba(200,155,60,0.3);
+    animation:spin 6s linear infinite;}
+  .ring.r2{width:180px;height:180px;border-color:rgba(10,200,185,0.35);
+    border-style:dashed;animation:spin 4s linear infinite reverse;}
+  .ring.r3{width:140px;height:140px;border:2px solid var(--gold);
+    box-shadow:0 0 20px rgba(200,155,60,0.4) inset, 0 0 20px rgba(200,155,60,0.3);
+    animation:pulse-ring 1.4s ease-in-out infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  @keyframes pulse-ring{
+    0%,100%{transform:scale(1);opacity:1;}
+    50%{transform:scale(1.06);opacity:.75;}
+  }
+  .hex-core{
+    width:78px;height:90px;
+    background:linear-gradient(180deg,#f0e6d2,#c89b3c);
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Black Han Sans',sans-serif;
+    font-size:26px;color:#0a1428;
+    box-shadow:0 0 30px rgba(200,155,60,0.6);
+    animation:corepulse 1.4s ease-in-out infinite;
+    z-index:2;
+  }
+  @keyframes corepulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(0.93);}
+  }
+  .found-orbit{
+    position:absolute;inset:0;
+  }
+  .found-tile{
+    position:absolute;top:50%;left:50%;
+    width:34px;height:39px;
+    background:linear-gradient(180deg,#123049,#0a1c30);
+    border:1px solid var(--blue);
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display:flex;align-items:center;justify-content:center;
+    font-size:11px;font-weight:700;color:var(--gold-light);
+    opacity:0;
+    transform:translate(-50%,-50%) scale(0.3);
+  }
+  .found-tile.pop{
+    animation:tilepop .55s cubic-bezier(.2,1.4,.4,1) forwards;
+  }
+  @keyframes tilepop{
+    0%{opacity:0;transform:translate(-50%,-50%) scale(0.2);}
+    55%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(1.15);}
+    100%{opacity:1;transform:translate(var(--tx),var(--ty)) scale(1);}
+  }
+
+  .status-text{
+    font-size:15px;color:var(--gold-light);letter-spacing:1px;
+    min-height:20px;margin-bottom:14px;
+    text-shadow:0 0 10px rgba(200,155,60,0.4);
+  }
+  .status-text .blink{animation:blink 1s steps(1) infinite;}
+  @keyframes blink{50%{opacity:0;}}
+
+  .progress-outer{
+    width:100%;max-width:280px;height:6px;
+    background:var(--bg-2);border:1px solid var(--line);border-radius:3px;
+    overflow:hidden;
+  }
+  .progress-inner{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,var(--blue),var(--gold));
+    box-shadow:0 0 10px rgba(200,155,60,0.6);
+    transition:width .25s ease;
+  }
+  .progress-pct{
+    font-family:'Black Han Sans',sans-serif;
+    font-size:12px;color:#8b96a8;margin-top:8px;letter-spacing:1px;
+  }
+
+  /* ---------- Result screen ---------- */
+  .match-summary{
+    text-align:center;font-family:'Black Han Sans',sans-serif;
+    font-size:16px;letter-spacing:1px;color:var(--gold-light);
+    margin-bottom:18px;text-shadow:0 0 12px rgba(200,155,60,0.35);
+  }
+
+  .teams{
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .team-card{
+    --tc: #c89b3c;
+    border-radius:4px;padding:12px 10px 16px;
+    position:relative;overflow:hidden;
+    background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(0,0,0,0.25)), var(--bg-2);
+    border:1px solid color-mix(in srgb, var(--tc) 45%, transparent);
+  }
+  .team-title{
+    text-align:center;font-family:'Black Han Sans',sans-serif;
+    font-size:15px;letter-spacing:2px;margin-bottom:2px;
+    color:var(--tc);
+  }
+  .team-score{
+    text-align:center;font-size:10.5px;color:#8b96a8;
+    letter-spacing:.5px;margin-bottom:10px;
+  }
+  .balance-note{
+    text-align:center;font-size:11px;color:var(--gold);
+    letter-spacing:.5px;margin:6px 0 14px;opacity:.85;
+  }
+
+  .player-row{
+    display:flex;align-items:center;gap:8px;
+    padding:8px 8px;margin-bottom:6px;
+    background:rgba(0,0,0,0.25);
+    border-radius:3px;border-left:2px solid color-mix(in srgb, var(--tc) 55%, transparent);
+    opacity:0;transform:translateX(var(--slide-from, -20px));
+  }
+  .player-row.show{
+    animation:rowin .45s ease forwards;
+  }
+  @keyframes rowin{
+    to{opacity:1;transform:translateX(0);}
+  }
+  .player-row .badge{
+    width:24px;height:24px;flex:0 0 auto;
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background:var(--bg-2);
+    display:flex;align-items:center;justify-content:center;
+    font-size:10px;font-weight:700;color:var(--gold-light);
+  }
+  .player-row .pinfo{
+    flex:1;min-width:0;
+  }
+  .player-row .pname{
+    font-size:13px;color:var(--gold-light);
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  }
+  .player-row .pmeta{
+    font-size:10px;color:#8b96a8;letter-spacing:.3px;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  }
+  .player-row.captain{
+    background:rgba(200,155,60,0.12);
+    border-left-color:var(--gold);
+  }
+  .player-row.captain .badge{
+    background:linear-gradient(180deg,#f0e6d2,#c89b3c);
+    color:#1a1305;
+    box-shadow:0 0 0 rgba(200,155,60,0);
+  }
+  .player-row.captain.crowned .badge{
+    animation:captainglow 1.6s ease-in-out infinite;
+  }
+  @keyframes captainglow{
+    0%,100%{box-shadow:0 0 6px rgba(200,155,60,0.5);}
+    50%{box-shadow:0 0 16px rgba(200,155,60,0.95);}
+  }
+  .crown{
+    display:inline-block;margin-left:4px;font-size:13px;
+    opacity:0;transform:translateY(-14px) scale(0.5);
+  }
+  .crown.drop{
+    animation:crowndrop .5s cubic-bezier(.2,1.6,.4,1) forwards;
+  }
+  @keyframes crowndrop{
+    0%{opacity:0;transform:translateY(-14px) scale(0.5) rotate(-20deg);}
+    60%{opacity:1;transform:translateY(2px) scale(1.25) rotate(8deg);}
+    100%{opacity:1;transform:translateY(0) scale(1) rotate(0deg);}
+  }
+  .captain-banner{
+    text-align:center;font-size:11px;letter-spacing:2px;
+    color:var(--gold);margin-top:2px;margin-bottom:8px;
+    opacity:0;height:0;overflow:hidden;
+  }
+  .captain-banner.show{
+    animation:bannerin .4s ease forwards;
+    height:auto;margin-bottom:8px;
+  }
+  @keyframes bannerin{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+
+  .result-actions{
+    display:flex;gap:8px;margin-top:20px;
+  }
+  .result-actions .primary-btn, .result-actions .ghost-btn{margin-top:0;font-size:14px;padding:12px;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}
+  }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- SCREEN 1: SETUP -->
+  <div class="screen active" id="screen-setup">
+    <div class="eyebrow">NEXUS · CLUB DRAFT</div>
+    <h1>팀 매칭 준비</h1>
+    <div class="sub">라이엇 아이디를 입력하면 실제 티어·주라인을 불러와 팀을 나눠드려요</div>
+    <div class="panel">
+      <div class="config-box">
+        <div class="cfg-label">🔌 조회 서버 (Cloudflare Worker) 주소</div>
+        <input type="text" id="workerUrl" placeholder="https://lol-lookup.내계정.workers.dev">
+        <div class="config-hint">한 번만 입력하면 이 브라우저에 저장돼요. 서버는 직접 배포해야 해요 — 배포 방법은 대화창에서 안내드릴게요.</div>
+        <label class="cfg-check-row"><input type="checkbox" id="laneDetect" checked> 최근 전적으로 주라인 자동 감지 (느릴 수 있음)</label>
+      </div>
+      <label>인원 수</label>
+      <div class="count-row">
+        <button class="count-btn" id="btnMinus" aria-label="인원 감소">−</button>
+        <input type="number" id="playerCount" value="30" min="2" max="60">
+        <button class="count-btn" id="btnPlus" aria-label="인원 증가">+</button>
+      </div>
+      <label>팀당 인원 (예: 5명씩 나누기)</label>
+      <div class="count-row">
+        <button class="count-btn" id="btnSizeMinus" aria-label="팀 인원 감소">−</button>
+        <input type="number" id="teamSize" value="5" min="2" max="10">
+        <button class="count-btn" id="btnSizePlus" aria-label="팀 인원 증가">+</button>
+      </div>
+      <label>참가자 라이엇 아이디 (이름#태그)</label>
+      <div class="name-grid" id="nameGrid"></div>
+      <button class="primary-btn" id="btnStart">매칭 시작</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: LOADING -->
+  <div class="screen" id="screen-loading">
+    <div class="eyebrow">MATCHMAKING</div>
+    <h1>최적의 팀 계산 중</h1>
+    <div class="loading-wrap">
+      <div class="ring-stage">
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="hex-core" id="hexCore">NX</div>
+        <div class="found-orbit" id="foundOrbit"></div>
+      </div>
+      <div class="status-text" id="statusText">플레이어 탐색 중<span class="blink">...</span></div>
+      <div class="progress-outer"><div class="progress-inner" id="progressInner"></div></div>
+      <div class="progress-pct" id="progressPct">0%</div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: RESULT -->
+  <div class="screen" id="screen-result">
+    <div class="eyebrow">MATCH FOUND</div>
+    <div class="match-summary" id="matchSummary"></div>
+    <div class="teams" id="teamsContainer"></div>
+    <div class="balance-note" id="balanceNote"></div>
+    <div class="result-actions">
+      <button class="ghost-btn" id="btnReshuffle" style="flex:1;">🔄 다시 섞기</button>
+      <button class="ghost-btn" id="btnRestart" style="flex:1;">처음으로</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  const screens = {
+    setup: document.getElementById('screen-setup'),
+    loading: document.getElementById('screen-loading'),
+    result: document.getElementById('screen-result'),
+  };
+  function showScreen(name){
+    Object.values(screens).forEach(s=>s.classList.remove('active'));
+    screens[name].classList.add('active');
+  }
+
+  const countInput = document.getElementById('playerCount');
+  const nameGrid = document.getElementById('nameGrid');
+  const btnMinus = document.getElementById('btnMinus');
+  const btnPlus = document.getElementById('btnPlus');
+  const btnStart = document.getElementById('btnStart');
+  const btnReshuffle = document.getElementById('btnReshuffle');
+  const btnRestart = document.getElementById('btnRestart');
+
+  let lastPlayers = [];
+  let lastFailCount = 0;
+
+  // ---------- Tier / Lane definitions ----------
+  const TIER_BASE = ['아이언','브론즈','실버','골드','플래티넘','에메랄드','다이아몬드'];
+  const TIER_OPTIONS = []; // { label, score }
+  TIER_BASE.forEach(name=>{
+    for(let d=4; d>=1; d--){
+      TIER_OPTIONS.push({ label: name+' '+d, score: TIER_OPTIONS.length });
+    }
+  });
+  ['마스터','그랜드마스터','챌린저'].forEach(name=>{
+    TIER_OPTIONS.push({ label:name, score: TIER_OPTIONS.length });
+  });
+  const MAX_SCORE = TIER_OPTIONS.length - 1;
+  const DEFAULT_TIER_IDX = TIER_OPTIONS.findIndex(t=>t.label==='골드 3');
+  TIER_OPTIONS.push({ label:'언랭크', score: TIER_OPTIONS[DEFAULT_TIER_IDX].score });
+  const UNRANKED_IDX = TIER_OPTIONS.length - 1;
+
+  function tierScoreToLabel(avgScore){
+    const idx = Math.max(0, Math.min(MAX_SCORE, Math.round(avgScore)));
+    return TIER_OPTIONS[idx].label;
+  }
+
+  const LANE_OPTIONS = ['탑','정글','미드','원딜','서포터','상관없음'];
+
+  // ---------- Riot API lookup helpers ----------
+  const RIOT_TIER_KR = { IRON:'아이언', BRONZE:'브론즈', SILVER:'실버', GOLD:'골드', PLATINUM:'플래티넘', EMERALD:'에메랄드', DIAMOND:'다이아몬드', MASTER:'마스터', GRANDMASTER:'그랜드마스터', CHALLENGER:'챌린저' };
+  const RIOT_RANK_NUM = { IV:4, III:3, II:2, I:1 };
+  const LANE_CODE_TO_KR = { TOP:'탑', JUNGLE:'정글', MIDDLE:'미드', BOTTOM:'원딜', UTILITY:'서포터' };
+
+  function tierLabelFromRiot(tier, rank){
+    const kr = RIOT_TIER_KR[tier];
+    if(!kr) return null;
+    if(tier==='MASTER' || tier==='GRANDMASTER' || tier==='CHALLENGER') return kr;
+    return kr + ' ' + (RIOT_RANK_NUM[rank] || 4);
+  }
+
+  const WORKER_URL_KEY = 'nexus_worker_url';
+  const workerUrlInput = document.getElementById('workerUrl');
+  const laneDetectCheckbox = document.getElementById('laneDetect');
+  try{
+    const saved = localStorage.getItem(WORKER_URL_KEY);
+    if(saved) workerUrlInput.value = saved;
+  } catch(e){ /* localStorage unavailable */ }
+  workerUrlInput.addEventListener('change', ()=>{
+    try{ localStorage.setItem(WORKER_URL_KEY, workerUrlInput.value.trim()); } catch(e){}
+  });
+
+  async function lookupRiotId(riotIdRaw){
+    const workerUrl = workerUrlInput.value.trim().replace(/\/+$/, '');
+    if(!workerUrl) throw new Error('조회 서버 주소를 먼저 입력하세요');
+    const hashIdx = riotIdRaw.indexOf('#');
+    if(hashIdx < 1 || hashIdx === riotIdRaw.length-1){
+      throw new Error('이름#태그 형식으로 입력하세요 (예: 롯디자잉#KR1)');
+    }
+    const name = riotIdRaw.slice(0, hashIdx).trim();
+    const tag = riotIdRaw.slice(hashIdx+1).trim();
+    const detect = laneDetectCheckbox.checked ? '1' : '0';
+    let res;
+    try{
+      res = await fetch(workerUrl + '/lookup?name=' + encodeURIComponent(name) + '&tag=' + encodeURIComponent(tag) + '&lane=' + detect);
+    } catch(e){
+      throw new Error('서버에 연결할 수 없어요 (주소 확인)');
+    }
+    let data;
+    try{ data = await res.json(); } catch(e){ data = null; }
+    if(!res.ok || !data || data.error){
+      throw new Error((data && data.error) || ('조회 실패 (' + res.status + ')'));
+    }
+    return data;
+  }
+
+  const teamSizeInput = document.getElementById('teamSize');
+  const btnSizeMinus = document.getElementById('btnSizeMinus');
+  const btnSizePlus = document.getElementById('btnSizePlus');
+
+  function clampCount(v){
+    v = parseInt(v,10);
+    if(isNaN(v)) v = 30;
+    return Math.max(2, Math.min(60, v));
+  }
+
+  function clampTeamSize(v){
+    v = parseInt(v,10);
+    if(isNaN(v)) v = 5;
+    return Math.max(2, Math.min(10, v));
+  }
+  teamSizeInput.addEventListener('change', ()=>{ teamSizeInput.value = clampTeamSize(teamSizeInput.value); });
+  btnSizeMinus.addEventListener('click', ()=>{ teamSizeInput.value = clampTeamSize(+teamSizeInput.value - 1); });
+  btnSizePlus.addEventListener('click', ()=>{ teamSizeInput.value = clampTeamSize(+teamSizeInput.value + 1); });
+
+  function renderPlayerRows(){
+    const n = clampCount(countInput.value);
+    countInput.value = n;
+    const existingInputs = Array.from(nameGrid.querySelectorAll('.riot-id-input')).map(i=>i.value);
+    nameGrid.innerHTML = '';
+    for(let i=0;i<n;i++){
+      const row = document.createElement('div');
+      row.className = 'player-row-input';
+
+      const idxTag = document.createElement('div');
+      idxTag.className = 'pidx';
+      idxTag.textContent = (i+1);
+
+      const riotInp = document.createElement('input');
+      riotInp.className = 'riot-id-input';
+      riotInp.placeholder = '이름#태그';
+      riotInp.value = existingInputs[i] || '';
+      riotInp.maxLength = 30;
+
+      row.appendChild(idxTag);
+      row.appendChild(riotInp);
+      nameGrid.appendChild(row);
+    }
+  }
+  renderPlayerRows();
+
+  btnMinus.addEventListener('click', ()=>{ countInput.value = clampCount(+countInput.value - 1); renderPlayerRows(); });
+  btnPlus.addEventListener('click', ()=>{ countInput.value = clampCount(+countInput.value + 1); renderPlayerRows(); });
+  countInput.addEventListener('change', renderPlayerRows);
+
+  function collectRiotIds(){
+    const inputs = Array.from(nameGrid.querySelectorAll('.riot-id-input'));
+    return inputs.map(inp=>inp.value.trim()).filter(v=>v.length>0);
+  }
+
+  // Resolves a list of "이름#태그" strings into player objects via the Worker.
+  // Lookups that fail (typo, no rank, worker unreachable) fall back to an
+  // unranked / laneless player rather than blocking the whole match.
+  async function resolvePlayers(riotIds, onProgress){
+    const players = [];
+    let failCount = 0;
+    for(let i=0;i<riotIds.length;i++){
+      if(onProgress) onProgress(i, riotIds.length);
+      try{
+        const data = await lookupRiotId(riotIds[i]);
+        const entry = data.solo || data.flex || null;
+        let tierLabel, tierScore;
+        if(entry){
+          tierLabel = tierLabelFromRiot(entry.tier, entry.rank);
+          const idx = TIER_OPTIONS.findIndex(t=>t.label===tierLabel);
+          tierScore = idx>=0 ? TIER_OPTIONS[idx].score : TIER_OPTIONS[UNRANKED_IDX].score;
+        } else {
+          tierLabel = '언랭크';
+          tierScore = TIER_OPTIONS[UNRANKED_IDX].score;
+        }
+        const lane = (data.mainLane && LANE_CODE_TO_KR[data.mainLane]) ? LANE_CODE_TO_KR[data.mainLane] : '상관없음';
+        players.push({ name: data.name, tierLabel, tierScore, lane });
+      } catch(err){
+        failCount++;
+        const fallbackName = riotIds[i].split('#')[0].trim() || ('플레이어' + (i+1));
+        players.push({ name: fallbackName, tierLabel:'언랭크', tierScore: TIER_OPTIONS[UNRANKED_IDX].score, lane:'상관없음' });
+      }
+    }
+    if(onProgress) onProgress(riotIds.length, riotIds.length);
+    return { players, failCount };
+  }
+
+  function shuffle(arr){
+    const a = arr.slice();
+    for(let i=a.length-1;i>0;i--){
+      const j = Math.floor(Math.random()*(i+1));
+      [a[i],a[j]] = [a[j],a[i]];
+    }
+    return a;
+  }
+
+  // ---------- Loading sequence ----------
+  const statusText = document.getElementById('statusText');
+  const progressInner = document.getElementById('progressInner');
+  const progressPct = document.getElementById('progressPct');
+  const foundOrbit = document.getElementById('foundOrbit');
+  const hexCore = document.getElementById('hexCore');
+
+  const phrases = [
+    '전적 데이터 분석 중',
+    '팀 밸런스 계산 중',
+    '진영 배정 중',
+  ];
+
+  function runMatchAnimation(players, basePct, onDone){
+    foundOrbit.innerHTML = '';
+    hexCore.textContent = 'NX';
+
+    const total = players.length;
+    const displayCount = Math.min(total, 24);
+    const extra = total - displayCount;
+    const compact = displayCount > 14;
+    const radius = compact ? 104 : 92;
+    const tileW = compact ? 25 : 34;
+    const tileH = compact ? 29 : 39;
+    const tileFont = compact ? 9 : 11;
+
+    const tileCount = displayCount + (extra > 0 ? 1 : 0);
+    const angles = Array.from({length: tileCount}, (_, i)=> (360/tileCount)*i + Math.random()*10);
+
+    for(let i=0;i<tileCount;i++){
+      const isExtraTile = extra > 0 && i === tileCount - 1;
+      const tile = document.createElement('div');
+      tile.className = 'found-tile';
+      tile.style.width = tileW+'px';
+      tile.style.height = tileH+'px';
+      tile.style.fontSize = tileFont+'px';
+      tile.textContent = isExtraTile ? ('+'+extra) : players[i].name.slice(0,2);
+      const rad = angles[i] * Math.PI/180;
+      const tx = Math.cos(rad)*radius;
+      const ty = Math.sin(rad)*radius;
+      tile.style.setProperty('--tx', tx.toFixed(1)+'px');
+      tile.style.setProperty('--ty', ty.toFixed(1)+'px');
+      foundOrbit.appendChild(tile);
+    }
+
+    const tiles = Array.from(foundOrbit.children);
+    let phraseIdx = 0;
+    statusText.innerHTML = phrases[0] + '<span class="blink">...</span>';
+
+    const span = 88 - basePct; // leave headroom for the final ramp to 100
+    const stepDelay = Math.max(60, Math.min(220, 1300/tiles.length));
+    let i = 0;
+    const popInterval = setInterval(()=>{
+      if(i < tiles.length){
+        tiles[i].classList.add('pop');
+        i++;
+        const pct = basePct + Math.round((i/tiles.length)*span);
+        progressInner.style.width = pct+'%';
+        progressPct.textContent = pct+'%';
+        const newPhrase = Math.min(phrases.length-1, Math.floor((i/tiles.length)*(phrases.length-1)));
+        if(newPhrase !== phraseIdx){
+          phraseIdx = newPhrase;
+          statusText.innerHTML = phrases[phraseIdx] + '<span class="blink">...</span>';
+        }
+      } else {
+        clearInterval(popInterval);
+        statusText.innerHTML = phrases[phrases.length-1] + '<span class="blink">...</span>';
+        let pct = basePct + span;
+        const rampInterval = setInterval(()=>{
+          pct += 5;
+          if(pct >= 100){
+            pct = 100;
+            clearInterval(rampInterval);
+            progressInner.style.width = '100%';
+            progressPct.textContent = '100%';
+            statusText.textContent = '매칭 완료!';
+            hexCore.textContent = 'GO';
+            setTimeout(onDone, 550);
+          } else {
+            progressInner.style.width = pct+'%';
+            progressPct.textContent = pct+'%';
+          }
+        }, 90);
+      }
+    }, stepDelay);
+  }
+
+  // ---------- Result rendering ----------
+  const teamsContainer = document.getElementById('teamsContainer');
+  const matchSummaryEl = document.getElementById('matchSummary');
+  const TEAM_COLORS = ['#0ac8b9','#e8495c','#c89b3c','#8b7cf6','#4ade80','#f59e0b','#ec4899','#38bdf8','#a3e635','#fb7185','#60a5fa','#facc15'];
+
+  // Balances any number of teams by tier score (greedy LPT partition: strongest
+  // players placed first, each going to whichever eligible team currently has
+  // the lowest total score), with lane-overlap used only as a tiebreaker so
+  // duplicate lanes are avoided when scores are otherwise even. Team sizes are
+  // kept within 1 of each other based on the requested team size.
+  function buildBalancedTeams(players, teamSize){
+    const n = players.length;
+    const teamCount = Math.max(1, Math.ceil(n / teamSize));
+    const base = Math.floor(n / teamCount);
+    const remainder = n % teamCount;
+    const capacities = Array.from({length:teamCount}, (_,i)=> base + (i < remainder ? 1 : 0));
+
+    const sorted = shuffle(players).sort((a,b)=> b.tierScore - a.tierScore);
+    const teams = Array.from({length:teamCount}, ()=>({ members: [], sum: 0, lanes: new Set() }));
+
+    sorted.forEach(p=>{
+      const eligible = teams.map((t,i)=>i).filter(i=> teams[i].members.length < capacities[i]);
+      const minSum = Math.min(...eligible.map(i=> teams[i].sum));
+      const tied = eligible.filter(i=> teams[i].sum === minSum);
+      let target;
+      if(tied.length === 1){
+        target = tied[0];
+      } else {
+        const withoutLane = tied.filter(i=> p.lane === '상관없음' || !teams[i].lanes.has(p.lane));
+        const pool = withoutLane.length ? withoutLane : tied;
+        target = pool[Math.floor(Math.random()*pool.length)];
+      }
+      teams[target].members.push(p);
+      teams[target].sum += p.tierScore;
+      if(p.lane !== '상관없음') teams[target].lanes.add(p.lane);
+    });
+
+    return teams;
+  }
+
+  function pickCaptainIdx(team){
+    const top = Math.max(...team.map(p=>p.tierScore));
+    const candidates = team.map((p,i)=>i).filter(i=>team[i].tierScore === top);
+    return candidates[Math.floor(Math.random()*candidates.length)];
+  }
+
+  function renderTeamList(container, players, captainIdx){
+    container.innerHTML = '';
+    players.forEach((p, idx)=>{
+      const row = document.createElement('div');
+      row.className = 'player-row' + (idx===captainIdx ? ' captain' : '');
+      row.style.transitionDelay = '0ms';
+      const badge = document.createElement('div');
+      badge.className = 'badge';
+      badge.textContent = p.name.slice(0,2);
+      const pinfo = document.createElement('div');
+      pinfo.className = 'pinfo';
+      const pname = document.createElement('div');
+      pname.className = 'pname';
+      pname.textContent = p.name;
+      const pmeta = document.createElement('div');
+      pmeta.className = 'pmeta';
+      pmeta.textContent = p.tierLabel + ' · ' + p.lane;
+      pinfo.appendChild(pname);
+      pinfo.appendChild(pmeta);
+      row.appendChild(badge);
+      row.appendChild(pinfo);
+      if(idx===captainIdx){
+        const crown = document.createElement('span');
+        crown.className = 'crown';
+        crown.textContent = '👑';
+        pname.appendChild(crown);
+      }
+      container.appendChild(row);
+    });
+  }
+
+  function animateReveal(teamCards){
+    const rows = Array.from(document.querySelectorAll('#screen-result .player-row'));
+    const rowDelay = Math.max(20, Math.min(90, 1300/Math.max(rows.length,1)));
+    rows.forEach((row, i)=>{
+      setTimeout(()=> row.classList.add('show'), i*rowDelay);
+    });
+    const totalDelay = rows.length*rowDelay + 250;
+    setTimeout(()=>{
+      teamCards.forEach((card, ti)=>{
+        setTimeout(()=>{
+          const banner = card.querySelector('.captain-banner');
+          if(banner) banner.classList.add('show');
+          const capRow = card.querySelector('.player-row.captain');
+          if(capRow){
+            capRow.classList.add('crowned');
+            const c = capRow.querySelector('.crown');
+            if(c) c.classList.add('drop');
+          }
+        }, ti*180);
+      });
+    }, totalDelay);
+  }
+
+  const balanceNoteEl = document.getElementById('balanceNote');
+
+  function showResults(){
+    const teamSize = clampTeamSize(teamSizeInput.value);
+    const teams = buildBalancedTeams(lastPlayers, teamSize);
+
+    teamsContainer.innerHTML = '';
+    const teamCards = [];
+    teams.forEach((team, ti)=>{
+      const card = document.createElement('div');
+      card.className = 'team-card';
+      card.style.setProperty('--tc', TEAM_COLORS[ti % TEAM_COLORS.length]);
+      card.style.setProperty('--slide-from', (ti % 2 === 0 ? '-24px' : '24px'));
+
+      const title = document.createElement('div');
+      title.className = 'team-title';
+      title.textContent = 'TEAM ' + (ti+1);
+
+      const scoreEl = document.createElement('div');
+      scoreEl.className = 'team-score';
+      const avg = team.sum / team.members.length;
+      scoreEl.textContent = '평균 ' + tierScoreToLabel(avg) + ' · 전력 ' + team.sum;
+
+      const banner = document.createElement('div');
+      banner.className = 'captain-banner';
+      banner.textContent = '★ 팀장 결정 ★';
+
+      const listEl = document.createElement('div');
+
+      card.appendChild(title);
+      card.appendChild(scoreEl);
+      card.appendChild(banner);
+      card.appendChild(listEl);
+      teamsContainer.appendChild(card);
+
+      const capIdx = pickCaptainIdx(team.members);
+      renderTeamList(listEl, team.members, capIdx);
+      teamCards.push(card);
+    });
+
+    let summary = '⚔ ' + teams.length + '개 팀 편성 완료 · 팀당 약 ' + teamSize + '명';
+    if(lastFailCount > 0){
+      summary += '<br><span style="font-size:11px;color:var(--red);letter-spacing:0;">⚠ ' + lastFailCount + '명은 조회 실패로 언랭크 처리됐어요</span>';
+    }
+    matchSummaryEl.innerHTML = summary;
+
+    const sums = teams.map(t=>t.sum);
+    const gap = Math.max(...sums) - Math.min(...sums);
+    balanceNoteEl.textContent = gap === 0
+      ? '⚖ 모든 팀의 전력이 완벽하게 균형 잡혔습니다'
+      : '⚖ 팀 간 최대 전력 차이: ' + gap + '점 (최소화 배정됨)';
+
+    showScreen('result');
+    animateReveal(teamCards);
+  }
+
+  btnStart.addEventListener('click', async ()=>{
+    const riotIds = collectRiotIds();
+    if(riotIds.length < 2) return;
+
+    showScreen('loading');
+    hexCore.textContent = 'NX';
+    foundOrbit.innerHTML = '';
+    progressInner.style.width = '0%';
+    progressPct.textContent = '0%';
+    statusText.innerHTML = '라이엇 서버에서 정보 조회 중...<span class="blink">...</span>';
+
+    const fetchSpan = 45; // 0-45% reserved for the lookup phase
+    const { players, failCount } = await resolvePlayers(riotIds, (done, total)=>{
+      const pct = Math.round((done/total) * fetchSpan);
+      progressInner.style.width = pct+'%';
+      progressPct.textContent = pct+'%';
+      statusText.innerHTML = '정보 조회 중... (' + done + '/' + total + ')<span class="blink">...</span>';
+    });
+
+    lastPlayers = players;
+    lastFailCount = failCount;
+    runMatchAnimation(lastPlayers, fetchSpan, showResults);
+  });
+
+  btnReshuffle.addEventListener('click', ()=>{
+    if(!lastPlayers.length) return;
+    showScreen('loading');
+    progressInner.style.width = '0%';
+    progressPct.textContent = '0%';
+    runMatchAnimation(lastPlayers, 0, showResults);
+  });
+
+  btnRestart.addEventListener('click', ()=>{
+    showScreen('setup');
+  });
+})();
+</script>
+</body>
+</html>
