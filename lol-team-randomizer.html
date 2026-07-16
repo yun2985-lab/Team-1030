@@ -409,6 +409,7 @@
         <button class="count-btn" id="btnSizePlus" aria-label="팀 인원 증가">+</button>
       </div>
       <label>참가자 라이엇 아이디 (이름#태그)</label>
+      <div class="config-hint" style="margin:-4px 0 10px;">💡 엑셀 등에서 여러 명을 한 번에 복사해서 아무 칸에나 붙여넣으면 이어지는 칸에 자동으로 채워져요</div>
       <div class="name-grid" id="nameGrid"></div>
       <button class="primary-btn" id="btnStart">매칭 시작</button>
     </div>
@@ -558,6 +559,34 @@
   btnSizeMinus.addEventListener('click', ()=>{ teamSizeInput.value = clampTeamSize(+teamSizeInput.value - 1); });
   btnSizePlus.addEventListener('click', ()=>{ teamSizeInput.value = clampTeamSize(+teamSizeInput.value + 1); });
 
+  // Splits pasted text into individual IDs. Handles Excel-column paste
+  // (newline separated) and single-row paste (tab or comma separated).
+  function parsePastedList(text){
+    let lines = text.split(/\r\n|\r|\n/);
+    if(lines.length <= 1){
+      lines = text.split(/\t|,/);
+    } else {
+      lines = lines.map(line => line.split(/\t|,/)[0]);
+    }
+    return lines.map(s=>s.trim()).filter(s=>s.length>0);
+  }
+
+  // Fills consecutive Riot ID fields starting at startIdx, growing the
+  // player count if the pasted list runs past the current number of rows.
+  function distributePastedIds(startIdx, ids){
+    const needed = startIdx + ids.length;
+    const current = clampCount(countInput.value);
+    if(needed > current){
+      countInput.value = clampCount(needed);
+      renderPlayerRows();
+    }
+    const inputs = Array.from(nameGrid.querySelectorAll('.riot-id-input'));
+    ids.forEach((val, li)=>{
+      const idx = startIdx + li;
+      if(inputs[idx]) inputs[idx].value = val;
+    });
+  }
+
   function renderPlayerRows(){
     const n = clampCount(countInput.value);
     countInput.value = n;
@@ -576,6 +605,14 @@
       riotInp.placeholder = '이름#태그';
       riotInp.value = existingInputs[i] || '';
       riotInp.maxLength = 30;
+      riotInp.addEventListener('paste', (e)=>{
+        const text = (e.clipboardData || window.clipboardData).getData('text');
+        if(!text) return;
+        const ids = parsePastedList(text);
+        if(ids.length <= 1) return; // single value: let normal paste happen
+        e.preventDefault();
+        distributePastedIds(i, ids);
+      });
 
       row.appendChild(idxTag);
       row.appendChild(riotInp);
