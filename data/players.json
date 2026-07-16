@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-15T12:36:32.687054Z",
+  "updated_at": "2026-07-16T07:38:07.013797Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -87,6 +87,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 36
+        },
+        {
+          "date": "2026-07-16",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 54,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 36
         }
       ],
       "solo": {
@@ -127,7 +136,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 12,
+      "solo_last_game_days_ago": 13,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -276,6 +285,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 31
+        },
+        {
+          "date": "2026-07-16",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 53,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 31
         }
       ],
       "solo": {
@@ -316,7 +334,7 @@
         "type": "loss",
         "count": 2
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 2,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -479,6 +497,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 15
+        },
+        {
+          "date": "2026-07-16",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 15
         }
       ],
       "solo": {
@@ -497,10 +524,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 3,
-          "wins": 2,
-          "losses": 1,
-          "winrate": 66.7
+          "games": 0,
+          "wins": 0,
+          "losses": 0,
+          "winrate": 0.0
         },
         "flex": {
           "games": 8,
@@ -516,10 +543,10 @@
         }
       },
       "solo_streak": {
-        "type": "win",
-        "count": 1
+        "type": "none",
+        "count": 0
       },
-      "solo_last_game_days_ago": 29,
+      "solo_last_game_days_ago": null,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -552,50 +579,7 @@
           "total": 5
         }
       ],
-      "recent_solo_games": [
-        {
-          "date": "2026-06-15",
-          "champion": "Lucian",
-          "win": true,
-          "kills": 5,
-          "deaths": 3,
-          "assists": 6,
-          "position": "BOTTOM",
-          "opponent_champion": "Ziggs",
-          "opponent_kills": 3,
-          "opponent_deaths": 7,
-          "opponent_assists": 7,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-06-15",
-          "champion": "Lucian",
-          "win": false,
-          "kills": 14,
-          "deaths": 9,
-          "assists": 7,
-          "position": "BOTTOM",
-          "opponent_champion": "Ezreal",
-          "opponent_kills": 8,
-          "opponent_deaths": 10,
-          "opponent_assists": 6,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-06-15",
-          "champion": "Nautilus",
-          "win": true,
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "position": "UTILITY",
-          "opponent_champion": "Braum",
-          "opponent_kills": 0,
-          "opponent_deaths": 0,
-          "opponent_assists": 0,
-          "laner_verdict": "even"
-        }
-      ]
+      "recent_solo_games": []
     },
     {
       "label": "전지훈",
@@ -682,13 +666,22 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-07-16",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 33,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 14,
-        "wins": 159,
+        "lp": 33,
+        "wins": 160,
         "losses": 160
       },
       "flex": {
@@ -700,10 +693,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 50,
-          "wins": 24,
+          "games": 51,
+          "wins": 25,
           "losses": 26,
-          "winrate": 48.0
+          "winrate": 49.0
         },
         "flex": {
           "games": 6,
@@ -719,8 +712,8 @@
         }
       },
       "solo_streak": {
-        "type": "loss",
-        "count": 3
+        "type": "win",
+        "count": 1
       },
       "solo_last_game_days_ago": 0,
       "recent_flex_games": [
@@ -759,6 +752,20 @@
         {
           "date": "2026-07-15",
           "champion": "Ziggs",
+          "win": true,
+          "kills": 6,
+          "deaths": 5,
+          "assists": 9,
+          "position": "BOTTOM",
+          "opponent_champion": "Tristana",
+          "opponent_kills": 14,
+          "opponent_deaths": 7,
+          "opponent_assists": 6,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-07-15",
+          "champion": "Ziggs",
           "win": false,
           "kills": 0,
           "deaths": 0,
@@ -783,20 +790,6 @@
           "opponent_deaths": 6,
           "opponent_assists": 5,
           "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-13",
-          "champion": "Nautilus",
-          "win": false,
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "position": "UTILITY",
-          "opponent_champion": "Maokai",
-          "opponent_kills": 0,
-          "opponent_deaths": 0,
-          "opponent_assists": 0,
-          "laner_verdict": "even"
         }
       ]
     },
@@ -879,6 +872,15 @@
         },
         {
           "date": "2026-07-15",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 19
+        },
+        {
+          "date": "2026-07-16",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
