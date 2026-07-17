@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T07:49:01+09:00",
+  "updated_at": "2026-07-17T07:36:23+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -17,6 +17,11 @@
       "name": "brainbreakers"
     },
     {
+      "slug": "GGYUU-KR1",
+      "riot_id": "GGYUU#KR1",
+      "name": "GGYUU"
+    },
+    {
       "slug": "Phieu%20Be%20Nguu-KR1",
       "riot_id": "Phieu%20Be%20Nguu#KR1",
       "name": "Phieu Be Nguu"
@@ -27,14 +32,14 @@
       "name": "난원딜같은거그냥버려버려"
     },
     {
-      "slug": "%ED%94%BC%EC%BD%94a-KR1",
-      "riot_id": "%ED%94%BC%EC%BD%94a#KR1",
-      "name": "피코a"
-    },
-    {
       "slug": "%EC%A1%B1%EB%B0%9C%EB%A7%89%EA%B5%AD%EC%88%98-%EB%B9%84%EB%B9%94%EC%82%BC%EA%B2%B9",
       "riot_id": "%EC%A1%B1%EB%B0%9C%EB%A7%89%EA%B5%AD%EC%88%98#%EB%B9%84%EB%B9%94%EC%82%BC%EA%B2%B9",
       "name": "족발막국수"
+    },
+    {
+      "slug": "%ED%94%BC%EC%BD%94a-KR1",
+      "riot_id": "%ED%94%BC%EC%BD%94a#KR1",
+      "name": "피코a"
     },
     {
       "slug": "%EC%95%A1%EC%85%98%EB%B9%94%20%EC%A7%80%EC%A7%80%EC%A7%81-KR1",
@@ -47,11 +52,6 @@
       "name": "이탈리아 스파게티 맛집 벨코즈"
     },
     {
-      "slug": "GGYUU-KR1",
-      "riot_id": "GGYUU#KR1",
-      "name": "GGYUU"
-    },
-    {
       "slug": "%EC%9A%B0%EC%9C%A0%EC%A7%B1-0420",
       "riot_id": "%EC%9A%B0%EC%9C%A0%EC%A7%B1#0420",
       "name": "우유짱"
@@ -60,6 +60,11 @@
       "slug": "DouyuTV%20050899-KR1",
       "riot_id": "DouyuTV%20050899#KR1",
       "name": "DouyuTV 050899"
+    },
+    {
+      "slug": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84-KR1",
+      "riot_id": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84#KR1",
+      "name": "난 원딜 믿지않아"
     },
     {
       "slug": "%EB%8B%B9%EC%8B%A0%EC%9D%80%20%EC%A2%8B%EC%9D%80%20%EC%9B%90%EB%94%9C-KR1",
@@ -77,14 +82,14 @@
       "name": "징크쓰"
     },
     {
-      "slug": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84-KR1",
-      "riot_id": "%EB%82%9C%20%EC%9B%90%EB%94%9C%20%EB%AF%BF%EC%A7%80%EC%95%8A%EC%95%84#KR1",
-      "name": "난 원딜 믿지않아"
-    },
-    {
       "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
       "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
       "name": "상 수 리 나 무"
+    },
+    {
+      "slug": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8-KR3",
+      "riot_id": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8#KR3",
+      "name": "딜서폿장인"
     },
     {
       "slug": "%EB%B9%84%EB%9E%98%EB%8F%99%EC%A0%84%EC%82%AC-KR1",
@@ -100,11 +105,6 @@
       "slug": "KuOn-KR1",
       "riot_id": "KuOn#KR1",
       "name": "KuOn"
-    },
-    {
-      "slug": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8-KR3",
-      "riot_id": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8#KR3",
-      "name": "딜서폿장인"
     },
     {
       "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
@@ -217,14 +217,14 @@
       "name": "벨코즈 좋아"
     },
     {
-      "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
-      "riot_id": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94#KR1",
-      "name": "달리면숨차요"
-    },
-    {
       "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
       "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
       "name": "까르보불"
+    },
+    {
+      "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
+      "riot_id": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94#KR1",
+      "name": "달리면숨차요"
     },
     {
       "slug": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4-KR1",
