@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-16T07:38:07.013797Z",
+  "updated_at": "2026-07-17T01:06:49.509298Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -96,13 +96,22 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 36
+        },
+        {
+          "date": "2026-07-17",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 2,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 36
         }
       ],
       "solo": {
-        "tier": "SILVER",
-        "rank": "I",
-        "lp": 54,
-        "wins": 27,
+        "tier": "GOLD",
+        "rank": "IV",
+        "lp": 2,
+        "wins": 29,
         "losses": 28
       },
       "flex": {
@@ -114,16 +123,16 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 2,
-          "wins": 1,
+          "games": 4,
+          "wins": 3,
           "losses": 1,
-          "winrate": 50.0
+          "winrate": 75.0
         },
         "flex": {
-          "games": 11,
-          "wins": 5,
-          "losses": 6,
-          "winrate": 45.5
+          "games": 8,
+          "wins": 4,
+          "losses": 4,
+          "winrate": 50.0
         },
         "aram": {
           "games": 0,
@@ -134,9 +143,9 @@
       },
       "solo_streak": {
         "type": "win",
-        "count": 1
+        "count": 3
       },
-      "solo_last_game_days_ago": 13,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -171,6 +180,34 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-16",
+          "champion": "Nautilus",
+          "win": true,
+          "kills": 3,
+          "deaths": 2,
+          "assists": 8,
+          "position": "UTILITY",
+          "opponent_champion": "Xerath",
+          "opponent_kills": 2,
+          "opponent_deaths": 6,
+          "opponent_assists": 7,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-07-16",
+          "champion": "Xerath",
+          "win": true,
+          "kills": 10,
+          "deaths": 6,
+          "assists": 19,
+          "position": "UTILITY",
+          "opponent_champion": "Karma",
+          "opponent_kills": 0,
+          "opponent_deaths": 9,
+          "opponent_assists": 20,
+          "laner_verdict": "win"
+        },
+        {
           "date": "2026-07-02",
           "champion": "Thresh",
           "win": true,
@@ -182,20 +219,6 @@
           "opponent_kills": 3,
           "opponent_deaths": 9,
           "opponent_assists": 21,
-          "laner_verdict": "even"
-        },
-        {
-          "date": "2026-07-02",
-          "champion": "Nautilus",
-          "win": false,
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "position": "UTILITY",
-          "opponent_champion": "Blitzcrank",
-          "opponent_kills": 0,
-          "opponent_deaths": 0,
-          "opponent_assists": 0,
           "laner_verdict": "even"
         }
       ]
@@ -294,14 +317,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 31
+        },
+        {
+          "date": "2026-07-17",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 53,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 31
         }
       ],
       "solo": {
         "tier": "EMERALD",
         "rank": "II",
         "lp": 53,
-        "wins": 129,
-        "losses": 88
+        "wins": 130,
+        "losses": 89
       },
       "flex": {
         "tier": "GOLD",
@@ -312,10 +344,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 41,
-          "wins": 27,
-          "losses": 14,
-          "winrate": 65.9
+          "games": 43,
+          "wins": 28,
+          "losses": 15,
+          "winrate": 65.1
         },
         "flex": {
           "games": 8,
@@ -332,9 +364,9 @@
       },
       "solo_streak": {
         "type": "loss",
-        "count": 2
+        "count": 1
       },
-      "solo_last_game_days_ago": 2,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-10",
@@ -369,6 +401,34 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-16",
+          "champion": "Velkoz",
+          "win": false,
+          "kills": 4,
+          "deaths": 7,
+          "assists": 2,
+          "position": "MIDDLE",
+          "opponent_champion": "Lissandra",
+          "opponent_kills": 3,
+          "opponent_deaths": 5,
+          "opponent_assists": 9,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-07-16",
+          "champion": "Velkoz",
+          "win": true,
+          "kills": 7,
+          "deaths": 12,
+          "assists": 9,
+          "position": "MIDDLE",
+          "opponent_champion": "Syndra",
+          "opponent_kills": 23,
+          "opponent_deaths": 10,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        },
+        {
           "date": "2026-07-13",
           "champion": "Velkoz",
           "win": false,
@@ -380,34 +440,6 @@
           "opponent_kills": 15,
           "opponent_deaths": 8,
           "opponent_assists": 4,
-          "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-13",
-          "champion": "Taliyah",
-          "win": false,
-          "kills": 1,
-          "deaths": 6,
-          "assists": 5,
-          "position": "MIDDLE",
-          "opponent_champion": "Syndra",
-          "opponent_kills": 9,
-          "opponent_deaths": 3,
-          "opponent_assists": 10,
-          "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-12",
-          "champion": "Taliyah",
-          "win": true,
-          "kills": 0,
-          "deaths": 5,
-          "assists": 4,
-          "position": "MIDDLE",
-          "opponent_champion": "Syndra",
-          "opponent_kills": 6,
-          "opponent_deaths": 7,
-          "opponent_assists": 2,
           "laner_verdict": "loss"
         }
       ]
@@ -506,6 +538,15 @@
           "flex_tier": "PLATINUM",
           "flex_rank": "IV",
           "flex_lp": 15
+        },
+        {
+          "date": "2026-07-17",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "PLATINUM",
+          "flex_rank": "IV",
+          "flex_lp": 15
         }
       ],
       "solo": {
@@ -530,10 +571,10 @@
           "winrate": 0.0
         },
         "flex": {
-          "games": 8,
-          "wins": 3,
-          "losses": 5,
-          "winrate": 37.5
+          "games": 5,
+          "wins": 2,
+          "losses": 3,
+          "winrate": 40.0
         },
         "aram": {
           "games": 0,
@@ -675,14 +716,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-07-17",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 30,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 33,
-        "wins": 160,
-        "losses": 160
+        "lp": 30,
+        "wins": 162,
+        "losses": 162
       },
       "flex": {
         "tier": "GOLD",
@@ -693,10 +743,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 51,
-          "wins": 25,
-          "losses": 26,
-          "winrate": 49.0
+          "games": 55,
+          "wins": 27,
+          "losses": 28,
+          "winrate": 49.1
         },
         "flex": {
           "games": 6,
@@ -712,7 +762,7 @@
         }
       },
       "solo_streak": {
-        "type": "win",
+        "type": "loss",
         "count": 1
       },
       "solo_last_game_days_ago": 0,
@@ -750,46 +800,46 @@
       ],
       "recent_solo_games": [
         {
-          "date": "2026-07-15",
-          "champion": "Ziggs",
-          "win": true,
-          "kills": 6,
-          "deaths": 5,
-          "assists": 9,
-          "position": "BOTTOM",
-          "opponent_champion": "Tristana",
-          "opponent_kills": 14,
-          "opponent_deaths": 7,
-          "opponent_assists": 6,
-          "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-07-15",
-          "champion": "Ziggs",
-          "win": false,
-          "kills": 0,
-          "deaths": 0,
-          "assists": 0,
-          "position": "BOTTOM",
-          "opponent_champion": "Senna",
-          "opponent_kills": 0,
-          "opponent_deaths": 0,
-          "opponent_assists": 2,
-          "laner_verdict": "even"
-        },
-        {
-          "date": "2026-07-13",
+          "date": "2026-07-16",
           "champion": "Ziggs",
           "win": false,
           "kills": 2,
-          "deaths": 6,
+          "deaths": 8,
+          "assists": 3,
+          "position": "BOTTOM",
+          "opponent_champion": "Jinx",
+          "opponent_kills": 10,
+          "opponent_deaths": 4,
+          "opponent_assists": 12,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-07-16",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 2,
+          "deaths": 1,
+          "assists": 3,
+          "position": "BOTTOM",
+          "opponent_champion": "Xerath",
+          "opponent_kills": 2,
+          "opponent_deaths": 3,
+          "opponent_assists": 0,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-07-16",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 3,
+          "deaths": 1,
           "assists": 10,
           "position": "BOTTOM",
-          "opponent_champion": "Kalista",
-          "opponent_kills": 3,
-          "opponent_deaths": 6,
-          "opponent_assists": 5,
-          "laner_verdict": "loss"
+          "opponent_champion": "Caitlyn",
+          "opponent_kills": 4,
+          "opponent_deaths": 8,
+          "opponent_assists": 1,
+          "laner_verdict": "win"
         }
       ]
     },
@@ -887,6 +937,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 19
+        },
+        {
+          "date": "2026-07-17",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 19
         }
       ],
       "solo": {
@@ -911,10 +970,10 @@
           "winrate": 0.0
         },
         "flex": {
-          "games": 8,
-          "wins": 3,
-          "losses": 5,
-          "winrate": 37.5
+          "games": 5,
+          "wins": 2,
+          "losses": 3,
+          "winrate": 40.0
         },
         "aram": {
           "games": 0,
