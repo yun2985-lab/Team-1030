@@ -18686,5 +18686,151 @@
         "individualPosition": "UTILITY"
       }
     ]
+  },
+  "KR_8301624048": {
+    "win": true,
+    "game_end": 1784264852688,
+    "participants": [
+      {
+        "puuid": "wWUg-ShwVj-2kyrFAgOZwP_wuKV6OYdkuo78bIFF-DcEfV5KwAXHLN0i6ahyd8SDKxHcIQ4zCvbTZA",
+        "championName": "MissFortune",
+        "kills": 1,
+        "deaths": 6,
+        "assists": 2,
+        "damage": 23639,
+        "gold": 9875,
+        "vision": 32,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "wisnPGByDkEZxwG7ybjbgJUZKGhQbqlNwdeY0-8gLb4io6qbpjQOu_C-YF2ksbDcPfeBMs0amu934A",
+        "championName": "Warwick",
+        "kills": 0,
+        "deaths": 12,
+        "assists": 5,
+        "damage": 15589,
+        "gold": 9371,
+        "vision": 17,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "LBUkPTbXa_RPOj9JIs0LOB65DGO3NmVRsFwM2aNLWEsdbYFyt5cDNXPs-0cpfZNkxG9EywpBOU5MZw",
+        "championName": "Vex",
+        "kills": 8,
+        "deaths": 5,
+        "assists": 4,
+        "damage": 32572,
+        "gold": 14522,
+        "vision": 25,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "mCCFh5tMD-XSrNAXNU7MMUIDJL8WW9f2Ut-PzDwHEcewnhLRKPUUSuPDb3gkiqz_Wocu0k_5-xvUQw",
+        "championName": "Sivir",
+        "kills": 6,
+        "deaths": 5,
+        "assists": 7,
+        "damage": 39166,
+        "gold": 16568,
+        "vision": 29,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "48TqZrSRE0m62tN9HucAMyWWPiaUua7GmHXVZEajO240t5fJTFNqfb6TFwgswnQlSp-tx5UxJ1aQ4w",
+        "championName": "Nautilus",
+        "kills": 2,
+        "deaths": 11,
+        "assists": 8,
+        "damage": 13562,
+        "gold": 8474,
+        "vision": 56,
+        "win": false,
+        "teamId": 100,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      },
+      {
+        "puuid": "Pj3rSqa9xghB9_JPjZCGSOdVBvXP3yZb3wmI6HNTiHVGC8-WHwp3y2PVvHLJny_upUaaSiDokmDoSw",
+        "championName": "Aatrox",
+        "kills": 10,
+        "deaths": 2,
+        "assists": 5,
+        "damage": 29340,
+        "gold": 13387,
+        "vision": 31,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "TOP",
+        "individualPosition": "TOP"
+      },
+      {
+        "puuid": "izx4zh455Qvp3TjWSeU2ETnSTrFqBXjTx3X3SXXAuRFSMsVHzdKWsucKc1yAY2dfuQzZxRpd707EKw",
+        "championName": "LeeSin",
+        "kills": 15,
+        "deaths": 6,
+        "assists": 10,
+        "damage": 27727,
+        "gold": 15961,
+        "vision": 31,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "JUNGLE",
+        "individualPosition": "JUNGLE"
+      },
+      {
+        "puuid": "JTS8zP0bkme4MbLqxyOIWhw5RyEPmI6oyByaNaegjb2VKSvNfUbPH24AgaNaroHgNL-VXqKLEzlKXA",
+        "championName": "Akali",
+        "kills": 5,
+        "deaths": 5,
+        "assists": 5,
+        "damage": 16711,
+        "gold": 11232,
+        "vision": 30,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "MIDDLE",
+        "individualPosition": "MIDDLE"
+      },
+      {
+        "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
+        "championName": "Ziggs",
+        "kills": 4,
+        "deaths": 1,
+        "assists": 16,
+        "damage": 28216,
+        "gold": 15562,
+        "vision": 30,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "BOTTOM",
+        "individualPosition": "BOTTOM"
+      },
+      {
+        "puuid": "eaOLZh10WLIsLZ9EgiCRSXC6mxUFnwYOslrExefEy2z2lwCPGMZnPRgGgFP8PYnZtvEpyug13KbFyQ",
+        "championName": "TahmKench",
+        "kills": 5,
+        "deaths": 3,
+        "assists": 13,
+        "damage": 17931,
+        "gold": 9987,
+        "vision": 62,
+        "win": true,
+        "teamId": 200,
+        "teamPosition": "UTILITY",
+        "individualPosition": "UTILITY"
+      }
+    ]
   }
 }

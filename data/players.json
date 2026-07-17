@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-17T01:06:49.509298Z",
+  "updated_at": "2026-07-17T07:35:15.271346Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -721,7 +721,7 @@
           "date": "2026-07-17",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
-          "solo_lp": 30,
+          "solo_lp": 50,
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
@@ -730,8 +730,8 @@
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 30,
-        "wins": 162,
+        "lp": 50,
+        "wins": 163,
         "losses": 162
       },
       "flex": {
@@ -743,10 +743,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 55,
-          "wins": 27,
+          "games": 56,
+          "wins": 28,
           "losses": 28,
-          "winrate": 49.1
+          "winrate": 50.0
         },
         "flex": {
           "games": 6,
@@ -762,7 +762,7 @@
         }
       },
       "solo_streak": {
-        "type": "loss",
+        "type": "win",
         "count": 1
       },
       "solo_last_game_days_ago": 0,
@@ -800,6 +800,20 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-07-17",
+          "champion": "Ziggs",
+          "win": true,
+          "kills": 4,
+          "deaths": 1,
+          "assists": 16,
+          "position": "BOTTOM",
+          "opponent_champion": "Sivir",
+          "opponent_kills": 6,
+          "opponent_deaths": 5,
+          "opponent_assists": 7,
+          "laner_verdict": "win"
+        },
+        {
           "date": "2026-07-16",
           "champion": "Ziggs",
           "win": false,
@@ -825,20 +839,6 @@
           "opponent_kills": 2,
           "opponent_deaths": 3,
           "opponent_assists": 0,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-07-16",
-          "champion": "Ziggs",
-          "win": true,
-          "kills": 3,
-          "deaths": 1,
-          "assists": 10,
-          "position": "BOTTOM",
-          "opponent_champion": "Caitlyn",
-          "opponent_kills": 4,
-          "opponent_deaths": 8,
-          "opponent_assists": 1,
           "laner_verdict": "win"
         }
       ]
