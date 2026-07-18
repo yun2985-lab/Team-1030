@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-17T07:36:23+09:00",
+  "updated_at": "2026-07-18T07:12:40+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -20,6 +20,11 @@
       "slug": "GGYUU-KR1",
       "riot_id": "GGYUU#KR1",
       "name": "GGYUU"
+    },
+    {
+      "slug": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
+      "riot_id": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
+      "name": "미드 벨코즈"
     },
     {
       "slug": "Phieu%20Be%20Nguu-KR1",
@@ -82,14 +87,14 @@
       "name": "징크쓰"
     },
     {
-      "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
-      "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
-      "name": "상 수 리 나 무"
-    },
-    {
       "slug": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8-KR3",
       "riot_id": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8#KR3",
       "name": "딜서폿장인"
+    },
+    {
+      "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
+      "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
+      "name": "상 수 리 나 무"
     },
     {
       "slug": "%EB%B9%84%EB%9E%98%EB%8F%99%EC%A0%84%EC%82%AC-KR1",
@@ -112,14 +117,14 @@
       "name": "S 벨코즈"
     },
     {
-      "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
-      "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
-      "name": "타락함"
-    },
-    {
       "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
       "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
       "name": "임뿌뿌"
+    },
+    {
+      "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
+      "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
+      "name": "타락함"
     },
     {
       "slug": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC-KR1",
@@ -182,14 +187,19 @@
       "name": "MUTE ALL"
     },
     {
+      "slug": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC-charm",
+      "riot_id": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC#charm",
+      "name": "낭만파 아리"
+    },
+    {
       "slug": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5-%EB%82%99%EC%A7%80%ED%82%B9",
       "riot_id": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5#%EB%82%99%EC%A7%80%ED%82%B9",
       "name": "낙지덮밥"
     },
     {
-      "slug": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC-charm",
-      "riot_id": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC#charm",
-      "name": "낭만파 아리"
+      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
+      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
+      "name": "까르보불"
     },
     {
       "slug": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84-%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
@@ -217,9 +227,9 @@
       "name": "벨코즈 좋아"
     },
     {
-      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
-      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
-      "name": "까르보불"
+      "slug": "%ED%95%B5%20%EA%B7%80-KR1",
+      "riot_id": "%ED%95%B5%20%EA%B7%80#KR1",
+      "name": "핵 귀"
     },
     {
       "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
@@ -240,16 +250,6 @@
       "slug": "%EC%95%88%ED%98%95%EC%B0%AC-KR1",
       "riot_id": "%EC%95%88%ED%98%95%EC%B0%AC#KR1",
       "name": "안형찬"
-    },
-    {
-      "slug": "%ED%95%B5%20%EA%B7%80-KR1",
-      "riot_id": "%ED%95%B5%20%EA%B7%80#KR1",
-      "name": "핵 귀"
-    },
-    {
-      "slug": "%ED%9B%84%EC%B6%94%EB%8A%94%20infj-KR1",
-      "riot_id": "%ED%9B%84%EC%B6%94%EB%8A%94%20infj#KR1",
-      "name": "후추는 infj"
     }
   ]
 }
