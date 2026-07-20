@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T07:57:00+09:00",
+  "updated_at": "2026-07-20T11:24:18+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -17,14 +17,14 @@
       "name": "brainbreakers"
     },
     {
-      "slug": "GGYUU-KR1",
-      "riot_id": "GGYUU#KR1",
-      "name": "GGYUU"
-    },
-    {
       "slug": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
       "riot_id": "%EB%AF%B8%EB%93%9C%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
       "name": "미드 벨코즈"
+    },
+    {
+      "slug": "GGYUU-KR1",
+      "riot_id": "GGYUU#KR1",
+      "name": "GGYUU"
     },
     {
       "slug": "Phieu%20Be%20Nguu-KR1",
@@ -162,19 +162,29 @@
       "name": "O벨코즈O"
     },
     {
-      "slug": "Logos-KR1",
-      "riot_id": "Logos#KR1",
-      "name": "Logos"
-    },
-    {
       "slug": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4-kr0",
       "riot_id": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4#kr0",
       "name": "툼바신라면"
     },
     {
+      "slug": "Logos-KR1",
+      "riot_id": "Logos#KR1",
+      "name": "Logos"
+    },
+    {
+      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
+      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
+      "name": "까르보불"
+    },
+    {
       "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
       "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
       "name": "뚜끼뚜빠뿌"
+    },
+    {
+      "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
+      "riot_id": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94#KR1",
+      "name": "달리면숨차요"
     },
     {
       "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
@@ -187,19 +197,9 @@
       "name": "감마선자외선X선광선날리는벨코즈"
     },
     {
-      "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
-      "riot_id": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94#KR1",
-      "name": "달리면숨차요"
-    },
-    {
       "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
       "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
       "name": "벨코즈 좋아"
-    },
-    {
-      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
-      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
-      "name": "까르보불"
     },
     {
       "slug": "MUTE%20ALL-2307",
