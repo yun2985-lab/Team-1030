@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-07-28T10:04:34.539376Z",
+  "updated_at": "2026-07-29T10:14:28.574252Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -204,6 +204,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "I",
           "flex_lp": 3
+        },
+        {
+          "date": "2026-07-29",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 2,
+          "flex_tier": "GOLD",
+          "flex_rank": "I",
+          "flex_lp": 3
         }
       ],
       "solo": {
@@ -244,7 +253,7 @@
         "type": "win",
         "count": 3
       },
-      "solo_last_game_days_ago": 11,
+      "solo_last_game_days_ago": 12,
       "recent_flex_games": [
         {
           "date": "2026-07-22",
@@ -524,6 +533,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 31
+        },
+        {
+          "date": "2026-07-29",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 32,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 66
         }
       ],
       "solo": {
@@ -536,9 +554,9 @@
       "flex": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 31,
-        "wins": 38,
-        "losses": 48
+        "lp": 66,
+        "wins": 41,
+        "losses": 49
       },
       "recent_30d": {
         "solo": {
@@ -548,10 +566,10 @@
           "winrate": 60.7
         },
         "flex": {
-          "games": 6,
-          "wins": 4,
-          "losses": 2,
-          "winrate": 66.7
+          "games": 10,
+          "wins": 7,
+          "losses": 3,
+          "winrate": 70.0
         },
         "aram": {
           "games": 0,
@@ -564,36 +582,36 @@
         "type": "loss",
         "count": 3
       },
-      "solo_last_game_days_ago": 10,
+      "solo_last_game_days_ago": 11,
       "recent_flex_games": [
         {
-          "date": "2026-07-10",
+          "date": "2026-07-28",
+          "champion": "Velkoz",
+          "win": true,
+          "kills": 20,
+          "deaths": 5,
+          "assists": 12,
+          "rank": 1,
+          "total": 5
+        },
+        {
+          "date": "2026-07-28",
           "champion": "Velkoz",
           "win": false,
           "kills": 4,
-          "deaths": 7,
-          "assists": 3,
-          "rank": 1,
+          "deaths": 17,
+          "assists": 9,
+          "rank": 5,
           "total": 5
         },
         {
-          "date": "2026-07-10",
+          "date": "2026-07-28",
           "champion": "Velkoz",
           "win": true,
-          "kills": 14,
-          "deaths": 4,
-          "assists": 8,
-          "rank": 1,
-          "total": 5
-        },
-        {
-          "date": "2026-07-10",
-          "champion": "Velkoz",
-          "win": true,
-          "kills": 5,
-          "deaths": 1,
-          "assists": 11,
-          "rank": 2,
+          "kills": 6,
+          "deaths": 3,
+          "assists": 15,
+          "rank": 3,
           "total": 5
         }
       ],
@@ -838,6 +856,15 @@
         },
         {
           "date": "2026-07-28",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 80
+        },
+        {
+          "date": "2026-07-29",
           "solo_tier": "UNRANKED",
           "solo_rank": "",
           "solo_lp": 0,
@@ -1121,6 +1148,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 3
+        },
+        {
+          "date": "2026-07-29",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 66,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 46
         }
       ],
       "solo": {
@@ -1133,22 +1169,22 @@
       "flex": {
         "tier": "GOLD",
         "rank": "II",
-        "lp": 3,
-        "wins": 45,
-        "losses": 46
+        "lp": 46,
+        "wins": 48,
+        "losses": 47
       },
       "recent_30d": {
         "solo": {
-          "games": 61,
-          "wins": 30,
-          "losses": 31,
-          "winrate": 49.2
+          "games": 57,
+          "wins": 28,
+          "losses": 29,
+          "winrate": 49.1
         },
         "flex": {
-          "games": 14,
-          "wins": 7,
-          "losses": 7,
-          "winrate": 50.0
+          "games": 18,
+          "wins": 10,
+          "losses": 8,
+          "winrate": 55.6
         },
         "aram": {
           "games": 0,
@@ -1161,36 +1197,36 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 2,
       "recent_flex_games": [
         {
-          "date": "2026-07-22",
-          "champion": "DrMundo",
-          "win": false,
-          "kills": 1,
-          "deaths": 8,
-          "assists": 5,
-          "rank": 5,
-          "total": 5
-        },
-        {
-          "date": "2026-07-22",
-          "champion": "Yorick",
-          "win": false,
-          "kills": 0,
-          "deaths": 9,
-          "assists": 5,
-          "rank": 5,
-          "total": 5
-        },
-        {
-          "date": "2026-07-22",
-          "champion": "Malphite",
-          "win": false,
-          "kills": 9,
+          "date": "2026-07-28",
+          "champion": "Lulu",
+          "win": true,
+          "kills": 2,
           "deaths": 4,
-          "assists": 3,
+          "assists": 33,
           "rank": 2,
+          "total": 5
+        },
+        {
+          "date": "2026-07-28",
+          "champion": "Sylas",
+          "win": false,
+          "kills": 5,
+          "deaths": 15,
+          "assists": 11,
+          "rank": 3,
+          "total": 5
+        },
+        {
+          "date": "2026-07-28",
+          "champion": "Pantheon",
+          "win": true,
+          "kills": 5,
+          "deaths": 10,
+          "assists": 17,
+          "rank": 4,
           "total": 5
         }
       ],
@@ -1441,6 +1477,15 @@
           "flex_tier": "SILVER",
           "flex_rank": "I",
           "flex_lp": 28
+        },
+        {
+          "date": "2026-07-29",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "SILVER",
+          "flex_rank": "I",
+          "flex_lp": 60
         }
       ],
       "solo": {
@@ -1453,9 +1498,9 @@
       "flex": {
         "tier": "SILVER",
         "rank": "I",
-        "lp": 28,
-        "wins": 38,
-        "losses": 43
+        "lp": 60,
+        "wins": 41,
+        "losses": 44
       },
       "recent_30d": {
         "solo": {
@@ -1465,10 +1510,10 @@
           "winrate": 0.0
         },
         "flex": {
-          "games": 7,
-          "wins": 2,
-          "losses": 5,
-          "winrate": 28.6
+          "games": 11,
+          "wins": 5,
+          "losses": 6,
+          "winrate": 45.5
         },
         "aram": {
           "games": 0,
@@ -1484,33 +1529,33 @@
       "solo_last_game_days_ago": null,
       "recent_flex_games": [
         {
-          "date": "2026-07-22",
-          "champion": "Sejuani",
-          "win": false,
-          "kills": 6,
-          "deaths": 6,
-          "assists": 6,
-          "rank": 1,
-          "total": 5
-        },
-        {
-          "date": "2026-07-22",
+          "date": "2026-07-28",
           "champion": "Nocturne",
-          "win": false,
-          "kills": 0,
-          "deaths": 5,
-          "assists": 5,
+          "win": true,
+          "kills": 6,
+          "deaths": 4,
+          "assists": 18,
           "rank": 4,
           "total": 5
         },
         {
-          "date": "2026-07-22",
-          "champion": "Nocturne",
+          "date": "2026-07-28",
+          "champion": "LeeSin",
           "win": false,
-          "kills": 6,
+          "kills": 11,
+          "deaths": 8,
+          "assists": 8,
+          "rank": 4,
+          "total": 5
+        },
+        {
+          "date": "2026-07-28",
+          "champion": "Briar",
+          "win": true,
+          "kills": 19,
           "deaths": 7,
-          "assists": 4,
-          "rank": 4,
+          "assists": 11,
+          "rank": 1,
           "total": 5
         }
       ],
