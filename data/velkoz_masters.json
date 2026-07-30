@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-29T10:16:55+09:00",
+  "updated_at": "2026-07-30T09:44:44+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -67,14 +67,14 @@
       "name": "당신은 좋은 원딜"
     },
     {
-      "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
-      "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
-      "name": "상 수 리 나 무"
-    },
-    {
       "slug": "%EB%82%99%EC%84%B1%EB%8C%80%EC%95%94%EC%82%B4%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
       "riot_id": "%EB%82%99%EC%84%B1%EB%8C%80%EC%95%94%EC%82%B4%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
       "name": "낙성대암살벨코즈"
+    },
+    {
+      "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
+      "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
+      "name": "상 수 리 나 무"
     },
     {
       "slug": "%EC%9A%B0%EC%9C%A0%EC%A7%B1-0420",
@@ -217,6 +217,11 @@
       "name": "낙지덮밥"
     },
     {
+      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
+      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
+      "name": "사이좋게합시당"
+    },
+    {
       "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
       "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
       "name": "너무좋아고양이"
@@ -235,11 +240,6 @@
       "slug": "%ED%95%B5%20%EA%B7%80-KR1",
       "riot_id": "%ED%95%B5%20%EA%B7%80#KR1",
       "name": "핵 귀"
-    },
-    {
-      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
-      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
-      "name": "사이좋게합시당"
     },
     {
       "slug": "Pasta%20La%20Vista-31415",
