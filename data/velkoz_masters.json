@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-30T09:44:44+09:00",
+  "updated_at": "2026-07-31T10:11:10+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -65,11 +65,6 @@
       "slug": "%EB%8B%B9%EC%8B%A0%EC%9D%80%20%EC%A2%8B%EC%9D%80%20%EC%9B%90%EB%94%9C-KR1",
       "riot_id": "%EB%8B%B9%EC%8B%A0%EC%9D%80%20%EC%A2%8B%EC%9D%80%20%EC%9B%90%EB%94%9C#KR1",
       "name": "당신은 좋은 원딜"
-    },
-    {
-      "slug": "%EB%82%99%EC%84%B1%EB%8C%80%EC%95%94%EC%82%B4%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
-      "riot_id": "%EB%82%99%EC%84%B1%EB%8C%80%EC%95%94%EC%82%B4%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
-      "name": "낙성대암살벨코즈"
     },
     {
       "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
@@ -177,14 +172,14 @@
       "name": "날으는 스파게티 괴물"
     },
     {
-      "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
-      "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
-      "name": "뚜끼뚜빠뿌"
-    },
-    {
       "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
       "riot_id": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0#CROWN",
       "name": "왕관 쓴 꼴뚜기"
+    },
+    {
+      "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
+      "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
+      "name": "뚜끼뚜빠뿌"
     },
     {
       "slug": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4-kr0",
@@ -202,6 +197,11 @@
       "name": "벨코즈 좋아"
     },
     {
+      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
+      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
+      "name": "사이좋게합시당"
+    },
+    {
       "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%EC%9E%90%EC%99%B8%EC%84%A0X%EC%84%A0%EA%B4%91%EC%84%A0%EB%82%A0%EB%A6%AC%EB%8A%94%EB%B2%A8%EC%BD%94%EC%A6%88-2005",
       "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%EC%9E%90%EC%99%B8%EC%84%A0X%EC%84%A0%EA%B4%91%EC%84%A0%EB%82%A0%EB%A6%AC%EB%8A%94%EB%B2%A8%EC%BD%94%EC%A6%88#2005",
       "name": "감마선자외선X선광선날리는벨코즈"
@@ -212,14 +212,9 @@
       "name": "MUTE ALL"
     },
     {
-      "slug": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5-%EB%82%99%EC%A7%80%ED%82%B9",
-      "riot_id": "%EB%82%99%EC%A7%80%EB%8D%AE%EB%B0%A5#%EB%82%99%EC%A7%80%ED%82%B9",
-      "name": "낙지덮밥"
-    },
-    {
-      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
-      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
-      "name": "사이좋게합시당"
+      "slug": "Faker-KRY",
+      "riot_id": "Faker#KRY",
+      "name": "Faker"
     },
     {
       "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
@@ -245,6 +240,11 @@
       "slug": "Pasta%20La%20Vista-31415",
       "riot_id": "Pasta%20La%20Vista#31415",
       "name": "Pasta La Vista"
+    },
+    {
+      "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
+      "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
+      "name": "고냉고냉"
     },
     {
       "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
