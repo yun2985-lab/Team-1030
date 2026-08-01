@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T10:11:10+09:00",
+  "updated_at": "2026-08-01T08:42:14+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -112,6 +112,11 @@
       "name": "비래동전사"
     },
     {
+      "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
+      "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
+      "name": "타락함"
+    },
+    {
       "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
       "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
       "name": "S 벨코즈"
@@ -120,11 +125,6 @@
       "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
       "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
       "name": "임뿌뿌"
-    },
-    {
-      "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
-      "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
-      "name": "타락함"
     },
     {
       "slug": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC-KR1",
@@ -222,6 +222,11 @@
       "name": "너무좋아고양이"
     },
     {
+      "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
+      "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
+      "name": "고냉고냉"
+    },
+    {
       "slug": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84-%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
       "riot_id": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84#%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
       "name": "페비츄비"
@@ -240,11 +245,6 @@
       "slug": "Pasta%20La%20Vista-31415",
       "riot_id": "Pasta%20La%20Vista#31415",
       "name": "Pasta La Vista"
-    },
-    {
-      "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
-      "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
-      "name": "고냉고냉"
     },
     {
       "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
