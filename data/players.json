@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-08-05T10:11:25.712005Z",
+  "updated_at": "2026-08-06T10:14:49.982690Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -276,6 +276,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "I",
           "flex_lp": 3
+        },
+        {
+          "date": "2026-08-06",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 2,
+          "flex_tier": "GOLD",
+          "flex_rank": "I",
+          "flex_lp": 3
         }
       ],
       "solo": {
@@ -316,7 +325,7 @@
         "type": "win",
         "count": 2
       },
-      "solo_last_game_days_ago": 19,
+      "solo_last_game_days_ago": 20,
       "recent_flex_games": [
         {
           "date": "2026-07-22",
@@ -654,6 +663,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 42
+        },
+        {
+          "date": "2026-08-06",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 32,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 42
         }
       ],
       "solo": {
@@ -694,7 +712,7 @@
         "type": "loss",
         "count": 3
       },
-      "solo_last_game_days_ago": 18,
+      "solo_last_game_days_ago": 19,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -1040,6 +1058,15 @@
         },
         {
           "date": "2026-08-05",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 48
+        },
+        {
+          "date": "2026-08-06",
           "solo_tier": "UNRANKED",
           "solo_rank": "",
           "solo_lp": 0,
@@ -1395,14 +1422,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-08-06",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 4,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
         "tier": "SILVER",
         "rank": "I",
-        "lp": 10,
-        "wins": 176,
-        "losses": 182
+        "lp": 4,
+        "wins": 177,
+        "losses": 183
       },
       "flex": {
         "tier": "GOLD",
@@ -1413,10 +1449,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 54,
+          "games": 53,
           "wins": 23,
-          "losses": 31,
-          "winrate": 42.6
+          "losses": 30,
+          "winrate": 43.4
         },
         "flex": {
           "games": 22,
@@ -1435,7 +1471,7 @@
         "type": "loss",
         "count": 1
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -1470,6 +1506,34 @@
       ],
       "recent_solo_games": [
         {
+          "date": "2026-08-06",
+          "champion": "Renekton",
+          "win": false,
+          "kills": 9,
+          "deaths": 7,
+          "assists": 6,
+          "position": "TOP",
+          "opponent_champion": "Yasuo",
+          "opponent_kills": 7,
+          "opponent_deaths": 12,
+          "opponent_assists": 7,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-08-05",
+          "champion": "Malphite",
+          "win": true,
+          "kills": 3,
+          "deaths": 7,
+          "assists": 14,
+          "position": "TOP",
+          "opponent_champion": "Shaco",
+          "opponent_kills": 6,
+          "opponent_deaths": 9,
+          "opponent_assists": 9,
+          "laner_verdict": "loss"
+        },
+        {
           "date": "2026-08-03",
           "champion": "TwistedFate",
           "win": false,
@@ -1482,34 +1546,6 @@
           "opponent_deaths": 3,
           "opponent_assists": 10,
           "laner_verdict": "loss"
-        },
-        {
-          "date": "2026-08-02",
-          "champion": "Malphite",
-          "win": true,
-          "kills": 4,
-          "deaths": 0,
-          "assists": 1,
-          "position": "TOP",
-          "opponent_champion": "Teemo",
-          "opponent_kills": 0,
-          "opponent_deaths": 5,
-          "opponent_assists": 1,
-          "laner_verdict": "win"
-        },
-        {
-          "date": "2026-08-02",
-          "champion": "Yorick",
-          "win": false,
-          "kills": 7,
-          "deaths": 4,
-          "assists": 5,
-          "position": "TOP",
-          "opponent_champion": "Ashe",
-          "opponent_kills": 4,
-          "opponent_deaths": 5,
-          "opponent_assists": 9,
-          "laner_verdict": "win"
         }
       ]
     },
@@ -1781,6 +1817,15 @@
         },
         {
           "date": "2026-08-05",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "SILVER",
+          "flex_rank": "I",
+          "flex_lp": 35
+        },
+        {
+          "date": "2026-08-06",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
