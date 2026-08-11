@@ -1,6 +1,6 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-08-10T01:58:39.646142Z",
+  "updated_at": "2026-08-11T01:53:54.214913Z",
   "players": [
     {
       "label": "최강롯디자잉",
@@ -321,6 +321,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "I",
           "flex_lp": 3
+        },
+        {
+          "date": "2026-08-11",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 2,
+          "flex_tier": "GOLD",
+          "flex_rank": "I",
+          "flex_lp": 3
         }
       ],
       "solo": {
@@ -361,7 +370,7 @@
         "type": "win",
         "count": 2
       },
-      "solo_last_game_days_ago": 24,
+      "solo_last_game_days_ago": 25,
       "recent_flex_games": [
         {
           "date": "2026-07-22",
@@ -744,6 +753,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 42
+        },
+        {
+          "date": "2026-08-11",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 11,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 42
         }
       ],
       "solo": {
@@ -762,10 +780,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 13,
-          "wins": 6,
-          "losses": 7,
-          "winrate": 46.2
+          "games": 8,
+          "wins": 2,
+          "losses": 6,
+          "winrate": 25.0
         },
         "flex": {
           "games": 8,
@@ -784,7 +802,7 @@
         "type": "loss",
         "count": 4
       },
-      "solo_last_game_days_ago": 0,
+      "solo_last_game_days_ago": 1,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -1175,6 +1193,15 @@
         },
         {
           "date": "2026-08-10",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 48
+        },
+        {
+          "date": "2026-08-11",
           "solo_tier": "UNRANKED",
           "solo_rank": "",
           "solo_lp": 0,
@@ -1575,6 +1602,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-08-11",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 18,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
@@ -1593,10 +1629,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 62,
-          "wins": 28,
-          "losses": 34,
-          "winrate": 45.2
+          "games": 57,
+          "wins": 26,
+          "losses": 31,
+          "winrate": 45.6
         },
         "flex": {
           "games": 16,
@@ -1615,7 +1651,7 @@
         "type": "win",
         "count": 5
       },
-      "solo_last_game_days_ago": 1,
+      "solo_last_game_days_ago": 2,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -2006,6 +2042,15 @@
         },
         {
           "date": "2026-08-10",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "SILVER",
+          "flex_rank": "I",
+          "flex_lp": 35
+        },
+        {
+          "date": "2026-08-11",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
