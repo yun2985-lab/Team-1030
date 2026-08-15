@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-14T02:48:29+09:00",
+  "updated_at": "2026-08-15T01:52:15+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -12,14 +12,14 @@
       "name": "자쓰더라스트댄스"
     },
     {
-      "slug": "GGYUU-KR1",
-      "riot_id": "GGYUU#KR1",
-      "name": "GGYUU"
-    },
-    {
       "slug": "%EC%95%A1%EC%85%98%EB%B9%94%20%EC%A7%80%EC%A7%80%EC%A7%81-KR1",
       "riot_id": "%EC%95%A1%EC%85%98%EB%B9%94%20%EC%A7%80%EC%A7%80%EC%A7%81#KR1",
       "name": "액션빔 지지직"
+    },
+    {
+      "slug": "GGYUU-KR1",
+      "riot_id": "GGYUU#KR1",
+      "name": "GGYUU"
     },
     {
       "slug": "Phieu%20Be%20Nguu-KR1",
@@ -107,14 +107,14 @@
       "name": "비래동전사"
     },
     {
-      "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
-      "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
-      "name": "S 벨코즈"
-    },
-    {
       "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
       "riot_id": "%ED%83%80%EB%9D%BD%ED%95%A8#%ED%9D%91%ED%99%94%ED%95%A8",
       "name": "타락함"
+    },
+    {
+      "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
+      "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
+      "name": "S 벨코즈"
     },
     {
       "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
@@ -132,6 +132,11 @@
       "name": "사이좋게합시당"
     },
     {
+      "slug": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98-KR1",
+      "riot_id": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98#KR1",
+      "name": "세발낙지아님"
+    },
+    {
       "slug": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC-KR1",
       "riot_id": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC#KR1",
       "name": "퀀틱드림"
@@ -142,14 +147,14 @@
       "name": "Faker"
     },
     {
-      "slug": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98-KR1",
-      "riot_id": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98#KR1",
-      "name": "세발낙지아님"
-    },
-    {
       "slug": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4-KR1",
       "riot_id": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4#KR1",
       "name": "라이후이"
+    },
+    {
+      "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
+      "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
+      "name": "너무좋아고양이"
     },
     {
       "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
@@ -187,6 +192,11 @@
       "name": "O벨코즈O"
     },
     {
+      "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
+      "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
+      "name": "고냉고냉"
+    },
+    {
       "slug": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4-kr0",
       "riot_id": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4#kr0",
       "name": "툼바신라면"
@@ -197,19 +207,9 @@
       "name": "잔잔한 호숫가"
     },
     {
-      "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
-      "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
-      "name": "고냉고냉"
-    },
-    {
       "slug": "Logos-KR1",
       "riot_id": "Logos#KR1",
       "name": "Logos"
-    },
-    {
-      "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
-      "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
-      "name": "너무좋아고양이"
     },
     {
       "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
@@ -222,14 +222,19 @@
       "name": "감마선자외선X선광선날리는벨코즈"
     },
     {
+      "slug": "%EC%9C%A4%EB%82%99%EC%A7%80-111",
+      "riot_id": "%EC%9C%A4%EB%82%99%EC%A7%80#111",
+      "name": "윤낙지"
+    },
+    {
       "slug": "MUTE%20ALL-2307",
       "riot_id": "MUTE%20ALL#2307",
       "name": "MUTE ALL"
     },
     {
-      "slug": "%EC%9C%A4%EB%82%99%EC%A7%80-111",
-      "riot_id": "%EC%9C%A4%EB%82%99%EC%A7%80#111",
-      "name": "윤낙지"
+      "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
+      "riot_id": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80#KRI",
+      "name": "촉수는 내 성감대"
     },
     {
       "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
@@ -245,11 +250,6 @@
       "slug": "%ED%95%B5%20%EA%B7%80-KR1",
       "riot_id": "%ED%95%B5%20%EA%B7%80#KR1",
       "name": "핵 귀"
-    },
-    {
-      "slug": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI-KR1",
-      "riot_id": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI#KR1",
-      "name": "무지성 AI"
     }
   ]
 }
