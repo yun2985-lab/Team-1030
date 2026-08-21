@@ -1,21 +1,12 @@
 {
   "team_name": "Team 1030",
-  "updated_at": "2026-08-20T01:21:03.447456Z",
+  "updated_at": "2026-08-21T01:24:31.678411Z",
   "players": [
     {
       "label": "최강롯디자잉",
       "riot_id": "최강롯디자잉#1030",
       "puuid": "0kozO9sLydj2rcSZemBrq8z1dNdJS3DEQbIoe4H8d8HOQjSo893fSm9kWJF7PMBe8q-5X4-njwnewg",
       "history": [
-        {
-          "date": "2026-07-16",
-          "solo_tier": "SILVER",
-          "solo_rank": "I",
-          "solo_lp": 54,
-          "flex_tier": "PLATINUM",
-          "flex_rank": "IV",
-          "flex_lp": 36
-        },
         {
           "date": "2026-07-17",
           "solo_tier": "GOLD",
@@ -330,14 +321,23 @@
           "flex_tier": "GOLD",
           "flex_rank": "I",
           "flex_lp": 3
+        },
+        {
+          "date": "2026-08-21",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 0,
+          "flex_tier": "GOLD",
+          "flex_rank": "I",
+          "flex_lp": 3
         }
       ],
       "solo": {
         "tier": "GOLD",
         "rank": "IV",
-        "lp": 2,
-        "wins": 29,
-        "losses": 28
+        "lp": 0,
+        "wins": 30,
+        "losses": 30
       },
       "flex": {
         "tier": "GOLD",
@@ -348,10 +348,10 @@
       },
       "recent_30d": {
         "solo": {
-          "games": 0,
-          "wins": 0,
-          "losses": 0,
-          "winrate": 0.0
+          "games": 3,
+          "wins": 1,
+          "losses": 2,
+          "winrate": 33.3
         },
         "flex": {
           "games": 4,
@@ -367,10 +367,10 @@
         }
       },
       "solo_streak": {
-        "type": "none",
-        "count": 0
+        "type": "loss",
+        "count": 2
       },
-      "solo_last_game_days_ago": null,
+      "solo_last_game_days_ago": 0,
       "recent_flex_games": [
         {
           "date": "2026-07-22",
@@ -403,22 +403,56 @@
           "total": 5
         }
       ],
-      "recent_solo_games": []
+      "recent_solo_games": [
+        {
+          "date": "2026-08-20",
+          "champion": "Gangplank",
+          "win": false,
+          "kills": 5,
+          "deaths": 6,
+          "assists": 6,
+          "position": "TOP",
+          "opponent_champion": "Ornn",
+          "opponent_kills": 3,
+          "opponent_deaths": 5,
+          "opponent_assists": 12,
+          "laner_verdict": "win"
+        },
+        {
+          "date": "2026-08-20",
+          "champion": "Nasus",
+          "win": false,
+          "kills": 5,
+          "deaths": 10,
+          "assists": 3,
+          "position": "TOP",
+          "opponent_champion": "Garen",
+          "opponent_kills": 16,
+          "opponent_deaths": 3,
+          "opponent_assists": 4,
+          "laner_verdict": "loss"
+        },
+        {
+          "date": "2026-08-20",
+          "champion": "Nautilus",
+          "win": true,
+          "kills": 1,
+          "deaths": 7,
+          "assists": 13,
+          "position": "UTILITY",
+          "opponent_champion": "Braum",
+          "opponent_kills": 0,
+          "opponent_deaths": 4,
+          "opponent_assists": 9,
+          "laner_verdict": "loss"
+        }
+      ]
     },
     {
       "label": "심해최강벨코즈",
       "riot_id": "심해최강벨코즈#ybak",
       "puuid": "IYfrAzZ1IVM8Ju_AeBiiSeexs9ICamUfGBLoufqhfzhqvNY-nIguuNq2SjMY6i2uMO7e2p_unR8ZvA",
       "history": [
-        {
-          "date": "2026-07-16",
-          "solo_tier": "EMERALD",
-          "solo_rank": "II",
-          "solo_lp": 53,
-          "flex_tier": "GOLD",
-          "flex_rank": "IV",
-          "flex_lp": 31
-        },
         {
           "date": "2026-07-17",
           "solo_tier": "EMERALD",
@@ -733,6 +767,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "IV",
           "flex_lp": 42
+        },
+        {
+          "date": "2026-08-21",
+          "solo_tier": "EMERALD",
+          "solo_rank": "II",
+          "solo_lp": 49,
+          "flex_tier": "GOLD",
+          "flex_rank": "IV",
+          "flex_lp": 42
         }
       ],
       "solo": {
@@ -773,7 +816,7 @@
         "type": "win",
         "count": 2
       },
-      "solo_last_game_days_ago": 5,
+      "solo_last_game_days_ago": 6,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -856,15 +899,6 @@
       "riot_id": "부릉부릉배부릉#kr1",
       "puuid": "i3LAllNwJdfemNoETQQP9LQr4T97D7SdI5Ldrhwatx8QCwGR7IH_0296OueLXRKqnQRiBOM2Ghhp5A",
       "history": [
-        {
-          "date": "2026-07-16",
-          "solo_tier": "UNRANKED",
-          "solo_rank": "",
-          "solo_lp": 0,
-          "flex_tier": "PLATINUM",
-          "flex_rank": "IV",
-          "flex_lp": 15
-        },
         {
           "date": "2026-07-17",
           "solo_tier": "UNRANKED",
@@ -1179,6 +1213,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 48
+        },
+        {
+          "date": "2026-08-21",
+          "solo_tier": "UNRANKED",
+          "solo_rank": "",
+          "solo_lp": 0,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 48
         }
       ],
       "solo": {
@@ -1259,15 +1302,6 @@
       "riot_id": "전지훈#kr1",
       "puuid": "Q0eAUzz_wchnjZQHwuzAnUuimw227vUV1NYO5ETZ04JS1cvsYxa4V2tKq72BxZuWp_PqH6v3MkhRSw",
       "history": [
-        {
-          "date": "2026-07-16",
-          "solo_tier": "GOLD",
-          "solo_rank": "IV",
-          "solo_lp": 33,
-          "flex_tier": "GOLD",
-          "flex_rank": "II",
-          "flex_lp": 27
-        },
         {
           "date": "2026-07-17",
           "solo_tier": "GOLD",
@@ -1582,6 +1616,15 @@
           "flex_tier": "GOLD",
           "flex_rank": "II",
           "flex_lp": 27
+        },
+        {
+          "date": "2026-08-21",
+          "solo_tier": "SILVER",
+          "solo_rank": "I",
+          "solo_lp": 5,
+          "flex_tier": "GOLD",
+          "flex_rank": "II",
+          "flex_lp": 27
         }
       ],
       "solo": {
@@ -1622,7 +1665,7 @@
         "type": "win",
         "count": 1
       },
-      "solo_last_game_days_ago": 0,
+      "solo_last_game_days_ago": 1,
       "recent_flex_games": [
         {
           "date": "2026-07-30",
@@ -1705,15 +1748,6 @@
       "riot_id": "장의사#kr1",
       "puuid": "fK4_TblWW4E7RTm9Jxlkr9siRv-F8Z-bLGT8YYCY5MzlEbqRfsSVZcU7hP2IcWSO9LNYZds6oZKZDg",
       "history": [
-        {
-          "date": "2026-07-16",
-          "solo_tier": "GOLD",
-          "solo_rank": "IV",
-          "solo_lp": 63,
-          "flex_tier": "GOLD",
-          "flex_rank": "IV",
-          "flex_lp": 19
-        },
         {
           "date": "2026-07-17",
           "solo_tier": "GOLD",
@@ -2022,6 +2056,15 @@
         },
         {
           "date": "2026-08-20",
+          "solo_tier": "GOLD",
+          "solo_rank": "IV",
+          "solo_lp": 63,
+          "flex_tier": "SILVER",
+          "flex_rank": "I",
+          "flex_lp": 35
+        },
+        {
+          "date": "2026-08-21",
           "solo_tier": "GOLD",
           "solo_rank": "IV",
           "solo_lp": 63,
