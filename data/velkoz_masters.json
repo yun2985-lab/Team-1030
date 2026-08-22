@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T01:59:43+09:00",
+  "updated_at": "2026-08-22T01:53:03+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -32,14 +32,14 @@
       "name": "이정혁"
     },
     {
-      "slug": "%ED%94%BC%EC%BD%94a-KR1",
-      "riot_id": "%ED%94%BC%EC%BD%94a#KR1",
-      "name": "피코a"
-    },
-    {
       "slug": "DouyuTV%20050899-KR1",
       "riot_id": "DouyuTV%20050899#KR1",
       "name": "DouyuTV 050899"
+    },
+    {
+      "slug": "%ED%94%BC%EC%BD%94a-KR1",
+      "riot_id": "%ED%94%BC%EC%BD%94a#KR1",
+      "name": "피코a"
     },
     {
       "slug": "brainbreakers-KR1",
@@ -87,6 +87,11 @@
       "name": "딜서폿장인"
     },
     {
+      "slug": "Faker-KRY",
+      "riot_id": "Faker#KRY",
+      "name": "Faker"
+    },
+    {
       "slug": "KuOn-KR1",
       "riot_id": "KuOn#KR1",
       "name": "KuOn"
@@ -95,11 +100,6 @@
       "slug": "%EC%A7%95%ED%81%AC%EC%93%B0-KR1",
       "riot_id": "%EC%A7%95%ED%81%AC%EC%93%B0#KR1",
       "name": "징크쓰"
-    },
-    {
-      "slug": "Faker-KRY",
-      "riot_id": "Faker#KRY",
-      "name": "Faker"
     },
     {
       "slug": "%EC%9E%84%EC%A7%84%EB%A1%9D-KR1",
@@ -127,14 +127,14 @@
       "name": "타락함"
     },
     {
-      "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
-      "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
-      "name": "임뿌뿌"
-    },
-    {
       "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
       "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
       "name": "사이좋게합시당"
+    },
+    {
+      "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
+      "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
+      "name": "임뿌뿌"
     },
     {
       "slug": "%EC%84%B8%EB%B0%9C%EB%82%99%EC%A7%80%EC%95%84%EB%8B%98-KR1",
@@ -162,14 +162,14 @@
       "name": "너무좋아고양이"
     },
     {
-      "slug": "%EB%8F%99%EC%9B%90%EA%B3%B5%EC%A5%AC%EB%8B%98-%EC%B4%89%20%EC%B4%89",
-      "riot_id": "%EB%8F%99%EC%9B%90%EA%B3%B5%EC%A5%AC%EB%8B%98#%EC%B4%89%20%EC%B4%89",
-      "name": "동원공쥬님"
-    },
-    {
       "slug": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7-KR1",
       "riot_id": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7#KR1",
       "name": "롤은 질병이닷"
+    },
+    {
+      "slug": "%EB%8F%99%EC%9B%90%EA%B3%B5%EC%A5%AC%EB%8B%98-%EC%B4%89%20%EC%B4%89",
+      "riot_id": "%EB%8F%99%EC%9B%90%EA%B3%B5%EC%A5%AC%EB%8B%98#%EC%B4%89%20%EC%B4%89",
+      "name": "동원공쥬님"
     },
     {
       "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
@@ -247,9 +247,9 @@
       "name": "감마선 그 아이"
     },
     {
-      "slug": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0-153",
-      "riot_id": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0#153",
-      "name": "화내지말고"
+      "slug": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84-%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
+      "riot_id": "%ED%8E%98%EB%B9%84%EC%B8%84%EB%B9%84#%EA%B5%AC%EA%B5%AC%EA%B0%80%EA%B0%80",
+      "name": "페비츄비"
     }
   ]
 }
