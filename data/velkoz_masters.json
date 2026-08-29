@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T11:29:23+09:00",
+  "updated_at": "2026-08-29T07:08:53+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -217,6 +217,11 @@
       "name": "촉수는 내 성감대"
     },
     {
+      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
+      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4#2005",
+      "name": "감마선 그 아이"
+    },
+    {
       "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
       "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
       "name": "벨코즈 좋아"
@@ -225,11 +230,6 @@
       "slug": "Logos-KR1",
       "riot_id": "Logos#KR1",
       "name": "Logos"
-    },
-    {
-      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
-      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4#2005",
-      "name": "감마선 그 아이"
     },
     {
       "slug": "%EC%9C%A4%EB%82%99%EC%A7%80-111",
