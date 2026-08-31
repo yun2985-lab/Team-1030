@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T05:29:46+09:00",
+  "updated_at": "2026-08-31T05:43:21+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -82,14 +82,14 @@
       "name": "가람공주님"
     },
     {
-      "slug": "KuOn-KR1",
-      "riot_id": "KuOn#KR1",
-      "name": "KuOn"
-    },
-    {
       "slug": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8-KR3",
       "riot_id": "%EB%94%9C%EC%84%9C%ED%8F%BF%EC%9E%A5%EC%9D%B8#KR3",
       "name": "딜서폿장인"
+    },
+    {
+      "slug": "KuOn-KR1",
+      "riot_id": "KuOn#KR1",
+      "name": "KuOn"
     },
     {
       "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
@@ -107,6 +107,11 @@
       "name": "징크쓰"
     },
     {
+      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
+      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
+      "name": "사이좋게합시당"
+    },
+    {
       "slug": "%EC%9E%84%EC%A7%84%EB%A1%9D-KR1",
       "riot_id": "%EC%9E%84%EC%A7%84%EB%A1%9D#KR1",
       "name": "임진록"
@@ -115,11 +120,6 @@
       "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
       "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
       "name": "S 벨코즈"
-    },
-    {
-      "slug": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9-KR1",
-      "riot_id": "%EC%82%AC%EC%9D%B4%EC%A2%8B%EA%B2%8C%ED%95%A9%EC%8B%9C%EB%8B%B9#KR1",
-      "name": "사이좋게합시당"
     },
     {
       "slug": "%ED%83%80%EB%9D%BD%ED%95%A8-%ED%9D%91%ED%99%94%ED%95%A8",
@@ -147,14 +147,19 @@
       "name": "세발낙지아님"
     },
     {
+      "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
+      "riot_id": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0#CROWN",
+      "name": "왕관 쓴 꼴뚜기"
+    },
+    {
       "slug": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC-KR1",
       "riot_id": "%ED%80%80%ED%8B%B1%EB%93%9C%EB%A6%BC#KR1",
       "name": "퀀틱드림"
     },
     {
-      "slug": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0-CROWN",
-      "riot_id": "%EC%99%95%EA%B4%80%20%EC%93%B4%20%EA%BC%B4%EB%9A%9C%EA%B8%B0#CROWN",
-      "name": "왕관 쓴 꼴뚜기"
+      "slug": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7-KR1",
+      "riot_id": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7#KR1",
+      "name": "롤은 질병이닷"
     },
     {
       "slug": "%EA%B9%8C%EB%AB%84%EA%B8%94-KR1",
@@ -165,11 +170,6 @@
       "slug": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89-KR1",
       "riot_id": "%EA%B3%A0%EB%83%89%EA%B3%A0%EB%83%89#KR1",
       "name": "고냉고냉"
-    },
-    {
-      "slug": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7-KR1",
-      "riot_id": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7#KR1",
-      "name": "롤은 질병이닷"
     },
     {
       "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
@@ -205,6 +205,11 @@
       "slug": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4-KR1",
       "riot_id": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4#KR1",
       "name": "갓 두 나 무"
+    },
+    {
+      "slug": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0-153",
+      "riot_id": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0#153",
+      "name": "화내지말고"
     },
     {
       "slug": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80-KR1",
@@ -245,11 +250,6 @@
       "slug": "MUTE%20ALL-2307",
       "riot_id": "MUTE%20ALL#2307",
       "name": "MUTE ALL"
-    },
-    {
-      "slug": "%EB%94%B8%20%EA%B9%8D-AAA",
-      "riot_id": "%EB%94%B8%20%EA%B9%8D#AAA",
-      "name": "딸 깍"
     }
   ]
 }
