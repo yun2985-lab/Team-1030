@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T04:41:45+09:00",
+  "updated_at": "2026-09-03T04:39:41+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -57,14 +57,14 @@
       "name": "족발막국수"
     },
     {
-      "slug": "Faker-KRY",
-      "riot_id": "Faker#KRY",
-      "name": "Faker"
-    },
-    {
       "slug": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4-KR1",
       "riot_id": "%EC%83%81%20%EC%88%98%20%EB%A6%AC%20%EB%82%98%20%EB%AC%B4#KR1",
       "name": "상 수 리 나 무"
+    },
+    {
+      "slug": "Faker-KRY",
+      "riot_id": "Faker#KRY",
+      "name": "Faker"
     },
     {
       "slug": "%EB%A7%8C%ED%95%B4%ED%82%B9-KR1",
@@ -217,6 +217,11 @@
       "name": "화내지말고"
     },
     {
+      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
+      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4#2005",
+      "name": "감마선 그 아이"
+    },
+    {
       "slug": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80-KR1",
       "riot_id": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80#KR1",
       "name": "잔잔한 호숫가"
@@ -225,11 +230,6 @@
       "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
       "riot_id": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80#KRI",
       "name": "촉수는 내 성감대"
-    },
-    {
-      "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
-      "riot_id": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4#2005",
-      "name": "감마선 그 아이"
     },
     {
       "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
