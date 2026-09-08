@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T04:49:36+09:00",
+  "updated_at": "2026-09-08T04:45:20+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -167,6 +167,11 @@
       "name": "퀀틱드림"
     },
     {
+      "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
+      "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
+      "name": "너무좋아고양이"
+    },
+    {
       "slug": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7-KR1",
       "riot_id": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7#KR1",
       "name": "롤은 질병이닷"
@@ -182,9 +187,9 @@
       "name": "고냉고냉"
     },
     {
-      "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
-      "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
-      "name": "너무좋아고양이"
+      "slug": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0-153",
+      "riot_id": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0#153",
+      "name": "화내지말고"
     },
     {
       "slug": "%EB%82%A0%EC%9C%BC%EB%8A%94%20%EC%8A%A4%ED%8C%8C%EA%B2%8C%ED%8B%B0%20%EA%B4%B4%EB%AC%BC-%EB%B2%A8%EC%BD%94%EC%A6%88",
@@ -197,19 +202,14 @@
       "name": "림이의 촉촉이"
     },
     {
-      "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
-      "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
-      "name": "뚜끼뚜빠뿌"
-    },
-    {
-      "slug": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0-153",
-      "riot_id": "%ED%99%94%EB%82%B4%EC%A7%80%EB%A7%90%EA%B3%A0#153",
-      "name": "화내지말고"
-    },
-    {
       "slug": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4-kr0",
       "riot_id": "%ED%88%BC%EB%B0%94%EC%8B%A0%EB%9D%BC%EB%A9%B4#kr0",
       "name": "툼바신라면"
+    },
+    {
+      "slug": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C-KR1",
+      "riot_id": "%EB%9A%9C%EB%81%BC%EB%9A%9C%EB%B9%A0%EB%BF%8C#KR1",
+      "name": "뚜끼뚜빠뿌"
     },
     {
       "slug": "%EB%8B%AC%EB%A6%AC%EB%A9%B4%EC%88%A8%EC%B0%A8%EC%9A%94-KR1",
@@ -217,9 +217,19 @@
       "name": "달리면숨차요"
     },
     {
+      "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
+      "riot_id": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80#KRI",
+      "name": "촉수는 내 성감대"
+    },
+    {
       "slug": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4-KR1",
       "riot_id": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4#KR1",
       "name": "갓 두 나 무"
+    },
+    {
+      "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
+      "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
+      "name": "벨코즈 좋아"
     },
     {
       "slug": "%EA%B0%90%EB%A7%88%EC%84%A0%20%EA%B7%B8%20%EC%95%84%EC%9D%B4-2005",
@@ -232,11 +242,6 @@
       "name": "잔잔한 호숫가"
     },
     {
-      "slug": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80-KRI",
-      "riot_id": "%EC%B4%89%EC%88%98%EB%8A%94%20%EB%82%B4%20%EC%84%B1%EA%B0%90%EB%8C%80#KRI",
-      "name": "촉수는 내 성감대"
-    },
-    {
       "slug": "MUTE%20ALL-2307",
       "riot_id": "MUTE%20ALL#2307",
       "name": "MUTE ALL"
@@ -245,11 +250,6 @@
       "slug": "%EC%9C%A4%EB%82%99%EC%A7%80-111",
       "riot_id": "%EC%9C%A4%EB%82%99%EC%A7%80#111",
       "name": "윤낙지"
-    },
-    {
-      "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
-      "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
-      "name": "벨코즈 좋아"
     }
   ]
 }
