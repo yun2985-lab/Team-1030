@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T04:48:57+09:00",
+  "updated_at": "2026-09-10T04:50:23+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -147,11 +147,6 @@
       "name": "세발낙지아님"
     },
     {
-      "slug": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4-KR1",
-      "riot_id": "%EB%9D%BC%EC%9D%B4%ED%9B%84%EC%9D%B4#KR1",
-      "name": "라이후이"
-    },
-    {
       "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
       "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
       "name": "임뿌뿌"
@@ -170,11 +165,6 @@
       "slug": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4-KR1",
       "riot_id": "%EB%84%88%EB%AC%B4%EC%A2%8B%EC%95%84%EA%B3%A0%EC%96%91%EC%9D%B4#KR1",
       "name": "너무좋아고양이"
-    },
-    {
-      "slug": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7-KR1",
-      "riot_id": "%EB%A1%A4%EC%9D%80%20%EC%A7%88%EB%B3%91%EC%9D%B4%EB%8B%B7#KR1",
-      "name": "롤은 질병이닷"
     },
     {
       "slug": "%EA%B9%8C%EB%AB%84%EA%B8%94-KR1",
@@ -250,6 +240,16 @@
       "slug": "%EC%9C%A4%EB%82%99%EC%A7%80-111",
       "riot_id": "%EC%9C%A4%EB%82%99%EC%A7%80#111",
       "name": "윤낙지"
+    },
+    {
+      "slug": "Logos-KR1",
+      "riot_id": "Logos#KR1",
+      "name": "Logos"
+    },
+    {
+      "slug": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI-KR1",
+      "riot_id": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI#KR1",
+      "name": "무지성 AI"
     }
   ]
 }
