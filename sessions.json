@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "project": "TEAM 1030",
+  "sessions": [
+    {
+      "sessionId": "T1030-8567",
+      "createdAt": "2026-09-15T23:19:30.956340+00:00",
+      "audioMode": "game_and_voice",
+      "frameCount": 17,
+      "trackCount": 5,
+      "timeline": "map-session.json",
+      "status": "ready"
+    }
+  ]
+}
