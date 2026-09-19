@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T04:50:38+09:00",
+  "updated_at": "2026-09-19T04:43:37+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -67,14 +67,14 @@
       "name": "이탈리아 스파게티 맛집 벨코즈"
     },
     {
-      "slug": "%EB%A7%8C%ED%95%B4%ED%82%B9-KR1",
-      "riot_id": "%EB%A7%8C%ED%95%B4%ED%82%B9#KR1",
-      "name": "만해킹"
-    },
-    {
       "slug": "Faker-KRY",
       "riot_id": "Faker#KRY",
       "name": "Faker"
+    },
+    {
+      "slug": "%EB%A7%8C%ED%95%B4%ED%82%B9-KR1",
+      "riot_id": "%EB%A7%8C%ED%95%B4%ED%82%B9#KR1",
+      "name": "만해킹"
     },
     {
       "slug": "%EA%B0%80%EB%9E%8C%EA%B3%B5%EC%A3%BC%EB%8B%98-KR1",
@@ -212,6 +212,11 @@
       "name": "감마선 그 아이"
     },
     {
+      "slug": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC-charm",
+      "riot_id": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC#charm",
+      "name": "낭만파 아리"
+    },
+    {
       "slug": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4-KR1",
       "riot_id": "%EA%B0%93%20%EB%91%90%20%EB%82%98%20%EB%AC%B4#KR1",
       "name": "갓 두 나 무"
@@ -220,11 +225,6 @@
       "slug": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84-314",
       "riot_id": "%EB%B2%A8%EC%BD%94%EC%A6%88%20%EC%A2%8B%EC%95%84#314",
       "name": "벨코즈 좋아"
-    },
-    {
-      "slug": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC-charm",
-      "riot_id": "%EB%82%AD%EB%A7%8C%ED%8C%8C%20%EC%95%84%EB%A6%AC#charm",
-      "name": "낭만파 아리"
     },
     {
       "slug": "%EC%9E%94%EC%9E%94%ED%95%9C%20%ED%98%B8%EC%88%AB%EA%B0%80-KR1",
@@ -242,14 +242,14 @@
       "name": "MUTE ALL"
     },
     {
+      "slug": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI-KR1",
+      "riot_id": "%EB%AC%B4%EC%A7%80%EC%84%B1%20AI#KR1",
+      "name": "무지성 AI"
+    },
+    {
       "slug": "Logos-KR1",
       "riot_id": "Logos#KR1",
       "name": "Logos"
-    },
-    {
-      "slug": "%EC%BD%A4%EB%B6%80%EC%B0%A8%20%EC%A4%91%EB%8F%85-%EC%9E%90%EB%AA%BD%EB%B2%A0%EB%A6%AC%EB%A7%9B",
-      "riot_id": "%EC%BD%A4%EB%B6%80%EC%B0%A8%20%EC%A4%91%EB%8F%85#%EC%9E%90%EB%AA%BD%EB%B2%A0%EB%A6%AC%EB%A7%9B",
-      "name": "콤부차 중독"
     }
   ]
 }
