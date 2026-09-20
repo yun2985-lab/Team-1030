@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T04:43:37+09:00",
+  "updated_at": "2026-09-20T04:58:45+09:00",
   "masters": [
     {
       "slug": "%EA%B9%80%EB%AF%B8%EC%AF%94%EB%B0%94%EB%B3%B4-KR1",
@@ -72,6 +72,11 @@
       "name": "Faker"
     },
     {
+      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
+      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
+      "name": "까르보불"
+    },
+    {
       "slug": "%EB%A7%8C%ED%95%B4%ED%82%B9-KR1",
       "riot_id": "%EB%A7%8C%ED%95%B4%ED%82%B9#KR1",
       "name": "만해킹"
@@ -80,11 +85,6 @@
       "slug": "%EA%B0%80%EB%9E%8C%EA%B3%B5%EC%A3%BC%EB%8B%98-KR1",
       "riot_id": "%EA%B0%80%EB%9E%8C%EA%B3%B5%EC%A3%BC%EB%8B%98#KR1",
       "name": "가람공주님"
-    },
-    {
-      "slug": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88-KR1",
-      "riot_id": "%EA%B9%8C%EB%A5%B4%EB%B3%B4%EB%B6%88#KR1",
-      "name": "까르보불"
     },
     {
       "slug": "%EB%82%9C%EC%9B%90%EB%94%9C%EA%B0%99%EC%9D%80%EA%B1%B0%EA%B7%B8%EB%83%A5%EB%B2%84%EB%A0%A4%EB%B2%84%EB%A0%A4-%EC%9B%90%EC%A7%95%EC%A7%95",
@@ -117,14 +117,14 @@
       "name": "임진록"
     },
     {
-      "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
-      "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
-      "name": "S 벨코즈"
-    },
-    {
       "slug": "%EC%9E%84%EB%BF%8C%EB%BF%8C-KR1",
       "riot_id": "%EC%9E%84%EB%BF%8C%EB%BF%8C#KR1",
       "name": "임뿌뿌"
+    },
+    {
+      "slug": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88-KR1",
+      "riot_id": "S%20%EB%B2%A8%EC%BD%94%EC%A6%88#KR1",
+      "name": "S 벨코즈"
     },
     {
       "slug": "%EC%98%A4%EC%A7%95%EC%96%B4%EB%A7%9B%ED%83%80%EC%BD%94%EC%95%BC%ED%82%A4-KR1",
