@@ -31,7 +31,7 @@ function renderTable(){
  const head=$('tableHead'),body=$('tableBody');head.replaceChildren();body.replaceChildren();
  const headers=tab==='positions'?['종목 / 방향','수량 (BTC)','평균 진입가','현재 마크가','미실현 손익','가격 수익률']:tab==='orders'?['주문번호','방향','가격','남은 계약수','주문 유형','상태']:['체결 시각 (KST)','방향','가격','계약수','수수료','실현 손익'];
  let tr=document.createElement('tr');headers.forEach(h=>{let th=document.createElement('th');th.textContent=h;tr.append(th);});head.append(tr);
- const items=current?.[tab]||[];if(!items.length){emptyTable(body,headers.length,current?.connection==='connected'?'해당 내역이 없습니다.':'서버 연결 후 내역이 표시됩니다.');return;}
+ const items=current?.[tab]||[];if(!items.length){emptyTable(body,headers.length,current?.connection==='connected'?'해당 내역이 없습니다.':'휴대폰에서 현황을 게시하면 표시됩니다.');return;}
  items.forEach(r=>body.append(row(tab==='positions'?[`BTC/USDT · ${r.side}`,r.size,money(r.entry),money(r.mark),{text:money(r.pnl),tone:r.pnl},{text:pct(r.priceReturnPct),tone:r.priceReturnPct}]:tab==='orders'?[r.id,Number(r.size)>0?'매수':'매도',Number(r.price)===0?'시장가':money(r.price),r.left,r.reduce_only?'익절 · Reduce-only':r.tif==='ioc'?'시장가 IOC':'지정가',r.status]:[stamp(Number(r.create_time_ms)),Number(r.size)>0?'매수':'매도',money(r.price),Math.abs(Number(r.size)),money(r.fee),{text:money(r.realized_pnl),tone:Number(r.realized_pnl)}])));
 }
 function render(v){
