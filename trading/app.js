@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id), money=v=>v==null?'—':Number(v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}), pct=v=>v==null?'—':`${v>0?'+':''}${Number(v).toFixed(2)}%`;
 const PUBLIC_URL='https://raw.githubusercontent.com/yun2985-lab/Team-1030/trading-data/latest.json';
 const stamp=v=>v?new Date(v).toLocaleString('ko-KR',{timeZone:'Asia/Seoul',hour12:false}):'—';
-let current=null,endpoint='',token='',demo=false,days=0,tab='positions',pending=false,generation=0;
+let current=null,demo=false,days=0,tab='positions',pending=false,generation=0;
 const set=(id,text)=>{$(id).textContent=text;},tone=(el,n)=>{el.classList.toggle('positive',n>0);el.classList.toggle('negative',n<0);};
 function emptyChart(id,message='연결 후 차트가 표시됩니다'){$(id).replaceChildren();const x=document.createElement('div');x.className='empty';x.textContent=message;$(id).append(x);}
 function svgNode(tag,attrs={},text=''){const n=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v]of Object.entries(attrs))n.setAttribute(k,v);n.textContent=text;return n;}
@@ -52,20 +52,17 @@ function render(v){
  if(!strategies.length){let x=document.createElement('p');x.textContent='앱에서 등록한 전략이 여기에 표시됩니다.';x.style.padding='20px 0';$('strategyList').append(x);}
  strategies.forEach(s=>{let item=document.createElement('div');item.className='strategy';let name=document.createElement('div'),b=document.createElement('b'),small=document.createElement('small'),status=document.createElement('span');b.textContent=s.name;small.textContent=s.error||'0.9.35 전략 엔진';name.append(b,small);status.className='badge';status.textContent=s.status;item.append(name,status);$('strategyList').append(item);});
 }
-async function fetchSnapshot(base,key){const r=await fetch(base+'/api/dashboard',{headers:{Authorization:'Bearer '+key},cache:'no-store',signal:AbortSignal.timeout(20000)});if(!r.ok)throw new Error(r.status===401?'조회 토큰을 확인하세요.':`서버 응답 오류 (${r.status})`);return r.json();}
 async function refresh(){if(demo||pending)return;pending=true;const epoch=generation;try{
- let v;if(endpoint&&token)v=await fetchSnapshot(endpoint,token);else{
+ let v;{
  const r=await fetch(PUBLIC_URL+'?t='+Math.floor(Date.now()/60000),{cache:'no-store',signal:AbortSignal.timeout(20000)});
  if(!r.ok)throw new Error(r.status===404?'휴대폰의 첫 공개 게시를 기다리고 있습니다.':`GitHub 조회 오류 (${r.status})`);
  v=await r.json();if(v.source!=='phone-github'||v.schemaVersion!==1)throw new Error('공개 데이터 형식을 확인하세요.');
  }
  if(epoch===generation)render(v);
  }catch(e){if(epoch===generation)render({...current,connection:current?.updatedAt?'stale':'disconnected',error:e.message});}finally{pending=false;}}
-$('connect').onclick=()=>{$('endpoint').value=endpoint||localStorage.getItem('team1030-endpoint')||'';$('token').value='';set('connectError','');$('settings').showModal();};
-$('cancel').onclick=()=>{$('settings').close();$('token').value='';};
-$('disconnect').onclick=()=>{generation++;endpoint='';token='';demo=false;current=null;localStorage.removeItem('team1030-endpoint');$('settings').close();$('token').value='';render(null);refresh();};
-$('settingsForm').onsubmit=async e=>{e.preventDefault();set('connectError','연결 확인 중…');try{let u=new URL($('endpoint').value);if(u.protocol!=='https:'&&!(u.protocol==='http:'&&u.hostname==='127.0.0.1'))throw new Error('HTTPS 서버 주소를 입력하세요.');if(u.username||u.password||u.search||u.hash)throw new Error('사용자정보·쿼리 없는 서버 주소를 입력하세요.');let base=u.href.replace(/\/$/,''),key=$('token').value.trim(),v=await fetchSnapshot(base,key);generation++;endpoint=base;token=key;demo=false;localStorage.setItem('team1030-endpoint',endpoint);$('token').value='';$('settings').close();render(v);}catch(e){set('connectError',e.message);}};
+$('connect').onclick=()=>{$('settings').showModal();};
+$('cancel').onclick=()=>{$('settings').close();};
 $('refresh').onclick=()=>{if(demo){generation++;demo=false;current=null;}refresh();};$('ranges').onclick=e=>{if(!e.target.dataset.days)return;days=Number(e.target.dataset.days);$('ranges').querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b===e.target));render(current);};
 document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(t=>t.classList.toggle('selected',t===b));renderTable();});
-$('demo').onclick=()=>{generation++;token='';demo=true;let now=Date.now(),base=now-14*86400000,curve=[],daily=[],candles=[],p=0;for(let i=0;i<15;i++){let step=i?Math.sin(i*1.7)*65+38:0;p+=step;curve.push({at:base+i*86400000,pnl:p,returnPct:p/100,equity:10000+p});daily.push({date:new Date(base+i*86400000).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),pnl:step,returnPct:step/100,partial:i===0});}let price=97500;for(let i=0;i<100;i++){let o=price,c=o+Math.sin(i*1.4)*90+Math.cos(i*.1)*25;price=c;candles.push({t:Math.floor(now/900000)*900-(99-i)*900,o,h:Math.max(o,c)+40,l:Math.min(o,c)-40,c});}render({connection:'connected',environment:'demo',updatedAt:now,baselineAt:base,equity:10000+p,available:8760,totalReturnPct:p/100,realizedNetPnl:p+34,unrealizedPnl:-34,currentLossPct:-.34,dailyReturnPct:daily.at(-1).returnPct,drawdownPct:.64,curve,daily,candles,lastPrice:price,engineConnected:true,strategies:[{name:'지지저항 돌파',status:'ON · 신호 감시'},{name:'RSI 다이버전스',status:'ON · 신호 감시'},{name:'1분 삼각형',status:'OFF · 청산 유지'},{name:'구출모드',status:'대기'}],positions:[{symbol:'BTC_USDT_Perp',side:'LONG',size:.03,entry:98500,mark:97366.67,pnl:-34,priceReturnPct:-1.15}],orders:[],fills:[]});};
+$('demo').onclick=()=>{generation++;demo=true;let now=Date.now(),base=now-14*86400000,curve=[],daily=[],candles=[],p=0;for(let i=0;i<15;i++){let step=i?Math.sin(i*1.7)*65+38:0;p+=step;curve.push({at:base+i*86400000,pnl:p,returnPct:p/100,equity:10000+p});daily.push({date:new Date(base+i*86400000).toLocaleDateString('sv-SE',{timeZone:'Asia/Seoul'}),pnl:step,returnPct:step/100,partial:i===0});}let price=97500;for(let i=0;i<100;i++){let o=price,c=o+Math.sin(i*1.4)*90+Math.cos(i*.1)*25;price=c;candles.push({t:Math.floor(now/900000)*900-(99-i)*900,o,h:Math.max(o,c)+40,l:Math.min(o,c)-40,c});}render({connection:'connected',environment:'demo',updatedAt:now,baselineAt:base,equity:10000+p,available:8760,totalReturnPct:p/100,realizedNetPnl:p+34,unrealizedPnl:-34,currentLossPct:-.34,dailyReturnPct:daily.at(-1).returnPct,drawdownPct:.64,curve,daily,candles,lastPrice:price,engineConnected:true,strategies:[{name:'지지저항 돌파',status:'ON · 신호 감시'},{name:'RSI 다이버전스',status:'ON · 신호 감시'},{name:'1분 삼각형',status:'OFF · 청산 유지'},{name:'구출모드',status:'대기'}],positions:[{symbol:'BTC_USDT_Perp',side:'LONG',size:.03,entry:98500,mark:97366.67,pnl:-34,priceReturnPct:-1.15}],orders:[],fills:[]});};
 setInterval(refresh,60000);render(null);refresh();
